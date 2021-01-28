@@ -17,14 +17,14 @@
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     {% endblock %}
 
     {% block extra_css%}
     {% endblock %}
 
     {% block corejs %}
-        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     {% endblock %}
 
     {% block extrajs %}
@@ -35,7 +35,7 @@
 <body>
     <header class="container-fluid fixed-top">
     </header>
-    {% if messages}
+    {% if messages %}
     <div class="message-container">       
     </div>
     {% endif %}
