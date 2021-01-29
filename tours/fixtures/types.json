@@ -1,0 +1,26 @@
+[
+    {
+        "pk": 1,
+        "model": "types.type",
+        "fields": {
+            "name": "Test Match",        
+            "friendly_name": "Test"     
+        }
+    },
+    {
+        "pk": 2,
+        "model": "types.type",
+        "fields": {
+            "name": "One Day International",        
+            "friendly_name": "ODI"     
+        }
+    },
+    {
+        "pk": 3,
+        "model": "types.type",
+        "fields": {
+            "name": "International T20",        
+            "friendly_name": "IT20"     
+        }
+    }
+]

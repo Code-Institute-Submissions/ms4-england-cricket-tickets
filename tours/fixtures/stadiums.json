@@ -1,0 +1,144 @@
+[
+    {
+        "pk": 1,
+        "model": "stadiums.stadium",
+        "fields": {
+            "name": "M.A. Chidambaram Stadium, Chennai",   
+            "friendly_name": "Chennai",     
+            "image": "chennai.jpg",
+            "image_url": "https://ipltickets.in/wp-content/uploads/2017/10/ma-chidambaram-stadium-layout-seating-map.jpg"     
+        }
+    },
+    {
+        "pk": 2,
+        "model": "stadiums.stadium",
+        "fields": {
+            "name": "Sardar Patel Stadium, Ahmedabad",   
+            "friendly_name": "Ahmedabad",     
+            "image": "ahmedabad.jpg",
+            "image_url": "https://static.toiimg.com/photo/74219501.cms"   
+        }
+    },
+    {
+        "pk": 3,
+        "model": "stadiums.stadium",
+        "fields": {
+            "name": "Maharashtra Cricket Association Stadium, Pune",   
+            "friendly_name": "Pune",     
+            "image": "pune.jpg",
+            "image_url": "https://indiaongo.in/wp-content/uploads/2016/04/pune-cricket-stadium-seating-arrangement-map.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "stadiums.stadium",
+        "fields": {
+            "name": "Lord's Cricket Ground, London",   
+            "friendly_name": "Lord's",     
+            "image": "lords.jpg",
+            "image_url": "https://intl.stub.com/seating-charts/x450/lords-cricket-ground-cricket-9564.jpg" 
+        }
+    },
+    {
+        "pk": 5,
+        "model": "stadiums.stadium",
+        "fields": {
+            "name": "Edgbaston, Birmingham",   
+            "friendly_name": "Edgbaston",     
+            "image": "edgbaston.jpg",
+            "image_url": "https://stadiumsguide.com/wp-content/uploads/2019/04/edgbaston-stadium-seating-plan.jpg" 
+        }
+    },
+    {
+        "pk": 6,
+        "model": "stadiums.stadium",
+        "fields": {
+            "name": "Sophia Gardens, Cardiff",   
+            "friendly_name": "Cardiff",     
+            "image": "cardiff.jpg",
+            "image_url": "https://www.glamorgancricket.com/documents/2019-stadium-plan-7575.jpeg"  
+        }
+    },
+  {
+        "pk": 7,
+        "model": "stadiums.stadium",
+        "fields": {
+            "name": "The Ageas Bowl, Southampton",   
+            "friendly_name": "Southampton",     
+            "image": "southampton.jpg",
+            "image_url": "https://ageasbowl.s3.amazonaws.com/2019/Cricket/Body%20Images/2019%20T20%20Seating%20Plan.jpg"  
+        }
+    },
+  {
+        "pk": 8,
+        "model": "stadiums.stadium",
+        "fields": {
+            "name": "Trent Bridge, Nottingham",   
+            "friendly_name": "Nottingham",     
+            "image": "nottingham.jpg",
+            "image_url": "https://intl.stub.com/seating-charts/x450/trent-bridge-cricket-9566.jpg"  
+        }
+    },
+  {
+        "pk": 9,
+        "model": "stadiums.stadium",
+        "fields": {
+            "name": "Headingley, Leeds",   
+            "friendly_name": "Leeds",     
+            "image": "leeds.jpg",
+            "image_url": "https://stadiumsguide.com/wp-content/uploads/2019/05/headingley-leeds-cricket-ground-seating-plan.jpg" 
+        }
+    },
+  {
+        "pk": 10,
+        "model": "stadiums.stadium",
+        "fields": {
+            "name": "Old Trafford, Manchester",   
+            "friendly_name": "Manchester",     
+            "image": "manchester.jpg",
+            "image_url": "https://www.xchangetickets.com/seatingplans/venue_544.jpg"  
+        }
+    },
+  {
+        "pk": 11,
+        "model": "stadiums.stadium",
+        "fields": {
+            "name": "Emirates Riverside, Chester-le-Street",   
+            "friendly_name": "Durham",     
+            "image": "durham.jpg",
+            "image_url": "https://stadiumsguide.com/wp-content/uploads/2019/05/durham-emirates-riverside-chester-le-street-ground-seating-plan.jpg"  
+        }
+    },
+  {
+        "pk": 12,
+        "model": "stadiums.stadium",
+        "fields": {
+            "name": "The Kia Oval, London",   
+            "friendly_name": "The Oval, London",     
+            "image": "oval.jpg",
+            "image_url": "https://i.pinimg.com/originals/c3/ae/e6/c3aee6d044793232a210984890bc5649.jpg" 
+        }
+    },
+  {
+        "pk": 13,
+        "model": "stadiums.stadium",
+        "fields": {
+            "name": "The Bristol County Ground, Bristol",   
+            "friendly_name": "Bristol",     
+            "image": "bristol.jpg",
+            "image_url": "https://www.gloscricket.co.uk/wp-content/uploads/2015/08/Capture-of-map.jpg"  
+        }
+    },
+  {
+        "pk": 14,
+        "model": "stadiums.stadium",
+        "fields": {
+            "name": "National Stadium, Karachi",   
+            "friendly_name": "Karachi",     
+            "image": "karachi.jpg",
+            "image_url": "https://www.brandsynario.com/wp-content/uploads/2019/02/Karachi-Kings-vs-Quetta-Gladiators-PSL-Ticket.jpg"  
+        }
+    }
+
+
+]

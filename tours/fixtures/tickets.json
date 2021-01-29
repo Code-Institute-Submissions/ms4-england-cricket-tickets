@@ -1,0 +1,686 @@
+[
+    {
+        "pk": 1,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 1,    
+            "stand": "Upper Level",
+            "price": 15.00    
+        }
+    },
+    {
+        "pk": 2,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 1,    
+            "stand": "Lower Level",
+            "price": 25.00    
+        }
+    },
+    {
+        "pk": 3,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 1,    
+            "stand": "Hospitality Box",
+            "price": 75.00     
+        }
+    },
+    {
+        "pk": 4,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 1,    
+            "stand": "Terrace",
+            "price": 5.00     
+        }
+    },
+    {
+        "pk": 5,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 2,    
+            "stand": "Lower Level",
+            "price": 35.00     
+        }
+    },
+    {
+        "pk": 6,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 2,    
+            "stand": "Upper Level",
+            "price": 25.00     
+        }
+    },
+    {
+        "pk": 7,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 2,    
+            "stand": "Hospitality Box",
+            "price": 85.00     
+        }
+    },
+    {
+        "pk": 8,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 3,    
+            "stand": "North West to North East Stands",
+            "price": 25.00     
+        }
+    },
+    {
+        "pk": 9,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 3,    
+            "stand": "West & South West Stands",
+            "price": 25.00     
+        }
+    },
+    {
+        "pk": 10,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 3,    
+            "stand": "East & South East Stands",
+            "price": 25.00     
+        }
+    },
+    {
+        "pk": 11,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 3,    
+            "stand": "Pavilion Stand",
+            "price": 35.00     
+        }
+    },
+    {
+        "pk": 12,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 3,    
+            "stand": "Pavilion Hospitality Stand",
+            "price": 65.00     
+        }
+    },
+    {
+        "pk": 12,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 4,    
+            "stand": "Grand Stand",
+            "price": 65.00    
+        }
+    },
+    {
+        "pk": 13,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 4,    
+            "stand": "Compton Stand",
+            "price": 60.00     
+        }
+    },
+    {
+        "pk": 14,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 4,    
+            "stand": "Edrich Stand",
+            "price": 65.00     
+        }
+    },
+    {
+        "pk": 15,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 4,    
+            "stand": "Mound Stand",
+            "price": 60.00     
+        }
+    },
+    {
+        "pk": 16,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 4,    
+            "stand": "Allen Stand",
+            "price": 75.00     
+        }
+    },
+    {
+        "pk": 17,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 4,    
+            "stand": "Warner Stand",
+            "price": 75.00     
+        }
+    },
+    {
+        "pk": 18,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 5,    
+            "stand": "Eric Hollies Stand",
+            "price": 55.00     
+        }
+    },
+    {
+        "pk": 19,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 5,    
+            "stand": "South Stand",
+            "price": 60.00    
+        }
+    },
+    {
+        "pk": 20,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 5,    
+            "stand": "West Stand",
+            "price": 65.00     
+        }
+    },
+    {
+        "pk": 21,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 5,    
+            "stand": "Drayon Manor Family Stand",
+            "price": 60.00     
+        }
+    },
+    {
+        "pk": 22,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 5,    
+            "stand": "Raglan Stand",
+            "price": 65.00     
+        }
+    },
+    {
+        "pk": 23,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 5,    
+            "stand": "RES Wyatt Stand",
+            "price": 65.00     
+        }
+    },
+    {
+        "pk": 23,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 5,    
+            "stand": "Scrivens Opticians/Stanley Barnes Stand",
+            "price": 75.00     
+        }
+    },
+    {
+        "pk": 24,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 6,    
+            "stand": "Riverside Stand",
+            "price": 55.00    
+        }
+    },
+    {
+        "pk": 25,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 6,    
+            "stand": "Foster's Stand",
+            "price": 50.00     
+        }
+    },
+    {
+        "pk": 26,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 6,    
+            "stand": "Croeso Stand",
+            "price": 55.00     
+        }
+    },
+    {
+        "pk": 27,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 6,    
+            "stand": "Castel Howell Stand",
+            "price": 65.00     
+        }
+    },
+    {
+        "pk": 24,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 6,    
+            "stand": "Discover Leeks Pavilion",
+            "price": 75.00    
+        }
+    },
+    {
+        "pk": 25,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 6,    
+            "stand": "Altodigital Stand",
+            "price": 55.00     
+        }
+    },
+    {
+        "pk": 26,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 7,    
+            "stand": "East Side, Lower",
+            "price": 65.00     
+        }
+    },
+    {
+        "pk": 27,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 7,    
+            "stand": "East Side, Upper",
+            "price": 55.00     
+        }
+    },
+    {
+        "pk": 28,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 7,    
+            "stand": "West Side, Lower",
+            "price": 65.00     
+        }
+    },
+    {
+        "pk": 29,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 7,    
+            "stand": "West Side, Upper",
+            "price": 55.00     
+        }
+    },
+    {
+        "pk": 30,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 8,    
+            "stand": "Fox Road Stand",
+            "price": 55.00     
+        }
+    },
+    {
+        "pk": 31,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 8,    
+            "stand": "Hound Road",
+            "price": 60.00     
+        }
+    },
+    {
+        "pk": 32,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 8,    
+            "stand": "New Stand",
+            "price": 55.00     
+        }
+    },
+    {
+        "pk": 33,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 8,    
+            "stand": "William Clarke Stand",
+            "price": 65.00     
+        }
+    },
+    {
+        "pk": 34,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 8,    
+            "stand": "Radcliffe Road Stand",
+            "price": 60.00     
+        }
+    },
+    {
+        "pk": 35,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 9,    
+            "stand": "North East Stand",
+            "price": 55.00     
+        }
+    },
+    {
+        "pk": 36,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 9,    
+            "stand": "East Stand",
+            "price": 60.00     
+        }
+    },
+    {
+        "pk": 37,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 9,    
+            "stand": "Pavilion Stand",
+            "price": 65.00    
+        }
+    },
+    {
+        "pk": 38,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 9,    
+            "stand": "Main Stand",
+            "price": 65.00     
+        }
+    },
+    {
+        "pk": 39,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 9,    
+            "stand": "Popular Enclosure",
+            "price": 50.00     
+        }
+    },
+    {
+        "pk": 40,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 9,    
+            "stand": "1863 Enclosure",
+            "price": 55.00    
+        }
+    },
+    {
+        "pk": 41,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 9,    
+            "stand": "Community Stand",
+            "price": 55.00     
+        }
+    },
+    {
+        "pk": 42,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 9,    
+            "stand": "Trueman Enclosure",
+            "price": 65.00    
+        }
+    },
+    {
+        "pk": 43,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 10,    
+            "stand": "Stand A",
+            "price": 55.00     
+        }
+    },
+    {
+        "pk": 44,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 10,    
+            "stand": "Stand B Lower",
+            "price": 65.00    
+        }
+    },
+    {
+        "pk": 45,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 10,    
+            "stand": "Stand B Upper",
+            "price": 60.00     
+        }
+    },
+    {
+        "pk": 46,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 10,    
+            "stand": "Stand C Lower",
+            "price": 65.00     
+        }
+    },
+    {
+        "pk": 47,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 10,    
+            "stand": "Stand C Upper",
+            "price": 60.00     
+        }
+    },
+    {
+        "pk": 48,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 10,    
+            "stand": "Stand D",
+            "price": 65.00     
+        }
+    },
+    {
+        "pk": 49,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 10,    
+            "stand": "Stand E",
+            "price": 60.00     
+        }
+    },
+    {
+        "pk": 50,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 11,    
+            "stand": "North Terrace",
+            "price": 55.00     
+        }
+    },
+    {
+        "pk": 51,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 11,    
+            "stand": "North East Terrace",
+            "price": 50.00     
+        }
+    },
+    {
+        "pk": 52,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 11,    
+            "stand": "Family Stand",
+            "price": 45.00     
+        }
+    },
+    {
+        "pk": 53,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 11,    
+            "stand": "South Terrace",
+            "price": 55.00     
+        }
+    },
+    {
+        "pk": 54,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 11,    
+            "stand": "South West Terrace",
+            "price": 65.00     
+        }
+    },
+    {
+        "pk": 55,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 11,    
+            "stand": "Dan Robson Pavilion",
+            "price": 55.00     
+        }
+    },
+    {
+        "pk": 56,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 11,    
+            "stand": "North West Terrace",
+            "price": 50.00     
+        }
+    },
+    {
+        "pk": 57,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 12,    
+            "stand": "OCS Stand",
+            "price": 65.00     
+        }
+    },
+    {
+        "pk": 58,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 12,    
+            "stand": "OCS Family Zone",
+            "price": 55.00     
+        }
+    },
+    {
+        "pk": 59,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 12,    
+            "stand": "Peter May Stand",
+            "price": 70.00    
+        }
+    },
+    {
+        "pk": 60,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 12,    
+            "stand": "Lock Laker Stand",
+            "price": 75.00     
+        }
+    },
+    {
+        "pk": 61,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 12,    
+            "stand": "Bedser Stand",
+            "price": 70.00    
+        }
+    },
+    {
+        "pk": 62,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 13,    
+            "stand": "Mount Stand",
+            "price": 55.00     
+        }
+    },
+    {
+        "pk": 63,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 13,    
+            "stand": "Stands A-B",
+            "price": 60.00     
+        }
+    },
+    {
+        "pk": 64,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 13,    
+            "stand": "Stands C & E",
+            "price": 55.00     
+        }
+    },
+    {
+        "pk": 65,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 13,    
+            "stand": "Stand D",
+            "price": 60.00     
+        }
+    },
+    {
+        "pk": 66,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 13,    
+            "stand": "Stands F-G",
+            "price": 65.00     
+        }
+    },
+    {
+        "pk": 67,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 14,    
+            "stand": "Red Area",
+            "price": 25.00     
+        }
+    },
+    {
+        "pk": 68,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 14,    
+            "stand": "Green Area",
+            "price": 30.00     
+        }
+    },
+    {
+        "pk": 69,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 14,    
+            "stand": "Blue Area",
+            "price": 35.00     
+        }
+    },
+    {
+        "pk": 70,
+        "model": "tickets.ticket",
+        "fields": {
+            "stadium": 14,    
+            "stand": "Yellow Area",
+            "price": 20.00     
+        }
+    }
+]

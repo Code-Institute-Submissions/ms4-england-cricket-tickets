@@ -1,0 +1,58 @@
+[
+    {
+        "pk": 1,
+        "model": "tours.tour",
+        "fields": {
+            "name": "India v England",
+            "image_url": "https://images.newindianexpress.com/uploads/user/imagelibrary/2020/4/23/w900X450/Virat_Kohli_PTI.jpg",
+            "image": "kohli.jpg"
+
+        }
+    },
+{
+        "pk": 2,
+        "model": "tours.tour",
+        "fields": {
+            "name": "England v New Zealand",
+            "image_url": "https://p.imgci.com/db/PICTURES/CMS/274100/274155.jpg",
+            "image": "williamson.jpg"      
+        }
+    },
+{
+        "pk": 3,
+        "model": "tours.tour",
+        "fields": {
+            "name": "England v Sri Lanka",   
+            "image_url": "https://p.imgci.com/db/PICTURES/CMS/291000/291054.jpg",
+            "image": "stokes.jpg"       
+        }
+    },
+{
+        "pk": 4,
+        "model": "tours.tour",
+        "fields": {
+            "name": "England v Pakistan",
+            "image_url": "https://p.imgci.com/db/PICTURES/CMS/308200/308268.jpg",
+            "image": "malan.jpg"       
+        }
+    },
+{
+        "pk": 5,
+        "model": "tours.tour",
+        "fields": {
+            "name": "England v India",
+            "image_url": "https://p.imgci.com/db/PICTURES/CMS/279800/279820.jpg",
+            "image": "mo.jpg" 
+        }
+    },
+{
+        "pk": 6,
+        "model": "tours.tour",
+        "fields": {
+            "name": "Pakistan v England",
+            "image_url": "https://p.imgci.com/db/PICTURES/CMS/308300/308334.jpg",
+            "image": "afridi.jpg"
+        }
+    }
+
+]
