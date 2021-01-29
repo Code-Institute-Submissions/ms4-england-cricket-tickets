@@ -18,6 +18,9 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
+        <!--Import font-awesome css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" type="text/css"/>
     {% endblock %}
 
     {% block extra_css%}
@@ -34,6 +37,56 @@
 </head>
 <body>
     <header class="container-fluid fixed-top">
+        <nav class="nav-extended grey darken-4">
+            <ul id="dropdown1" class="dropdown-content">
+                {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                        <li><a href="#!">Product Management</a></li>
+                    {% endif %}
+                    <li class="divider"></li>
+                    <li><a href="#!">My Profile</a></li>                
+                    <li class="divider"></li>
+                    <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+                {% else %}
+                    <li><a href="{% url 'account_signup' %}">Register</a></li>                
+                    <li class="divider"></li>
+                    <li><a href="{% url 'account_login' %}">Log In</a></li>
+                {% endif %}            
+            </ul>
+            <div class="nav-wrapper">
+               <a href="{% url 'home' %}" class="brand-logo left white-text"><img src="#" alt=""></a>
+               <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars white-text"></i></a>
+               <ul class="right hide-on-med-and-down">
+                    <li><a href="{% url 'tours' %}">Tours</a></li>                 
+                    <li><a href="{% url 'faq' %}">FAQ</a></li>
+                    <li><a class="dropdown-trigger" href="{% url 'account' %}" data-target="dropdown1">My Account</a></li>                    
+                    <li>
+                        <a href="{% url 'bag' %}">
+                            <div class="center-align">
+                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <p>
+                                    {% if grand_total %}
+                                        £{{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                        £0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>               
+               </ul>
+            </div>
+         </nav>
+         <!--side navbar-->
+         <ul class="sidenav" id="mobile-demo">
+            <li>
+               <a href="{% url 'home' %}" class="center-align"><img src="#" alt=""></a>
+            </li>
+            <li><a href="{% url 'tours' %}">Tours</a></li>                 
+            <li><a href="{% url 'faq' %}">FAQ</a></li>
+            <li><a class="dropdown-trigger" href="{% url 'account' %}" data-target="dropdown1">My Account</a></li>  
+            <li><a href="{% url 'blog' %}">Bag</a></li>       
+         </ul>
     </header>
     {% if messages %}
     <div class="message-container">       
