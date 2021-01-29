@@ -46,8 +46,23 @@
 </head>
 <body>
     <header class="container-fluid navbar-fixed">
-        <nav class="nav-extended grey darken-4">            
+        <nav class="nav-extended blue">            
             <ul id="dropdown1" class="dropdown-content">
+                {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                        <li><a href="#!">Product Management</a></li>
+                    {% endif %}
+                    <li class="divider"></li>
+                    <li><a href="#!">My Profile</a></li>                
+                    <li class="divider"></li>
+                    <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+                {% else %}
+                    <li><a href="{% url 'account_signup' %}">Register</a></li>                
+                    <li class="divider"></li>
+                    <li><a href="{% url 'account_login' %}">Log In</a></li>
+                {% endif %}            
+            </ul>
+            <ul id="dropdown2" class="dropdown-content">
                 {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
                         <li><a href="#!">Product Management</a></li>
@@ -68,7 +83,7 @@
                <ul class="right hide-on-med-and-down">
                     <li><a href="#">Tours</a></li>                 
                     <li><a href="#">FAQ</a></li>
-                    <li><a class="dropdown-trigger" href="#" data-target="dropdown1">My Account</a></li>                     
+                    <li><a class="dropdown-trigger" href="#" data-target="dropdown2">My Account</a></li>                     
                     <li>
                         <a href="#" class="{% if grand_total %}black-text{% else %}red-text{% endif %}">
                             <div class="center-align">
@@ -85,7 +100,14 @@
                     </li>               
                </ul>
             </div>
-         </nav>
+            <div id="member-offer-banner" class="container-fluid center">
+            <div class="row ">
+                <div class="col black white-text ">
+                    <h4>Register now to receive 10% off your first order!</h4>                
+                </div>       
+            </div>     
+        </div>
+        </nav>
          <!--side navbar-->
          <ul class="sidenav" id="mobile-demo">
             <li>
@@ -96,6 +118,7 @@
             <li><a class="dropdown-trigger" href="#" data-target="dropdown1">My Account</a></li>  
             <li><a href="#">Bag</a></li>       
          </ul>
+        
     </header>
   
 
@@ -111,16 +134,6 @@
     {% endblock %}
 
     {% block postloadjs %}
-        <script type="text/javascript">
-       
-     $(document).ready(function(){
-    //The following functions are used to initialise Materialize CSS
-    $('.sidenav').sidenav({edge: "right"});
-    $(".dropdown-trigger").dropdown(); 
-
-});
-
-        </script>
     {% endblock %}
 
 
