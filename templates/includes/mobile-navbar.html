@@ -1,0 +1,27 @@
+  <!--side navbar-->
+         <ul class="sidenav" id="mobile-demo">
+            <li>
+               <a href="{% url 'home' %}" class="center-align"><img src="#" alt=""></a>
+            </li>
+            <li><a href="#">Tours</a></li>                 
+            <li><a href="#">FAQ</a></li>
+            <li><a class="dropdown-trigger" href="#" data-target="dropdown1">My Account</a></li>  
+            <li><a href="#">Bag</a></li>       
+         </ul>
+<!--Extension for mobile version-->
+                   
+            <ul id="dropdown1" class="dropdown-content">
+                {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                        <li><a href="#!">Product Management</a></li>
+                    {% endif %}
+                    <li class="divider"></li>
+                    <li><a href="#!">My Profile</a></li>                
+                    <li class="divider"></li>
+                    <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+                {% else %}
+                    <li><a href="{% url 'account_signup' %}">Register</a></li>                
+                    <li class="divider"></li>
+                    <li><a href="{% url 'account_login' %}">Log In</a></li>
+                {% endif %}            
+            </ul>

@@ -46,80 +46,17 @@
 </head>
 <body>
     <header class="container-fluid navbar-fixed">
-        <nav class="nav-extended blue">            
-            <ul id="dropdown1" class="dropdown-content">
-                {% if request.user.is_authenticated %}
-                    {% if request.user.is_superuser %}
-                        <li><a href="#!">Product Management</a></li>
-                    {% endif %}
-                    <li class="divider"></li>
-                    <li><a href="#!">My Profile</a></li>                
-                    <li class="divider"></li>
-                    <li><a href="{% url 'account_logout' %}">Log Out</a></li>
-                {% else %}
-                    <li><a href="{% url 'account_signup' %}">Register</a></li>                
-                    <li class="divider"></li>
-                    <li><a href="{% url 'account_login' %}">Log In</a></li>
-                {% endif %}            
-            </ul>
-            <ul id="dropdown2" class="dropdown-content">
-                {% if request.user.is_authenticated %}
-                    {% if request.user.is_superuser %}
-                        <li><a href="#!">Product Management</a></li>
-                    {% endif %}
-                    <li class="divider"></li>
-                    <li><a href="#!">My Profile</a></li>                
-                    <li class="divider"></li>
-                    <li><a href="{% url 'account_logout' %}">Log Out</a></li>
-                {% else %}
-                    <li><a href="{% url 'account_signup' %}">Register</a></li>                
-                    <li class="divider"></li>
-                    <li><a href="{% url 'account_login' %}">Log In</a></li>
-                {% endif %}            
-            </ul>
-            <div class="nav-wrapper">
-               <a href="{% url 'home' %}" class="brand-logo left"><img src="#" alt=""></a>
-               <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars white-text"></i></a>
-               <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Tours</a></li>                 
-                    <li><a href="#">FAQ</a></li>
-                    <li><a class="dropdown-trigger" href="#" data-target="dropdown2">My Account</a></li>                     
-                    <li>
-                        <a href="#" class="{% if grand_total %}black-text{% else %}red-text{% endif %}">
-                            <div class="center-align">
-                                <i class="fas fa-shopping-bag fa-lg"></i>
-                                <p>
-                                    {% if grand_total %}
-                                        £{{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                        £0.00
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </a>
-                    </li>               
-               </ul>
-            </div>
-            <div id="member-offer-banner" class="container-fluid center">
-            <div class="row ">
-                <div class="col black white-text ">
-                    <h4>Register now to receive 10% off your first order!</h4>                
-                </div>       
-            </div>     
-        </div>
-        </nav>
-         <!--side navbar-->
-         <ul class="sidenav" id="mobile-demo">
-            <li>
-               <a href="{% url 'home' %}" class="center-align"><img src="#" alt=""></a>
-            </li>
-            <li><a href="#">Tours</a></li>                 
-            <li><a href="#">FAQ</a></li>
-            <li><a class="dropdown-trigger" href="#" data-target="dropdown1">My Account</a></li>  
-            <li><a href="#">Bag</a></li>       
-         </ul>
-        
+       <nav class="nav-extended" style="background-color:rgb(4,45,82)">  
+            {% include 'includes/desktop-navbar.html' %}
+            {% include 'includes/mobile-navbar.html' %}     
+            <h4 class="center-align white-text" style="background-color:rgb(4,45,82)">Register now to receive 10% off your first order!</h4>                
+           
+        </nav>    
     </header>
+    <!--Offer Banner-->
+
+    
+                
   
 
     {% if messages %}

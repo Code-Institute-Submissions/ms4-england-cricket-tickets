@@ -1,0 +1,38 @@
+<!--Desktop navbar-->
+<div class="nav-wrapper">
+    <a href="{% url 'home' %}" class="brand-logo center"><img src="media/images/logo3.jpg" style="height:80px;" alt=""></a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars white-text"></i></a>
+    <ul class="right hide-on-med-and-down">
+        <li><a href="#">Tours</a></li>                 
+        <li><a href="#">FAQ</a></li>
+        <li><a class="dropdown-trigger" href="#" data-target="dropdown2">My Account</a></li>                     
+        <li>
+            <a href="#" class="{% if grand_total %}black-text{% else %}red-text{% endif %}">
+                <div class="center-align">                   
+                        <i class="fas fa-shopping-bag fa-lg"></i>
+                        {% if grand_total %}
+                            £{{ grand_total|floatformat:2 }}
+                        {% else %}
+                            £0.00
+                        {% endif %}                    
+                </div>
+            </a>
+        </li>               
+    </ul>
+</div>
+<!--Extension for desktop version-->
+<ul id="dropdown2" class="dropdown-content">
+    {% if request.user.is_authenticated %}
+        {% if request.user.is_superuser %}
+            <li><a href="#!">Product Management</a></li>
+        {% endif %}
+        <li class="divider"></li>
+        <li><a href="#!">My Profile</a></li>                
+        <li class="divider"></li>
+        <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+    {% else %}
+        <li><a href="{% url 'account_signup' %}">Register</a></li>                
+        <li class="divider"></li>
+        <li><a href="{% url 'account_login' %}">Log In</a></li>
+    {% endif %}            
+</ul>
