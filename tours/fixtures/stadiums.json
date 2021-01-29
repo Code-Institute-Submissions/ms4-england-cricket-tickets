@@ -1,7 +1,7 @@
 [
     {
         "pk": 1,
-        "model": "stadiums.stadium",
+        "model": "tours.stadium",
         "fields": {
             "name": "M.A. Chidambaram Stadium, Chennai",   
             "friendly_name": "Chennai",     
@@ -11,7 +11,7 @@
     },
     {
         "pk": 2,
-        "model": "stadiums.stadium",
+        "model": "tours.stadium",
         "fields": {
             "name": "Sardar Patel Stadium, Ahmedabad",   
             "friendly_name": "Ahmedabad",     
@@ -21,7 +21,7 @@
     },
     {
         "pk": 3,
-        "model": "stadiums.stadium",
+        "model": "tours.stadium",
         "fields": {
             "name": "Maharashtra Cricket Association Stadium, Pune",   
             "friendly_name": "Pune",     
@@ -31,7 +31,7 @@
     },
     {
         "pk": 4,
-        "model": "stadiums.stadium",
+        "model": "tours.stadium",
         "fields": {
             "name": "Lord's Cricket Ground, London",   
             "friendly_name": "Lord's",     
@@ -41,7 +41,7 @@
     },
     {
         "pk": 5,
-        "model": "stadiums.stadium",
+        "model": "tours.stadium",
         "fields": {
             "name": "Edgbaston, Birmingham",   
             "friendly_name": "Edgbaston",     
@@ -51,7 +51,7 @@
     },
     {
         "pk": 6,
-        "model": "stadiums.stadium",
+        "model": "tours.stadium",
         "fields": {
             "name": "Sophia Gardens, Cardiff",   
             "friendly_name": "Cardiff",     
@@ -61,7 +61,7 @@
     },
   {
         "pk": 7,
-        "model": "stadiums.stadium",
+        "model": "tours.stadium",
         "fields": {
             "name": "The Ageas Bowl, Southampton",   
             "friendly_name": "Southampton",     
@@ -71,7 +71,7 @@
     },
   {
         "pk": 8,
-        "model": "stadiums.stadium",
+        "model": "tours.stadium",
         "fields": {
             "name": "Trent Bridge, Nottingham",   
             "friendly_name": "Nottingham",     
@@ -81,7 +81,7 @@
     },
   {
         "pk": 9,
-        "model": "stadiums.stadium",
+        "model": "tours.stadium",
         "fields": {
             "name": "Headingley, Leeds",   
             "friendly_name": "Leeds",     
@@ -91,7 +91,7 @@
     },
   {
         "pk": 10,
-        "model": "stadiums.stadium",
+        "model": "tours.stadium",
         "fields": {
             "name": "Old Trafford, Manchester",   
             "friendly_name": "Manchester",     
@@ -101,7 +101,7 @@
     },
   {
         "pk": 11,
-        "model": "stadiums.stadium",
+        "model": "tours.stadium",
         "fields": {
             "name": "Emirates Riverside, Chester-le-Street",   
             "friendly_name": "Durham",     
@@ -111,7 +111,7 @@
     },
   {
         "pk": 12,
-        "model": "stadiums.stadium",
+        "model": "tours.stadium",
         "fields": {
             "name": "The Kia Oval, London",   
             "friendly_name": "The Oval, London",     
@@ -121,7 +121,7 @@
     },
   {
         "pk": 13,
-        "model": "stadiums.stadium",
+        "model": "tours.stadium",
         "fields": {
             "name": "The Bristol County Ground, Bristol",   
             "friendly_name": "Bristol",     
@@ -131,7 +131,7 @@
     },
   {
         "pk": 14,
-        "model": "stadiums.stadium",
+        "model": "tours.stadium",
         "fields": {
             "name": "National Stadium, Karachi",   
             "friendly_name": "Karachi",     
