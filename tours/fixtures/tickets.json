@@ -4,7 +4,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 1,    
-            "stand": "Upper Level",
+            "name": "Upper Level",
             "price": 15.00    
         }
     },
@@ -12,7 +12,7 @@
         "pk": 2,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 1,    
+            "name": 1,    
             "stand": "Lower Level",
             "price": 25.00    
         }
@@ -22,7 +22,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 1,    
-            "stand": "Hospitality Box",
+            "name": "Hospitality Box",
             "price": 75.00     
         }
     },
@@ -31,7 +31,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 1,    
-            "stand": "Terrace",
+            "name": "Terrace",
             "price": 5.00     
         }
     },
@@ -40,7 +40,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 2,    
-            "stand": "Lower Level",
+            "name": "Lower Level",
             "price": 35.00     
         }
     },
@@ -49,7 +49,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 2,    
-            "stand": "Upper Level",
+            "name": "Upper Level",
             "price": 25.00     
         }
     },
@@ -58,7 +58,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 2,    
-            "stand": "Hospitality Box",
+            "name": "Hospitality Box",
             "price": 85.00     
         }
     },
@@ -67,7 +67,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 3,    
-            "stand": "North West to North East Stands",
+            "name": "North West to North East Stands",
             "price": 25.00     
         }
     },
@@ -76,7 +76,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 3,    
-            "stand": "West & South West Stands",
+            "name": "West & South West Stands",
             "price": 25.00     
         }
     },
@@ -85,7 +85,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 3,    
-            "stand": "East & South East Stands",
+            "name": "East & South East Stands",
             "price": 25.00     
         }
     },
@@ -94,7 +94,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 3,    
-            "stand": "Pavilion Stand",
+            "name": "Pavilion Stand",
             "price": 35.00     
         }
     },
@@ -103,7 +103,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 3,    
-            "stand": "Pavilion Hospitality Stand",
+            "name": "Pavilion Hospitality Stand",
             "price": 65.00     
         }
     },
@@ -112,7 +112,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 4,    
-            "stand": "Grand Stand",
+            "name": "Grand Stand",
             "price": 65.00    
         }
     },
@@ -121,7 +121,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 4,    
-            "stand": "Compton Stand",
+            "name": "Compton Stand",
             "price": 60.00     
         }
     },
@@ -130,7 +130,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 4,    
-            "stand": "Edrich Stand",
+            "name": "Edrich Stand",
             "price": 65.00     
         }
     },
@@ -139,7 +139,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 4,    
-            "stand": "Mound Stand",
+            "name": "Mound Stand",
             "price": 60.00     
         }
     },
@@ -148,7 +148,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 4,    
-            "stand": "Allen Stand",
+            "name": "Allen Stand",
             "price": 75.00     
         }
     },
@@ -157,7 +157,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 4,    
-            "stand": "Warner Stand",
+            "name": "Warner Stand",
             "price": 75.00     
         }
     },
@@ -166,7 +166,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 5,    
-            "stand": "Eric Hollies Stand",
+            "name": "Eric Hollies Stand",
             "price": 55.00     
         }
     },
@@ -175,7 +175,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 5,    
-            "stand": "South Stand",
+            "name": "South Stand",
             "price": 60.00    
         }
     },
@@ -184,7 +184,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 5,    
-            "stand": "West Stand",
+            "name": "West Stand",
             "price": 65.00     
         }
     },
@@ -193,7 +193,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 5,    
-            "stand": "Drayon Manor Family Stand",
+            "name": "Drayon Manor Family Stand",
             "price": 60.00     
         }
     },
@@ -202,7 +202,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 5,    
-            "stand": "Raglan Stand",
+            "name": "Raglan Stand",
             "price": 65.00     
         }
     },
@@ -211,7 +211,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 5,    
-            "stand": "RES Wyatt Stand",
+            "name": "RES Wyatt Stand",
             "price": 65.00     
         }
     },
@@ -220,7 +220,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 5,    
-            "stand": "Scrivens Opticians/Stanley Barnes Stand",
+            "name": "Scrivens Opticians/Stanley Barnes Stand",
             "price": 75.00     
         }
     },
@@ -229,7 +229,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 6,    
-            "stand": "Riverside Stand",
+            "name": "Riverside Stand",
             "price": 55.00    
         }
     },
@@ -238,7 +238,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 6,    
-            "stand": "Foster's Stand",
+            "name": "Foster's Stand",
             "price": 50.00     
         }
     },
@@ -247,7 +247,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 6,    
-            "stand": "Croeso Stand",
+            "name": "Croeso Stand",
             "price": 55.00     
         }
     },
@@ -256,7 +256,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 6,    
-            "stand": "Castel Howell Stand",
+            "name": "Castel Howell Stand",
             "price": 65.00     
         }
     },
@@ -265,7 +265,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 6,    
-            "stand": "Discover Leeks Pavilion",
+            "name": "Discover Leeks Pavilion",
             "price": 75.00    
         }
     },
@@ -274,7 +274,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 6,    
-            "stand": "Altodigital Stand",
+            "name": "Altodigital Stand",
             "price": 55.00     
         }
     },
@@ -283,7 +283,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 7,    
-            "stand": "East Side, Lower",
+            "name": "East Side, Lower",
             "price": 65.00     
         }
     },
@@ -292,7 +292,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 7,    
-            "stand": "East Side, Upper",
+            "name": "East Side, Upper",
             "price": 55.00     
         }
     },
@@ -301,7 +301,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 7,    
-            "stand": "West Side, Lower",
+            "name": "West Side, Lower",
             "price": 65.00     
         }
     },
@@ -310,7 +310,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 7,    
-            "stand": "West Side, Upper",
+            "name": "West Side, Upper",
             "price": 55.00     
         }
     },
@@ -319,7 +319,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 8,    
-            "stand": "Fox Road Stand",
+            "name": "Fox Road Stand",
             "price": 55.00     
         }
     },
@@ -328,7 +328,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 8,    
-            "stand": "Hound Road",
+            "name": "Hound Road",
             "price": 60.00     
         }
     },
@@ -337,7 +337,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 8,    
-            "stand": "New Stand",
+            "name": "New Stand",
             "price": 55.00     
         }
     },
@@ -346,7 +346,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 8,    
-            "stand": "William Clarke Stand",
+            "name": "William Clarke Stand",
             "price": 65.00     
         }
     },
@@ -355,7 +355,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 8,    
-            "stand": "Radcliffe Road Stand",
+            "name": "Radcliffe Road Stand",
             "price": 60.00     
         }
     },
@@ -364,7 +364,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 9,    
-            "stand": "North East Stand",
+            "name": "North East Stand",
             "price": 55.00     
         }
     },
@@ -373,7 +373,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 9,    
-            "stand": "East Stand",
+            "name": "East Stand",
             "price": 60.00     
         }
     },
@@ -382,7 +382,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 9,    
-            "stand": "Pavilion Stand",
+            "name": "Pavilion Stand",
             "price": 65.00    
         }
     },
@@ -391,7 +391,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 9,    
-            "stand": "Main Stand",
+            "name": "Main Stand",
             "price": 65.00     
         }
     },
@@ -400,7 +400,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 9,    
-            "stand": "Popular Enclosure",
+            "name": "Popular Enclosure",
             "price": 50.00     
         }
     },
@@ -409,7 +409,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 9,    
-            "stand": "1863 Enclosure",
+            "name": "1863 Enclosure",
             "price": 55.00    
         }
     },
@@ -418,7 +418,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 9,    
-            "stand": "Community Stand",
+            "name": "Community Stand",
             "price": 55.00     
         }
     },
@@ -427,7 +427,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 9,    
-            "stand": "Trueman Enclosure",
+            "name": "Trueman Enclosure",
             "price": 65.00    
         }
     },
@@ -436,7 +436,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 10,    
-            "stand": "Stand A",
+            "name": "Stand A",
             "price": 55.00     
         }
     },
@@ -445,7 +445,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 10,    
-            "stand": "Stand B Lower",
+            "name": "Stand B Lower",
             "price": 65.00    
         }
     },
@@ -454,7 +454,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 10,    
-            "stand": "Stand B Upper",
+            "name": "Stand B Upper",
             "price": 60.00     
         }
     },
@@ -463,7 +463,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 10,    
-            "stand": "Stand C Lower",
+            "name": "Stand C Lower",
             "price": 65.00     
         }
     },
@@ -472,7 +472,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 10,    
-            "stand": "Stand C Upper",
+            "name": "Stand C Upper",
             "price": 60.00     
         }
     },
@@ -481,7 +481,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 10,    
-            "stand": "Stand D",
+            "name": "Stand D",
             "price": 65.00     
         }
     },
@@ -490,7 +490,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 10,    
-            "stand": "Stand E",
+            "name": "Stand E",
             "price": 60.00     
         }
     },
@@ -499,7 +499,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 11,    
-            "stand": "North Terrace",
+            "name": "North Terrace",
             "price": 55.00     
         }
     },
@@ -508,7 +508,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 11,    
-            "stand": "North East Terrace",
+            "name": "North East Terrace",
             "price": 50.00     
         }
     },
@@ -517,7 +517,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 11,    
-            "stand": "Family Stand",
+            "name": "Family Stand",
             "price": 45.00     
         }
     },
@@ -526,7 +526,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 11,    
-            "stand": "South Terrace",
+            "name": "South Terrace",
             "price": 55.00     
         }
     },
@@ -535,7 +535,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 11,    
-            "stand": "South West Terrace",
+            "name": "South West Terrace",
             "price": 65.00     
         }
     },
@@ -544,7 +544,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 11,    
-            "stand": "Dan Robson Pavilion",
+            "name": "Dan Robson Pavilion",
             "price": 55.00     
         }
     },
@@ -553,7 +553,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 11,    
-            "stand": "North West Terrace",
+            "name": "North West Terrace",
             "price": 50.00     
         }
     },
@@ -562,7 +562,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 12,    
-            "stand": "OCS Stand",
+            "name": "OCS Stand",
             "price": 65.00     
         }
     },
@@ -571,7 +571,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 12,    
-            "stand": "OCS Family Zone",
+            "name": "OCS Family Zone",
             "price": 55.00     
         }
     },
@@ -580,7 +580,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 12,    
-            "stand": "Peter May Stand",
+            "name": "Peter May Stand",
             "price": 70.00    
         }
     },
@@ -589,7 +589,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 12,    
-            "stand": "Lock Laker Stand",
+            "name": "Lock Laker Stand",
             "price": 75.00     
         }
     },
@@ -598,7 +598,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 12,    
-            "stand": "Bedser Stand",
+            "name": "Bedser Stand",
             "price": 70.00    
         }
     },
@@ -607,7 +607,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 13,    
-            "stand": "Mount Stand",
+            "name": "Mount Stand",
             "price": 55.00     
         }
     },
@@ -616,7 +616,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 13,    
-            "stand": "Stands A-B",
+            "name": "Stands A-B",
             "price": 60.00     
         }
     },
@@ -625,7 +625,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 13,    
-            "stand": "Stands C & E",
+            "name": "Stands C & E",
             "price": 55.00     
         }
     },
@@ -634,7 +634,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 13,    
-            "stand": "Stand D",
+            "name": "Stand D",
             "price": 60.00     
         }
     },
@@ -643,7 +643,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 13,    
-            "stand": "Stands F-G",
+            "name": "Stands F-G",
             "price": 65.00     
         }
     },
@@ -661,7 +661,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 14,    
-            "stand": "Green Area",
+            "name": "Green Area",
             "price": 30.00     
         }
     },
@@ -670,7 +670,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 14,    
-            "stand": "Blue Area",
+            "name": "Blue Area",
             "price": 35.00     
         }
     },
@@ -679,7 +679,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 14,    
-            "stand": "Yellow Area",
+            "name": "Yellow Area",
             "price": 20.00     
         }
     }

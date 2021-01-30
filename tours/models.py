@@ -42,7 +42,7 @@ class Stadium(models.Model):
 
 class Ticket(models.Model):
     stadium = models.ForeignKey('Stadium', null=True, blank=True, on_delete=models.SET_NULL)
-    stand = models.CharField(max_length=254)
+    name = models.CharField(max_length=254)
     price = models.DecimalField(max_digits=6, decimal_places=2)
 
     def __str__(self):
