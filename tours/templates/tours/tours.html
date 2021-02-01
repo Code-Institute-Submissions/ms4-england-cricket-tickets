@@ -12,6 +12,18 @@
             <h2>Tours</h2>
         </div>
     </div>
+    <div class="row">
+        <div class="col">
+            <form method="GET" action="{% url 'tours' %}">
+                <div class="input-field">
+                    <input id="search" type="search" required name="q" placeholder="Search our site">                  
+                        <button type="submit">                            
+                                <i class="fas fa-search"></i>                            
+                        </button>                    
+                </div>
+            </form>
+        </div>        
+    </div>
     {% for tour in tours %}
         <div class="row center-align" style="background-image: url('{{tour.image_url}}'); background-size: cover;
 	-webkit-background-size: cover;	-moz-background-size: cover;	-o-background-size: cover;
