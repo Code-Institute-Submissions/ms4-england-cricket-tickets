@@ -21,7 +21,7 @@
                 {% for match in matches %}
                     {% if match.tour == tour%}
                     <p>{{match.name}}, {{match.stadium}}: {{match.date}}</p>
-                    <a href="" class="btn">Buy tickets</a>
+                    <a href="{% url 'tickets' match.id %}" class="btn">Buy tickets</a>
                     {% endif %}
                 {% endfor %}
             </div>

@@ -8,15 +8,12 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row center-align">
-        <h2>{{match.name}}</h2>
-        <div class="col m6">           
-            
-            
-
-            {% for stadium in stadiums%}
+        <h3>{{match.tour}}: {{match.name}}</h3>
+        {% for stadium in stadiums%}
                 {% if match.stadium == stadium %}
-                    <p>{{stadium.name}}</p>
-                    <img src="{{stadium.image_url}}" alt="" style="max-width: 100%;">
+        <h5>{{stadium.name}}</h5>
+        <div class="col m6">       
+                <a href="{{stadium.image_url}}" target="_blank"><img src="{{stadium.image_url}}" alt="{{stadium.name}}" style="max-width: 100%;"></a>
                 {% endif %}
             {% endfor %}          
            
