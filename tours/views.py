@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Tour, Match, Stadium, Ticket
+from .models import Tour, Match, Stadium, Ticket, Gametype
 
 # Create your views here.
 
@@ -10,9 +10,18 @@ def tours(request):
 
     tours = Tour.objects.all()
     matches = Match.objects.all()
+    gametypes = Gametype.objects.all()
+    stadiums = Stadium.objects.all()
+    tour = None
     query = None
 
     if request.GET:
+        if 'tour' in request.GET:
+            tours = request.GET['tour']
+            tours = tours.filter(tour__name__in=tours)
+            tour = tours.objects.filter(name__in=tours)
+
+    
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -25,6 +34,8 @@ def tours(request):
     context = {
         'tours': tours,
         'matches': matches,
+        'gametypes': gametypes,
+        'stadiums': stadiums,
         'search_term': query
     }
 
