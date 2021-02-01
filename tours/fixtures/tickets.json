@@ -12,8 +12,8 @@
         "pk": 2,
         "model": "tours.ticket",
         "fields": {
-            "name": 1,    
-            "stand": "Lower Level",
+            "stadium": 1,    
+            "name": "Lower Level",
             "price": 25.00    
         }
     },
@@ -652,7 +652,7 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 14,    
-            "stand": "Red Area",
+            "name": "Red Area",
             "price": 25.00     
         }
     },

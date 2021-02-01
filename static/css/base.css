@@ -26,10 +26,10 @@ body{
 
 .fullscreen-video-wrap {
 	position: absolute;
-	top: -100px;
+	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100vh;
+	height: 150vh;
 	overflow: hidden;
 }
 
