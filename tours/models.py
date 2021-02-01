@@ -21,6 +21,8 @@ class Tour(models.Model):
         return self.name
 
 class Match(models.Model):
+    class Meta:
+        verbose_name_plural = 'Matches'
     tour = models.ForeignKey('Tour', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     stadium = models.ForeignKey('Stadium', null=True, blank=True, on_delete=models.SET_NULL)
