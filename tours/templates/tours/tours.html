@@ -30,7 +30,7 @@
                 <!-- Dropdown Structure -->
                 <ul id="dropdown3" class="dropdown-content">
                     {% for tour in tours %}
-                    <li><a href="{% url 'tours' %}?tour={{g.friendly_name}}">{{tour.name}}</a></li>                    
+                    <li><a href="{% url 'tours' %}?tour={{tour.name}}">{{tour.friendly_name}}</a></li>                    
                     <li class="divider" tabindex="-1"></li>
                     {% endfor %}                    
                 </ul>
@@ -54,7 +54,7 @@
         <div class="row center-align" style="background-image: url('{{tour.image_url}}'); background-size: cover;
 	-webkit-background-size: cover;	-moz-background-size: cover;	-o-background-size: cover;
 	background-repeat: no-repeat;	background-position: 50% 50%;">
-            <h3 style="padding-top: 25px;">{{tour.name}}</h3>
+            <h3 style="padding-top: 25px;">{{tour.friendly_name}}</h3>
             <div class="col m6 offset-m6 center-align">                
                 {% for match in matches %}
                     {% if match.tour == tour%}

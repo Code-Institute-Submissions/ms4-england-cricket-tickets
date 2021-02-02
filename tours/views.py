@@ -17,9 +17,12 @@ def tours(request):
 
     if request.GET:
         if 'tour' in request.GET:
-            tours = request.GET['tour']
-            tours = tours.filter(tour__name__in=tours)
-            tour = tours.objects.filter(name__in=tours)
+            all_tours = Tour.objects.all()
+            tour = request.GET['tour']
+            tours = all_tours.filter(name=tour)
+            print(all_tours)
+            print(tour)
+            print(tours)
 
     
         if 'q' in request.GET:
