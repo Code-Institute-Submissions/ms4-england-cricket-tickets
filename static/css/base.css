@@ -60,3 +60,15 @@ body{
         height: 120px;
     }
 }
+
+.btt-button{
+    height: 42px;
+    width: 200px;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+
+.btt-link{
+    cursor: pointer;
+}

@@ -23,33 +23,33 @@
                 </div>
             </form>
         </div>   
-        <div class="col m4 center-align">
-            <div class="row">
-                 <!-- Dropdown Trigger -->
-                <a class="dropdown-trigger white-text" href="#" data-target="dropdown3">Select Match</a>
-                <!-- Dropdown Structure -->
-                <ul id="dropdown3" class="dropdown-content">
-                    {% for tour in tours %}
-                    <li><a href="{% url 'tours' %}?tour={{tour.name}}">{{tour.friendly_name}}</a></li>                    
-                    <li class="divider" tabindex="-1"></li>
-                    {% endfor %}                    
-                </ul>
-            </div>
+        <div class="col m4 center-align">            
+                <!-- Dropdown Trigger -->
+            <a class="dropdown-trigger white-text" href="#" data-target="dropdown3">Select Match</a>
+            <!-- Dropdown Structure -->
+            <ul id="dropdown3" class="dropdown-content">
+                {% for tour in tours %}
+                <li><a href="{% url 'tours' %}?tour={{tour.name}}">{{tour.friendly_name}}</a></li>                    
+                <li class="divider" tabindex="-1"></li>
+                {% endfor %}                    
+            </ul>
+            <a href="{% url 'tours' %}" class="btn">Reset</a>         
         </div>  
         <div class="col m4 center-align">
-            <div class="row">
+            
                  <!-- Dropdown Trigger -->
                 <a class="dropdown-trigger white-text" href="#" data-target="dropdown4">Select Stadium Location</a>
                 <!-- Dropdown Structure -->
                 <ul id="dropdown4" class="dropdown-content">
                     {% for s in stadiums %}
-                    <li><a href="#!">{{s.friendly_name}}</a></li>                    
+                    <li><a href="{% url 'tours' %}?stadium={{s.name}}">{{s.name}}</a></li>                    
                     <li class="divider" tabindex="-1"></li>
                     {% endfor %}                    
                 </ul>
             </div>
-        </div>  
+         
     </div>
+    
     {% for tour in tours %}
         <div class="row center-align" style="background-image: url('{{tour.image_url}}'); background-size: cover;
 	-webkit-background-size: cover;	-moz-background-size: cover;	-o-background-size: cover;
@@ -58,7 +58,7 @@
             <div class="col m6 offset-m6 center-align">                
                 {% for match in matches %}
                     {% if match.tour == tour%}
-                    <p>{{match.name}}, {{match.stadium}}: {{match.date}}</p>
+                    <p>{{match.name}}, {{match.stadium.full_name}}: {{match.date}}</p>
                     <a href="{% url 'tickets' match.id %}" class="btn">Buy tickets</a>
                     {% endif %}
                 {% endfor %}
@@ -68,5 +68,17 @@
     {% endfor %}
                     
 </div>
+<div class="btt-button">
+    <a href="" class="btn btt-link">Back to Top</a>
+</div>
 
+{% endblock %}
+{% block postloadjs %}
+    {{block.super}}
+    <script type="text/javascript">
+        $(.btt-link).click(function(e){
+            window.scrollTo(0,0)
+        })
+    </script>
+    {{endblock}}
 {% endblock %}

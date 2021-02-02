@@ -23,7 +23,7 @@ class MatchAdmin(admin.ModelAdmin):
 class StadiumAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-        'friendly_name',
+        'full_name',
         'image',
         'image_url'
     )

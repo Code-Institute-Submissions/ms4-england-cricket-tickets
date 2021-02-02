@@ -20,11 +20,12 @@ def tours(request):
             all_tours = Tour.objects.all()
             tour = request.GET['tour']
             tours = all_tours.filter(name=tour)
-            print(all_tours)
-            print(tour)
-            print(tours)
 
-    
+        if 'stadium' in request.GET:
+            all_stadiums = Stadium.objects.all()
+            stadium = request.GET['stadium']
+            stadiums = all_stadiums.filter(match__name=stadium)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -54,11 +55,13 @@ def tickets(request, match_id):
     match = get_object_or_404(Match, pk=match_id)
     stadiums = Stadium.objects.all()
     tickets = Ticket.objects.all()
+    tours = Tour.objects.all()
 
     context = {
         'match': match,
         'stadiums': stadiums,
-        'tickets': tickets
+        'tickets': tickets,
+        'tours': tours
     }
 
     return render(request, 'tours/tickets.html', context)
