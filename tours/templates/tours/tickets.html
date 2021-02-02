@@ -18,14 +18,36 @@
             {% endfor %}          
            
         </div>
-        <div class="col m6">
+        <div class="col m6">            
              {% for ticket in tickets %}
                 {% if match.stadium == ticket.stadium %}
                     <p>{{ ticket.name }}: {{ticket.price}}</p>
-                {% endif %}
+                    {% if match.gametype.name == "Test Match" %}
+                        <form>
+                           <select>
+                            <option value="" disabled selected>Choose Day</option>
+                            <option value="day1">Day 1</option>
+                            <option value="day2">Day 2</option>
+                            <option value="day3">Day 3</option>
+                            </select>
+                            <label>Choose Day</label>
+                        </form>
+                    {% endif %}
+                    <form>
+                           <select>
+                            <option value="" disabled selected>Choose Quantity</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            </select>
+                            <label>Choose Quantity</label>
+                        </form>
+                        <a href="" class="btn">Buy Ticket</a>
+                {% endif %}                
             {% endfor %}
+        </div>        
         </div>
-    </div>
+    
 </div>
 
 {% endblock %}
