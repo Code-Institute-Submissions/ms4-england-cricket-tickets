@@ -20,7 +20,6 @@ def add_to_cart(request, ticket_id):
     else:
         cart[ticket_id] = quantity
 
-    request.session['cart'] = cart
-    print(request.session['cart'])
+    request.session['cart'] = cart    
     return redirect(redirect_url)
 

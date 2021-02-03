@@ -7,7 +7,7 @@
         <li><a href="#">FAQ</a></li>
         <li><a class="dropdown-trigger" href="#" data-target="dropdown2">My Account</a></li>                     
         <li>
-            <a href="{% url 'view_cart' %}" class="{% if grand_total %}black-text{% else %}red-text{% endif %}">
+            <a href="{% url 'view_cart' %}" class="{% if grand_total %}white-text{% else %}red-text{% endif %}">
                 <div class="center-align">                   
                         <i class="fas fa-shopping-bag fa-lg"></i>
                         {% if grand_total %}
