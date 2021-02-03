@@ -72,3 +72,7 @@ body{
 .btt-link{
     cursor: pointer;
 }
+
+.select-dropdown .dropdown-trigger{
+    color: white;
+}
