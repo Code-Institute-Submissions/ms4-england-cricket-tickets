@@ -6,6 +6,7 @@ def view_cart(request):
     """
     A view that renders the cart contents page
     """
+    
     return render(request, 'cart/cart.html',)
 
 
@@ -20,6 +21,7 @@ def add_to_cart(request, ticket_id):
     else:
         cart[ticket_id] = quantity
 
-    request.session['cart'] = cart    
+    request.session['cart'] = cart
+    
     return redirect(redirect_url)
 

@@ -1,7 +1,7 @@
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
-from tours.models import Ticket
+from tours.models import Ticket, Match
 
 
 def cart_contents(request):
@@ -25,12 +25,16 @@ def cart_contents(request):
 
     grand_total = total + delivery
 
+    matches = Match.objects.all()
+
     context = {
         'cart_items': cart_items,
         'total': total,
         'product_count': product_count,
         'delivery': delivery,
         'grand_total': grand_total,
+        'matches': matches
+ 
     }
 
     return context

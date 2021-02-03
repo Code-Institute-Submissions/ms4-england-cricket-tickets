@@ -16,7 +16,46 @@
         <div class="col12 center">
             {% if cart_items %}
                 <div class="table">
-                    {{cart_items}}
+                          <table class="striped">
+                            <thead>
+                            <tr>
+                                <th>Match</th>
+                                <th>Stadium</th>
+                                <th>Stand</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Subtotal</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in cart_items %}
+                            <tr>
+                                <td>tbc</td>
+                                <td>{{item.ticket.stadium.name}}</td>
+                                <td>{{item.ticket}}</td>
+                                <td>{{item.ticket.price}}</td>
+                                <td>{{item.quantity}}</td>
+                                <td>tbc: {{item.ticket.price}}**{{item.quantity}}</td>                         
+                            </tr>
+                                {% endfor %}                        
+                            </tbody>
+                        </table>
+                <div class="row center">
+                    <h6>Total: £{{total|floatformat:2}}</h6>
+                    <h6>Delivery: £{{delivery|floatformat:2}}</h6>
+                    <h6><strong>Grand Total: £{{grand_total|floatformat:2}}</strong></h6>
+                </div>
+                <div class="row center">
+                    <a href="{% url 'tours' %}" class="btn">
+                        <i class="fas fa-chevron-left"> Back Tours</i>
+                    </a>
+                    <a href="{% url 'tours' %}" class="btn">
+                        <i class="fas fa-lock"> Secure Checkout</i>
+                    </a>
+                </div>
+
+                
+                   
                 </div>
             {% else %}
                 <p>Your cart is empty.</p>
