@@ -18,31 +18,29 @@
             {% endfor %}          
            
         </div>
-        <div class="col m6">            
+        <div class="col m6 center">            
              {% for ticket in tickets %}
                 {% if match.stadium == ticket.stadium %}
                     <p>{{ ticket.name }}: {{ticket.price}}</p>
                     {% if match.gametype.name == "Test Match" %}
-                        <form>
-                           <select>
+                        <form action="{% url 'add_to_cart' ticket.id %}" method="POST">
+                            {% csrf_token %}
+                            <!--add days later
+                           <select name="day" data-item_id="{{ticket.id}}" id="id_day_{{ticket.id}}">
                             <option value="" disabled selected>Choose Day</option>
                             <option value="day1">Day 1</option>
                             <option value="day2">Day 2</option>
                             <option value="day3">Day 3</option>
                             </select>
-                            <label>Choose Day</label>
-                        </form>
+                            <label>Choose Day</label>  
+                            -->                      
                     {% endif %}
-                    <form>
-                           <select>
-                            <option value="" disabled selected>Choose Quantity</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            </select>
-                            <label>Choose Quantity</label>
+                             <input class="qty_input white-text" type="number" name="quantity" value="1" min="1" max="4" data-item_id="{{ ticket.id }}" id="id_qty_{{ ticket.id }}">
+                             <input type="submit" class="btn" value="Buy Tickets">
+                             <input type="hidden" name="redirect_url" value="{{request.path}}">
                         </form>
-                        <a href="" class="btn">Buy Ticket</a>
+                        <a href="{% url 'tours'%}" class="btn"><i class="fas fa-chevron-left"></i> Back to Tours</a>
+                        
                 {% endif %}                
             {% endfor %}
         </div>        
