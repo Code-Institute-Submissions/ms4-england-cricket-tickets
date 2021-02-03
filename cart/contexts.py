@@ -1,7 +1,7 @@
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
-from tours.models import Ticket, Match
+from tours.models import Ticket, Match, Gametype
 
 
 def cart_contents(request):
@@ -11,21 +11,34 @@ def cart_contents(request):
     product_count = 0
     cart = request.session.get('cart', {})
 
-    for item_id, quantity in cart.items():
-        ticket = get_object_or_404(Ticket, pk=item_id)
-        total += quantity * ticket.price
-        product_count += quantity
-        cart_items.append({
-            'item_id': item_id,
-            'quantity': quantity,
-            'ticket': ticket,
-        })
+    for item_id, item_data in cart.items():
+        if isinstance(item_data, int):
+            ticket = get_object_or_404(Ticket, pk=item_id)
+            total += item_data * ticket.price
+            product_count += item_data
+            cart_items.append({
+                'item_id': item_id,
+                'quantity': item_data,
+                'ticket': ticket,
+            })
+        else:
+            ticket = get_object_or_404(Ticket, pk=item_id)
+            for day, quantity in item_data['items_by_day'].items():
+                total += quantity * ticket.price
+                product_count += quantity
+                cart_items.append({
+                    'item_id': item_id,
+                    'quantity': item_data,
+                    'ticket': ticket,
+                    'day': day
+                })
 
     delivery = total * Decimal(settings.DELIVERY_CHARGE / 100)
 
     grand_total = total + delivery
 
-    matches = Match.objects.all()
+    match = Match.objects.all()
+    gametype = Gametype.objects.all()
 
     context = {
         'cart_items': cart_items,
@@ -33,7 +46,8 @@ def cart_contents(request):
         'product_count': product_count,
         'delivery': delivery,
         'grand_total': grand_total,
-        'matches': matches
+        'match': match,
+        'gametype': gametype
  
     }
 
