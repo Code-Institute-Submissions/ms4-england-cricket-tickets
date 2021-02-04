@@ -14,6 +14,7 @@ def tours(request):
     stadiums = Stadium.objects.all()
     tour = None
     query = None
+    stadium = None
 
     if request.GET:
         if 'tour' in request.GET:
@@ -24,7 +25,7 @@ def tours(request):
         if 'stadium' in request.GET:
             all_stadiums = Stadium.objects.all()
             stadium = request.GET['stadium']
-            stadiums = all_stadiums.filter(match__name=stadium)
+            stadiums = all_stadiums.filter(match__stadium__name__icontains=stadium)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -32,7 +33,7 @@ def tours(request):
                 messages.error(request, "You haven't searched for anything, please try again!")
                 return redirect(reverse('tours'))
 
-            queries = Q(name__icontains=query)
+            queries = Q(name__icontains=query)|Q(match__stadium__name__icontains=query)
             tours = tours.filter(queries)
 
     context = {

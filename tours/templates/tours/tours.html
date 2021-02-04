@@ -33,7 +33,7 @@
                 <li class="divider" tabindex="-1"></li>
                 {% endfor %}                    
             </ul>
-            <a href="{% url 'tours' %}" class="btn">Reset</a>         
+            <a href="{% url 'tours' %}" class="btn btn-white">Reset</a>         
         </div>  
         <div class="col m4 center-align">
             
@@ -53,13 +53,13 @@
     {% for tour in tours %}
         <div class="row center-align" style="background-image: url('{{tour.image_url}}'); background-size: cover;
 	-webkit-background-size: cover;	-moz-background-size: cover;	-o-background-size: cover;
-	background-repeat: no-repeat;	background-position: 50% 50%;">
+	background-repeat: no-repeat;	background-position: 50% 50%; min-height: 60vh;">
             <h3 style="padding-top: 25px;">{{tour.friendly_name}}</h3>
             <div class="col m6 offset-m6 center-align">                
                 {% for match in matches %}
                     {% if match.tour == tour%}
                     <p>{{match.name}}, {{match.stadium.full_name}}: {{match.date}}</p>
-                    <a href="{% url 'tickets' match.id %}" class="btn">Buy tickets</a>
+                    <a href="{% url 'tickets' match.id %}" class="btn btn-blue" >Buy tickets</a>
                     {% endif %}
                 {% endfor %}
             </div>
@@ -69,7 +69,7 @@
                     
 </div>
 <div class="btt-button">
-    <a href="" class="btn btt-link">Back to Top</a>
+    <a href="" class="btn btn-blue btt-link">Back to Top</a>
 </div>
 
 {% endblock %}

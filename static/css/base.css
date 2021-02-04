@@ -61,6 +61,24 @@ body{
     }
 }
 
+.btn-blue{
+    background-color: rgb(4,45,82);
+}
+
+.btn-blue:hover{
+    background-color: white;
+    color: rgb(4,45,82);;
+}
+
+.btn-white{
+    background-color: white;
+    color: rgb(4,45,82);
+}
+.btn-white:hover{
+    color: white;
+    background-color: rgb(4,45,82);
+}
+
 .btt-button{
     height: 42px;
     width: 200px;

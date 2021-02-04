@@ -9,7 +9,7 @@
 <div class="container">
     <div class="row">
         <div class="col12 center ">
-            <h2>Cart</h2>
+            <h2>Cart</h2>            
         </div>
     </div>
     <div class="row">
@@ -33,9 +33,13 @@
                             <tbody>
                                 {% for item in cart_items %}
                             <tr>
-                                <td>tbc</td>
-                                <td>{{item.ticket.stadium.name}}</td>
-                                <td>{% if match.gametype.name == "Test Match" %}{{item.day}}{%else%}N/A{%endif%}</td>
+                                {% for m in match %}
+                                    {% if m.stadium == item.ticket.stadium %}
+                                        <td>{{m.tour.friendly_name}}: {{m.name}}</td>
+                                    {% endif %}
+                                {% endfor %}
+                                <td>{{item.ticket.stadium}}</td>                                
+                                <td>{% if item.ticket.match.gametype == "Test Match" %}{{item.day}}{%else%}N/A{%endif%}</td>                                
                                 <td>{{item.ticket}}</td>
                                 <td>{{item.ticket.price}}</td>
                                 <td>{{item.quantity}}</td>
@@ -51,10 +55,10 @@
                 </div>
                 <div class="row center">
                     <a href="{% url 'tours' %}" class="btn">
-                        <i class="fas fa-chevron-left"> Back Tours</i>
+                        <i class="fas fa-chevron-left"> </i> Back to Tours
                     </a>
-                    <a href="{% url 'tours' %}" class="btn">
-                        <i class="fas fa-lock"> Secure Checkout</i>
+                    <a href="{% url 'tours' %}" class="btn ">
+                        <i class="fas fa-lock"> </i> Secure Checkout
                     </a>
                 </div>
 
