@@ -5,6 +5,7 @@
         "fields": {
             "stadium": 1,    
             "name": "UpperLevelMatch1",
+            "friendly_name": "Upper Level",
             "price": 15.00,
             "match": 1 
         }
@@ -15,6 +16,7 @@
         "fields": {
             "stadium": 1,    
             "name": "LowerLevelMatch1",
+            "friendly_name": "Lower Level",
             "price": 25.00,
             "match": 1
         }
@@ -25,6 +27,7 @@
         "fields": {
             "stadium": 1,    
             "name": "HospitalityBoxMatch1",
+            "friendly_name": "Hospitality Box",
             "price": 75.00,
             "match": 1   
         }
@@ -35,6 +38,7 @@
         "fields": {
             "stadium": 1,    
             "name": "TerraceMatch1",
+            "friendly_name": "Terrace",
             "price": 5.00,
             "match": 1 
         }
@@ -45,6 +49,7 @@
         "fields": {
             "stadium": 1,    
             "name": "UpperLevelMatch2",
+            "friendly_name": "Upper Level",
             "price": 15.00,
             "match": 2 
         }
@@ -55,6 +60,7 @@
         "fields": {
             "stadium": 1,    
             "name": "LowerLevelMatch2",
+            "friendly_name": "Lower Level",
             "price": 25.00,
             "match": 2
         }
@@ -65,6 +71,7 @@
         "fields": {
             "stadium": 1,    
             "name": "HospitalityBoxMatch2",
+            "friendly_name": "Hospitality Box",
             "price": 75.00,
             "match": 2   
         }
@@ -75,6 +82,7 @@
         "fields": {
             "stadium": 1,    
             "name": "TerraceMatch2",
+            "friendly_name": "Terrace",
             "price": 5.00,
             "match": 2  
         }
@@ -85,6 +93,7 @@
         "fields": {
             "stadium": 2,    
             "name": "LowerLevelMatch3",
+            "friendly_name": "Lower Level",
             "price": 35.00,
             "match": 3   
         }
@@ -95,6 +104,7 @@
         "fields": {
             "stadium": 2,    
             "name": "UpperLevelMatch3",
+            "friendly_name": "Upper Level",
             "price": 25.00,
             "match": 3       
         }
@@ -105,6 +115,7 @@
         "fields": {
             "stadium": 2,    
             "name": "HospitalityBoxMatch3",
+            "friendly_name": "Hospitality Box",
             "price": 85.00,
             "match": 3      
         }
@@ -115,6 +126,7 @@
         "fields": {
             "stadium": 2,    
             "name": "LowerLevelMatch4",
+            "friendly_name": "Lower Level",
             "price": 35.00,
             "match": 4   
         }
@@ -125,6 +137,7 @@
         "fields": {
             "stadium": 2,    
             "name": "UpperLevelMatch4",
+            "friendly_name": "Upper Level",
             "price": 25.00,
             "match": 4      
         }
@@ -135,6 +148,7 @@
         "fields": {
             "stadium": 2,    
             "name": "HospitalityBoxMatch4",
+            "friendly_name": "Hospitality Box",
             "price": 85.00,
             "match": 4      
         }
@@ -145,6 +159,7 @@
         "fields": {
             "stadium": 2,    
             "name": "LowerLevelMatch5",
+            "friendly_name": "Lower Level",
             "price": 35.00,
             "match": 5  
         }
@@ -155,6 +170,7 @@
         "fields": {
             "stadium": 2,    
             "name": "UpperLevelMatch5",
+            "friendly_name": "Upper Level",
             "price": 25.00,
             "match": 5   
         }
@@ -165,6 +181,7 @@
         "fields": {
             "stadium": 2,    
             "name": "HospitalityBoxMatch5",
+            "friendly_name": "Hospitality Box",
             "price": 85.00,
             "match": 5     
         }
@@ -175,6 +192,7 @@
         "fields": {
             "stadium": 2,    
             "name": "LowerLevelMatch6",
+            "friendly_name": "Lower Level",
             "price": 35.00,
             "match": 6  
         }
@@ -185,6 +203,7 @@
         "fields": {
             "stadium": 2,    
             "name": "UpperLevelMatch6",
+            "friendly_name": "Upper Level",
             "price": 25.00,
             "match": 6 
         }
@@ -195,6 +214,7 @@
         "fields": {
             "stadium": 2,    
             "name": "HospitalityBoxMatch6",
+            "friendly_name": "Hospitality Box",
             "price": 85.00,
             "match": 6    
         }
@@ -205,6 +225,7 @@
         "fields": {
             "stadium": 2,    
             "name": "LowerLevelMatch7",
+            "friendly_name": "Lower Level",
             "price": 35.00,
             "match": 7  
         }
@@ -215,6 +236,7 @@
         "fields": {
             "stadium": 2,    
             "name": "UpperLevelMatch7",
+            "friendly_name": "Upper Level",
             "price": 25.00,
             "match": 7
         }
@@ -225,6 +247,7 @@
         "fields": {
             "stadium": 2,    
             "name": "HospitalityBoxMatch7",
+            "friendly_name": "Hospitality Box",
             "price": 85.00,
             "match": 7   
         }
@@ -235,6 +258,7 @@
         "fields": {
             "stadium": 2,    
             "name": "LowerLevelMatch8",
+            "friendly_name": "Lower Level",
             "price": 35.00,
             "match": 8  
         }
@@ -245,6 +269,7 @@
         "fields": {
             "stadium": 2,    
             "name": "UpperLevelMatch8",
+            "friendly_name": "Upper Level",
             "price": 25.00,
             "match": 8
         }
@@ -255,6 +280,7 @@
         "fields": {
             "stadium": 2,    
             "name": "HospitalityBoxMatch8",
+            "friendly_name": "Hospitality Box",
             "price": 85.00,
             "match": 8  
         }
@@ -265,6 +291,7 @@
         "fields": {
             "stadium": 2,    
             "name": "LowerLevelMatch9",
+            "friendly_name": "Lower Level",
             "price": 35.00,
             "match": 9  
         }
@@ -275,6 +302,7 @@
         "fields": {
             "stadium": 2,    
             "name": "UpperLevelMatch9",
+            "friendly_name": "Upper Level",
             "price": 25.00,
             "match": 9
         }
@@ -285,6 +313,7 @@
         "fields": {
             "stadium": 2,    
             "name": "HospitalityBoxMatch9",
+            "friendly_name": "Hospitality Box",
             "price": 85.00,
             "match": 9 
         }
@@ -296,6 +325,7 @@
         "fields": {
             "stadium": 3,    
             "name": "NorthWesttoNorthEastStandsMatch10",
+            "friendly_name": "North West to North East Stands",
             "price": 25.00,
             "match": 10  
         }
@@ -306,6 +336,7 @@
         "fields": {
             "stadium": 3,    
             "name": "West&SouthWestStandsMatch10",
+            "friendly_name": "West to South West Stands",
             "price": 25.00,
             "match": 10      
         }
@@ -316,6 +347,7 @@
         "fields": {
             "stadium": 3,    
             "name": "East&SouthEastStandsMatch10",
+            "friendly_name": "East to South East Stands",
             "price": 25.00,
             "match": 10     
         }
@@ -326,6 +358,7 @@
         "fields": {
             "stadium": 3,    
             "name": "PavilionStandMatch10",
+            "friendly_name": "Pavilion Stand",
             "price": 35.00,
             "match": 10      
         }
@@ -336,6 +369,7 @@
         "fields": {
             "stadium": 3,    
             "name": "PavilionHospitalityStandMatch10",
+            "friendly_name": "Pavilion Hospitality Stand",
             "price": 65.00,
             "match": 10      
         }
@@ -346,6 +380,7 @@
         "fields": {
             "stadium": 3,    
             "name": "NorthWesttoNorthEastStandsMatch11",
+            "friendly_name": "North West to North East Stands",
             "price": 25.00,
             "match": 11  
         }
@@ -356,6 +391,7 @@
         "fields": {
             "stadium": 3,    
             "name": "West&SouthWestStandsMatch11",
+            "friendly_name": "West to South West Stands",
             "price": 25.00,
             "match": 11      
         }
@@ -366,6 +402,7 @@
         "fields": {
             "stadium": 3,    
             "name": "East&SouthEastStandsMatch11",
+            "friendly_name": "East to South East Stands",
             "price": 25.00,
             "match": 11     
         }
@@ -376,6 +413,7 @@
         "fields": {
             "stadium": 3,    
             "name": "PavilionStandMatch11",
+            "friendly_name": "Pavilion Stand",
             "price": 35.00,
             "match": 11      
         }
@@ -386,6 +424,7 @@
         "fields": {
             "stadium": 3,    
             "name": "PavilionHospitalityStandMatch11",
+            "friendly_name": "Pavilion Hospitality Stand",
             "price": 65.00,
             "match": 11      
         }
@@ -396,6 +435,7 @@
         "fields": {
             "stadium": 3,    
             "name": "NorthWesttoNorthEastStandsMatch12",
+            "friendly_name": "North West to North East Stands",
             "price": 25.00,
             "match": 12
         }
@@ -406,6 +446,7 @@
         "fields": {
             "stadium": 3,    
             "name": "West&SouthWestStandsMatch12",
+            "friendly_name": "West to South West Stands",
             "price": 25.00,
             "match": 12    
         }
@@ -416,6 +457,7 @@
         "fields": {
             "stadium": 3,    
             "name": "East&SouthEastStandsMatch12",
+            "friendly_name": "East to South East Stands",
             "price": 25.00,
             "match": 12     
         }
@@ -426,6 +468,7 @@
         "fields": {
             "stadium": 3,    
             "name": "PavilionStandMatch12",
+            "friendly_name": "Pavilion Stand",
             "price": 35.00,
             "match": 12     
         }
@@ -436,6 +479,7 @@
         "fields": {
             "stadium": 3,    
             "name": "PavilionHospitalityStandMatch12",
+            "friendly_name": "Pavilion Hospitality Stand",
             "price": 65.00,
             "match": 12      
         }
@@ -446,6 +490,7 @@
         "fields": {
             "stadium": 4,    
             "name": "GrandStandMatch13",
+            "friendly_name": "Grand Stand",
             "price": 65.00,
             "match": 13
               
@@ -457,6 +502,7 @@
         "fields": {
             "stadium": 4,    
             "name": "ComptonStandMatch13",
+            "friendly_name": "Compton Stand",
             "price": 60.00,
             "match": 13     
         }
@@ -467,6 +513,7 @@
         "fields": {
             "stadium": 4,    
             "name": "EdrichStandMatch13",
+            "friendly_name": "Edrich Stand",
             "price": 65.00,
             "match": 13   
         }
@@ -477,6 +524,7 @@
         "fields": {
             "stadium": 4,    
             "name": "MoundStandMatch13",
+            "friendly_name": "Mound Stand",
             "price": 60.00,
             "match": 13     
         }
@@ -487,6 +535,7 @@
         "fields": {
             "stadium": 4,    
             "name": "AllenStandMatch13",
+            "friendly_name": "Allen Stand",
             "price": 75.00,
             "match": 13     
         }
@@ -497,6 +546,7 @@
         "fields": {
             "stadium": 4,    
             "name": "WarnerStandMatch13",
+            "friendly_name": "Warner Stand",
             "price": 75.00,
             "match": 13    
         }
@@ -507,6 +557,7 @@
         "fields": {
             "stadium": 4,    
             "name": "GrandStandMatch22",
+            "friendly_name": "Grand Stand",
             "price": 65.00,
             "match": 22
               
@@ -518,6 +569,7 @@
         "fields": {
             "stadium": 4,    
             "name": "ComptonStandMatch22",
+            "friendly_name": "Compton Stand",
             "price": 60.00,
             "match": 22     
         }
@@ -528,6 +580,7 @@
         "fields": {
             "stadium": 4,    
             "name": "EdrichStandMatch22",
+            "friendly_name": "Edrich Stand",
             "price": 65.00,
             "match": 22   
         }
@@ -538,6 +591,7 @@
         "fields": {
             "stadium": 4,    
             "name": "MoundStandMatch22",
+            "friendly_name": "Mound Stand",
             "price": 60.00,
             "match": 22     
         }
@@ -548,6 +602,7 @@
         "fields": {
             "stadium": 4,    
             "name": "AllenStandMatch22",
+            "friendly_name": "Allen Stand",
             "price": 75.00,
             "match": 22     
         }
@@ -558,6 +613,7 @@
         "fields": {
             "stadium": 4,    
             "name": "WarnerStandMatch22",
+            "friendly_name": "Warner Stand",
             "price": 75.00,
             "match": 22    
         }
@@ -568,6 +624,7 @@
         "fields": {
             "stadium": 4,    
             "name": "GrandStandMatch28",
+            "friendly_name": "Grand Stand",
             "price": 65.00,
             "match": 28
               
@@ -579,6 +636,7 @@
         "fields": {
             "stadium": 4,    
             "name": "ComptonStandMatch28",
+            "friendly_name": "Compton Stand",
             "price": 60.00,
             "match": 28     
         }
@@ -589,6 +647,7 @@
         "fields": {
             "stadium": 4,    
             "name": "EdrichStandMatch28",
+            "friendly_name": "Edrich Stand",
             "price": 65.00,
             "match": 28  
         }
@@ -599,6 +658,7 @@
         "fields": {
             "stadium": 4,    
             "name": "MoundStandMatch28",
+            "friendly_name": "Mound Stand",
             "price": 60.00,
             "match": 28     
         }
@@ -609,6 +669,7 @@
         "fields": {
             "stadium": 4,    
             "name": "AllenStandMatch28",
+            "friendly_name": "Allen Stand",
             "price": 75.00,
             "match": 28    
         }
@@ -619,6 +680,7 @@
         "fields": {
             "stadium": 4,    
             "name": "WarnerStandMatch28",
+            "friendly_name": "Warner Stand",
             "price": 75.00,
             "match": 28   
         }
@@ -629,6 +691,7 @@
         "fields": {
             "stadium": 5,    
             "name": "EricHolliesStandMatch14",
+            "friendly_name": "Eric Hollies Stand",
             "price": 55.00,
             "match": 14    
         }
@@ -639,6 +702,7 @@
         "fields": {
             "stadium": 5,    
             "name": "SouthStandMatch14",
+            "friendly_name": "South Stand",
             "price": 60.00,
             "match": 14   
         }
@@ -649,6 +713,7 @@
         "fields": {
             "stadium": 5,    
             "name": "WestStandMatch14",
+            "friendly_name": "West Stand",
             "price": 65.00,
             "match": 14      
         }
@@ -659,6 +724,7 @@
         "fields": {
             "stadium": 5,    
             "name": "DrayonManorFamilyStandMatch14",
+            "friendly_name": "Drayon Manor Family Stand",
             "price": 60.00,
             "match": 14      
         }
@@ -669,6 +735,7 @@
         "fields": {
             "stadium": 5,    
             "name": "RaglanStandMatch14",
+            "friendly_name": "Raglan Stand",
             "price": 65.00,
             "match": 14      
         }
@@ -679,6 +746,7 @@
         "fields": {
             "stadium": 5,    
             "name": "RESWyattStandMatch14",
+            "friendly_name": "Res Wyatt Stand",
             "price": 65.00,
             "match": 14      
         }
@@ -689,6 +757,7 @@
         "fields": {
             "stadium": 5,    
             "name": "ScrivensOpticians/StanleyBarnesStandMatch14",
+            "friendly_name": "Scrivens Opticians/ StanleyBarnes Stand",
             "price": 75.00,
             "match": 14      
         }
@@ -699,6 +768,8 @@
         "fields": {
             "stadium": 5,    
             "name": "EricHolliesStandMatch23",
+            "friendly_name": "Eric Hollies Stand",
+            
             "price": 55.00,
             "match": 23    
         }
@@ -709,6 +780,7 @@
         "fields": {
             "stadium": 5,    
             "name": "SouthStandMatch23",
+            "friendly_name": "South Stand",
             "price": 60.00,
             "match": 23   
         }
@@ -719,6 +791,7 @@
         "fields": {
             "stadium": 5,    
             "name": "WestStandMatch23",
+            "friendly_name": "West Stand",
             "price": 65.00,
             "match": 23     
         }
@@ -729,6 +802,7 @@
         "fields": {
             "stadium": 5,    
             "name": "DrayonManorFamilyStandMatch23",
+            "friendly_name": "Drayon Manor Family Stand",
             "price": 60.00,
             "match": 23      
         }
@@ -739,6 +813,7 @@
         "fields": {
             "stadium": 5,    
             "name": "RaglanStandMatch23",
+            "friendly_name": "Raglan Stand",
             "price": 65.00,
             "match": 23      
         }
@@ -749,6 +824,7 @@
         "fields": {
             "stadium": 5,    
             "name": "RESWyattStandMatch23",
+            "friendly_name": "Res Wyatt Stand",
             "price": 65.00,
             "match": 23      
         }
@@ -759,6 +835,7 @@
         "fields": {
             "stadium": 5,    
             "name": "ScrivensOpticians/StanleyBarnesStandMatch23",
+            "friendly_name": "Scrivens Opticians/ StanleyBarnes Stand",
             "price": 75.00,
             "match": 23     
         }
@@ -769,6 +846,7 @@
         "fields": {
             "stadium": 6,    
             "name": "RiversideStandMatch15",
+            "friendly_name": "Riverside Stand",
             "price": 55.00,
             "match": 15   
         }
@@ -779,6 +857,7 @@
         "fields": {
             "stadium": 6,    
             "name": "FostersStandMatch15",
+            "friendly_name": "Foster's Stand",
             "price": 50.00,
             "match": 15      
         }
@@ -789,6 +868,7 @@
         "fields": {
             "stadium": 6,    
             "name": "CroesoStandMatch15",
+            "friendly_name": "Croeso Stand",
             "price": 55.00,
             "match": 15       
         }
@@ -799,6 +879,7 @@
         "fields": {
             "stadium": 6,    
             "name": "CastelHowellStandMatch15",
+            "friendly_name": "Castel Howell Stand",
             "price": 65.00 ,
             "match": 15    
         }
@@ -809,6 +890,7 @@
         "fields": {
             "stadium": 6,    
             "name": "DiscoverLeeksPavilionMatch15",
+            "friendly_name": "Discover Leeks Pavilion",
             "price": 75.00,
             "match": 15     
         }
@@ -819,6 +901,7 @@
         "fields": {
             "stadium": 6,    
             "name": "AltodigitalStandMatch15",
+            "friendly_name": "Altodigital Stand",
             "price": 55.00,
             "match": 15      
         }
@@ -829,6 +912,7 @@
         "fields": {
             "stadium": 6,    
             "name": "RiversideStandMatch16",
+            "friendly_name": "Riverside Stand",
             "price": 55.00,
             "match": 16  
         }
@@ -839,6 +923,7 @@
         "fields": {
             "stadium": 6,    
             "name": "FostersStandMatch16",
+            "friendly_name": "Foster's Stand",
             "price": 50.00,
             "match": 16      
         }
@@ -849,6 +934,7 @@
         "fields": {
             "stadium": 6,    
             "name": "CroesoStandMatch16",
+            "friendly_name": "Croeso Stand",
             "price": 55.00,
             "match": 16       
         }
@@ -859,6 +945,7 @@
         "fields": {
             "stadium": 6,    
             "name": "CastelHowellStandMatch16",
+            "friendly_name": "Castel Howell Stand",
             "price": 65.00 ,
             "match": 16    
         }
@@ -869,6 +956,7 @@
         "fields": {
             "stadium": 6,    
             "name": "DiscoverLeeksPavilionMatch16",
+            "friendly_name": "Discover Leeks Pavilion",
             "price": 75.00,
             "match": 16     
         }
@@ -879,6 +967,7 @@
         "fields": {
             "stadium": 6,    
             "name": "AltodigitalStandMatch16",
+            "friendly_name": "Altodigital Stand",
             "price": 55.00,
             "match": 16      
         }
@@ -889,6 +978,7 @@
         "fields": {
             "stadium": 6,    
             "name": "RiversideStandMatch21",
+            "friendly_name": "Riverside Stand",
             "price": 55.00,
             "match": 21  
         }
@@ -899,6 +989,7 @@
         "fields": {
             "stadium": 6,    
             "name": "FostersStandMatch21",
+            "friendly_name": "Foster's Stand",
             "price": 50.00,
             "match": 21      
         }
@@ -909,6 +1000,7 @@
         "fields": {
             "stadium": 6,    
             "name": "CroesoStandMatch21",
+            "friendly_name": "Croeso Stand",
             "price": 55.00,
             "match": 21       
         }
@@ -919,6 +1011,7 @@
         "fields": {
             "stadium": 6,    
             "name": "CastelHowellStandMatch21",
+            "friendly_name": "Castel Howell Stand",
             "price": 65.00 ,
             "match": 21    
         }
@@ -929,6 +1022,7 @@
         "fields": {
             "stadium": 6,    
             "name": "DiscoverLeeksPavilionMatch21",
+            "friendly_name": "Disover Leeks Pavilion",
             "price": 75.00,
             "match": 21     
         }

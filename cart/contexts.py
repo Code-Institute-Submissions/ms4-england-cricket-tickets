@@ -13,14 +13,14 @@ def cart_contents(request):
 
     for item_id, item_data in cart.items():
         if isinstance(item_data, int):
-            ticket = get_object_or_404(Ticket, pk=item_id)            
+            ticket = get_object_or_404(Ticket, pk=item_id)
             total += item_data * ticket.price
             product_count += item_data
             cart_items.append({
                 'item_id': item_id,
                 'quantity': item_data,
                 'ticket': ticket,
-                'match': match
+
             })
             print(cart_items)
         else:
