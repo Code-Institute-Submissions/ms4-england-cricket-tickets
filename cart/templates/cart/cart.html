@@ -36,7 +36,9 @@
                                 {% for item in cart_items %}
                             <tr>
                                 {% for m in match%}
+                                {% if item.ticket.match = match.name %}
                                 <td>{{m.name}}</td>
+                                {% endif %}
                                 {%endfor%}
                                 <td>{{item.ticket.stadium}}</td>                                
                                 <td>{% if item.ticket.match.gametype == "Test Match" %}{{item.day}}{%else%}N/A{%endif%}</td>                                

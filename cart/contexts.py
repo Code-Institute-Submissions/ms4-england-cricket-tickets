@@ -13,8 +13,7 @@ def cart_contents(request):
 
     for item_id, item_data in cart.items():
         if isinstance(item_data, int):
-            ticket = get_object_or_404(Ticket, pk=item_id)
-            match = Match.objects.filter(stadium=ticket.stadium)
+            ticket = get_object_or_404(Ticket, pk=item_id)            
             total += item_data * ticket.price
             product_count += item_data
             cart_items.append({
@@ -41,7 +40,7 @@ def cart_contents(request):
     grand_total = total + delivery
    
     gametype = Gametype.objects.all()
-    match = Match.objects.filter(stadium=ticket.stadium)
+    match = Match.objects.all()
 
     context = {
         'cart_items': cart_items,
@@ -49,6 +48,7 @@ def cart_contents(request):
         'product_count': product_count,
         'delivery': delivery,
         'grand_total': grand_total,
+        'match': match,
         'gametype': gametype
     }
 
