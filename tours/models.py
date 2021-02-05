@@ -47,6 +47,7 @@ class Ticket(models.Model):
     stadium = models.ForeignKey('Stadium', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    match = models.ForeignKey('Match', null=True, blank=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.name

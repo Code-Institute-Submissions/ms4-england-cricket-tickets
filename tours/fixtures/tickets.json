@@ -4,8 +4,9 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 1,    
-            "name": "Upper Level",
-            "price": 15.00    
+            "name": "UpperLevelMatch1",
+            "price": 15.00,
+            "match": 1 
         }
     },
     {
@@ -13,8 +14,9 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 1,    
-            "name": "Lower Level",
-            "price": 25.00    
+            "name": "LowerLevelMatch1",
+            "price": 25.00,
+            "match": 1
         }
     },
     {
@@ -22,665 +24,1663 @@
         "model": "tours.ticket",
         "fields": {
             "stadium": 1,    
-            "name": "Hospitality Box",
-            "price": 75.00     
+            "name": "HospitalityBoxMatch1",
+            "price": 75.00,
+            "match": 1   
         }
     },
-    {
+        {
         "pk": 4,
         "model": "tours.ticket",
         "fields": {
             "stadium": 1,    
-            "name": "Terrace",
-            "price": 5.00     
+            "name": "TerraceMatch1",
+            "price": 5.00,
+            "match": 1 
         }
     },
-    {
+        {
         "pk": 5,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 2,    
-            "name": "Lower Level",
-            "price": 35.00     
+            "stadium": 1,    
+            "name": "UpperLevelMatch2",
+            "price": 15.00,
+            "match": 2 
         }
     },
     {
         "pk": 6,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 2,    
-            "name": "Upper Level",
-            "price": 25.00     
+            "stadium": 1,    
+            "name": "LowerLevelMatch2",
+            "price": 25.00,
+            "match": 2
         }
     },
     {
         "pk": 7,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 2,    
-            "name": "Hospitality Box",
-            "price": 85.00     
+            "stadium": 1,    
+            "name": "HospitalityBoxMatch2",
+            "price": 75.00,
+            "match": 2   
         }
     },
     {
         "pk": 8,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 3,    
-            "name": "North West to North East Stands",
-            "price": 25.00     
+            "stadium": 1,    
+            "name": "TerraceMatch2",
+            "price": 5.00,
+            "match": 2  
         }
     },
     {
         "pk": 9,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 3,    
-            "name": "West & South West Stands",
-            "price": 25.00     
+            "stadium": 2,    
+            "name": "LowerLevelMatch3",
+            "price": 35.00,
+            "match": 3   
         }
     },
     {
         "pk": 10,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 3,    
-            "name": "East & South East Stands",
-            "price": 25.00     
+            "stadium": 2,    
+            "name": "UpperLevelMatch3",
+            "price": 25.00,
+            "match": 3       
         }
     },
     {
         "pk": 11,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 3,    
-            "name": "Pavilion Stand",
-            "price": 35.00     
+            "stadium": 2,    
+            "name": "HospitalityBoxMatch3",
+            "price": 85.00,
+            "match": 3      
         }
     },
-    {
+        {
         "pk": 12,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 3,    
-            "name": "Pavilion Hospitality Stand",
-            "price": 65.00     
+            "stadium": 2,    
+            "name": "LowerLevelMatch4",
+            "price": 35.00,
+            "match": 4   
         }
     },
     {
         "pk": 13,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 4,    
-            "name": "Grand Stand",
-            "price": 65.00    
+            "stadium": 2,    
+            "name": "UpperLevelMatch4",
+            "price": 25.00,
+            "match": 4      
         }
     },
     {
         "pk": 14,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 4,    
-            "name": "Compton Stand",
-            "price": 60.00     
+            "stadium": 2,    
+            "name": "HospitalityBoxMatch4",
+            "price": 85.00,
+            "match": 4      
         }
     },
-    {
+        {
         "pk": 15,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 4,    
-            "name": "Edrich Stand",
-            "price": 65.00     
+            "stadium": 2,    
+            "name": "LowerLevelMatch5",
+            "price": 35.00,
+            "match": 5  
         }
     },
     {
         "pk": 16,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 4,    
-            "name": "Mound Stand",
-            "price": 60.00     
+            "stadium": 2,    
+            "name": "UpperLevelMatch5",
+            "price": 25.00,
+            "match": 5   
         }
     },
     {
         "pk": 17,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 4,    
-            "name": "Allen Stand",
-            "price": 75.00     
+            "stadium": 2,    
+            "name": "HospitalityBoxMatch5",
+            "price": 85.00,
+            "match": 5     
         }
     },
     {
         "pk": 18,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 4,    
-            "name": "Warner Stand",
-            "price": 75.00     
+            "stadium": 2,    
+            "name": "LowerLevelMatch6",
+            "price": 35.00,
+            "match": 6  
         }
     },
     {
         "pk": 19,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 5,    
-            "name": "Eric Hollies Stand",
-            "price": 55.00     
+            "stadium": 2,    
+            "name": "UpperLevelMatch6",
+            "price": 25.00,
+            "match": 6 
         }
     },
     {
         "pk": 20,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 5,    
-            "name": "South Stand",
-            "price": 60.00    
+            "stadium": 2,    
+            "name": "HospitalityBoxMatch6",
+            "price": 85.00,
+            "match": 6    
         }
     },
-    {
+        {
         "pk": 21,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 5,    
-            "name": "West Stand",
-            "price": 65.00     
+            "stadium": 2,    
+            "name": "LowerLevelMatch7",
+            "price": 35.00,
+            "match": 7  
         }
     },
     {
         "pk": 22,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 5,    
-            "name": "Drayon Manor Family Stand",
-            "price": 60.00     
+            "stadium": 2,    
+            "name": "UpperLevelMatch7",
+            "price": 25.00,
+            "match": 7
         }
     },
     {
         "pk": 23,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 5,    
-            "name": "Raglan Stand",
-            "price": 65.00     
+            "stadium": 2,    
+            "name": "HospitalityBoxMatch7",
+            "price": 85.00,
+            "match": 7   
         }
     },
-    {
+        {
         "pk": 24,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 5,    
-            "name": "RES Wyatt Stand",
-            "price": 65.00     
+            "stadium": 2,    
+            "name": "LowerLevelMatch8",
+            "price": 35.00,
+            "match": 8  
         }
     },
     {
         "pk": 25,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 5,    
-            "name": "Scrivens Opticians/Stanley Barnes Stand",
-            "price": 75.00     
+            "stadium": 2,    
+            "name": "UpperLevelMatch8",
+            "price": 25.00,
+            "match": 8
         }
     },
     {
         "pk": 26,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 6,    
-            "name": "Riverside Stand",
-            "price": 55.00    
+            "stadium": 2,    
+            "name": "HospitalityBoxMatch8",
+            "price": 85.00,
+            "match": 8  
         }
     },
-    {
+                {
         "pk": 27,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 6,    
-            "name": "Foster's Stand",
-            "price": 50.00     
+            "stadium": 2,    
+            "name": "LowerLevelMatch9",
+            "price": 35.00,
+            "match": 9  
         }
     },
     {
         "pk": 28,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 6,    
-            "name": "Croeso Stand",
-            "price": 55.00     
+            "stadium": 2,    
+            "name": "UpperLevelMatch9",
+            "price": 25.00,
+            "match": 9
         }
     },
     {
         "pk": 29,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 6,    
-            "name": "Castel Howell Stand",
-            "price": 65.00     
+            "stadium": 2,    
+            "name": "HospitalityBoxMatch9",
+            "price": 85.00,
+            "match": 9 
         }
-    },
+    }, 
+    
     {
         "pk": 30,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 6,    
-            "name": "Discover Leeks Pavilion",
-            "price": 75.00    
+            "stadium": 3,    
+            "name": "NorthWesttoNorthEastStandsMatch10",
+            "price": 25.00,
+            "match": 10  
         }
     },
     {
         "pk": 31,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 6,    
-            "name": "Altodigital Stand",
-            "price": 55.00     
+            "stadium": 3,    
+            "name": "West&SouthWestStandsMatch10",
+            "price": 25.00,
+            "match": 10      
         }
     },
     {
         "pk": 32,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 7,    
-            "name": "East Side, Lower",
-            "price": 65.00     
+            "stadium": 3,    
+            "name": "East&SouthEastStandsMatch10",
+            "price": 25.00,
+            "match": 10     
         }
     },
     {
         "pk": 33,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 7,    
-            "name": "East Side, Upper",
-            "price": 55.00     
+            "stadium": 3,    
+            "name": "PavilionStandMatch10",
+            "price": 35.00,
+            "match": 10      
         }
     },
     {
         "pk": 34,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 7,    
-            "name": "West Side, Lower",
-            "price": 65.00     
+            "stadium": 3,    
+            "name": "PavilionHospitalityStandMatch10",
+            "price": 65.00,
+            "match": 10      
         }
     },
-    {
+        {
         "pk": 35,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 7,    
-            "name": "West Side, Upper",
-            "price": 55.00     
+            "stadium": 3,    
+            "name": "NorthWesttoNorthEastStandsMatch11",
+            "price": 25.00,
+            "match": 11  
         }
     },
     {
         "pk": 36,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 8,    
-            "name": "Fox Road Stand",
-            "price": 55.00     
+            "stadium": 3,    
+            "name": "West&SouthWestStandsMatch11",
+            "price": 25.00,
+            "match": 11      
         }
     },
     {
         "pk": 37,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 8,    
-            "name": "Hound Road",
-            "price": 60.00     
+            "stadium": 3,    
+            "name": "East&SouthEastStandsMatch11",
+            "price": 25.00,
+            "match": 11     
         }
     },
     {
         "pk": 38,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 8,    
-            "name": "New Stand",
-            "price": 55.00     
+            "stadium": 3,    
+            "name": "PavilionStandMatch11",
+            "price": 35.00,
+            "match": 11      
         }
     },
     {
         "pk": 39,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 8,    
-            "name": "William Clarke Stand",
-            "price": 65.00     
+            "stadium": 3,    
+            "name": "PavilionHospitalityStandMatch11",
+            "price": 65.00,
+            "match": 11      
         }
     },
-    {
+            {
         "pk": 40,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 8,    
-            "name": "Radcliffe Road Stand",
-            "price": 60.00     
+            "stadium": 3,    
+            "name": "NorthWesttoNorthEastStandsMatch12",
+            "price": 25.00,
+            "match": 12
         }
     },
     {
         "pk": 41,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 9,    
-            "name": "North East Stand",
-            "price": 55.00     
+            "stadium": 3,    
+            "name": "West&SouthWestStandsMatch12",
+            "price": 25.00,
+            "match": 12    
         }
     },
     {
         "pk": 42,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 9,    
-            "name": "East Stand",
-            "price": 60.00     
+            "stadium": 3,    
+            "name": "East&SouthEastStandsMatch12",
+            "price": 25.00,
+            "match": 12     
         }
     },
     {
         "pk": 43,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 9,    
-            "name": "Pavilion Stand",
-            "price": 65.00    
+            "stadium": 3,    
+            "name": "PavilionStandMatch12",
+            "price": 35.00,
+            "match": 12     
         }
     },
     {
         "pk": 44,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 9,    
-            "name": "Main Stand",
-            "price": 65.00     
+            "stadium": 3,    
+            "name": "PavilionHospitalityStandMatch12",
+            "price": 65.00,
+            "match": 12      
         }
     },
     {
         "pk": 45,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 9,    
-            "name": "Popular Enclosure",
-            "price": 50.00     
+            "stadium": 4,    
+            "name": "GrandStandMatch13",
+            "price": 65.00,
+            "match": 13
+              
         }
     },
     {
         "pk": 46,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 9,    
-            "name": "1863 Enclosure",
-            "price": 55.00    
+            "stadium": 4,    
+            "name": "ComptonStandMatch13",
+            "price": 60.00,
+            "match": 13     
         }
     },
     {
         "pk": 47,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 9,    
-            "name": "Community Stand",
-            "price": 55.00     
+            "stadium": 4,    
+            "name": "EdrichStandMatch13",
+            "price": 65.00,
+            "match": 13   
         }
     },
     {
         "pk": 48,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 9,    
-            "name": "Trueman Enclosure",
-            "price": 65.00    
+            "stadium": 4,    
+            "name": "MoundStandMatch13",
+            "price": 60.00,
+            "match": 13     
         }
     },
     {
         "pk": 49,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 10,    
-            "name": "Stand A",
-            "price": 55.00     
+            "stadium": 4,    
+            "name": "AllenStandMatch13",
+            "price": 75.00,
+            "match": 13     
         }
     },
     {
         "pk": 50,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 10,    
-            "name": "Stand B Lower",
-            "price": 65.00    
+            "stadium": 4,    
+            "name": "WarnerStandMatch13",
+            "price": 75.00,
+            "match": 13    
         }
     },
-    {
+        {
         "pk": 51,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 10,    
-            "name": "Stand B Upper",
-            "price": 60.00     
+            "stadium": 4,    
+            "name": "GrandStandMatch22",
+            "price": 65.00,
+            "match": 22
+              
         }
     },
     {
         "pk": 52,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 10,    
-            "name": "Stand C Lower",
-            "price": 65.00     
+            "stadium": 4,    
+            "name": "ComptonStandMatch22",
+            "price": 60.00,
+            "match": 22     
         }
     },
     {
         "pk": 53,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 10,    
-            "name": "Stand C Upper",
-            "price": 60.00     
+            "stadium": 4,    
+            "name": "EdrichStandMatch22",
+            "price": 65.00,
+            "match": 22   
         }
     },
     {
         "pk": 54,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 10,    
-            "name": "Stand D",
-            "price": 65.00     
+            "stadium": 4,    
+            "name": "MoundStandMatch22",
+            "price": 60.00,
+            "match": 22     
         }
     },
     {
         "pk": 55,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 10,    
-            "name": "Stand E",
-            "price": 60.00     
+            "stadium": 4,    
+            "name": "AllenStandMatch22",
+            "price": 75.00,
+            "match": 22     
         }
     },
     {
         "pk": 56,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 11,    
-            "name": "North Terrace",
-            "price": 55.00     
+            "stadium": 4,    
+            "name": "WarnerStandMatch22",
+            "price": 75.00,
+            "match": 22    
         }
     },
-    {
+            {
         "pk": 57,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 11,    
-            "name": "North East Terrace",
-            "price": 50.00     
+            "stadium": 4,    
+            "name": "GrandStandMatch28",
+            "price": 65.00,
+            "match": 28
+              
         }
     },
     {
         "pk": 58,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 11,    
-            "name": "Family Stand",
-            "price": 45.00     
+            "stadium": 4,    
+            "name": "ComptonStandMatch28",
+            "price": 60.00,
+            "match": 28     
         }
     },
     {
         "pk": 59,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 11,    
-            "name": "South Terrace",
-            "price": 55.00     
+            "stadium": 4,    
+            "name": "EdrichStandMatch28",
+            "price": 65.00,
+            "match": 28  
         }
     },
     {
         "pk": 60,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 11,    
-            "name": "South West Terrace",
-            "price": 65.00     
+            "stadium": 4,    
+            "name": "MoundStandMatch28",
+            "price": 60.00,
+            "match": 28     
         }
     },
     {
         "pk": 61,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 11,    
-            "name": "Dan Robson Pavilion",
-            "price": 55.00     
+            "stadium": 4,    
+            "name": "AllenStandMatch28",
+            "price": 75.00,
+            "match": 28    
         }
     },
     {
         "pk": 62,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 11,    
-            "name": "North West Terrace",
-            "price": 50.00     
+            "stadium": 4,    
+            "name": "WarnerStandMatch28",
+            "price": 75.00,
+            "match": 28   
         }
     },
     {
         "pk": 63,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 12,    
-            "name": "OCS Stand",
-            "price": 65.00     
+            "stadium": 5,    
+            "name": "EricHolliesStandMatch14",
+            "price": 55.00,
+            "match": 14    
         }
     },
     {
         "pk": 64,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 12,    
-            "name": "OCS Family Zone",
-            "price": 55.00     
+            "stadium": 5,    
+            "name": "SouthStandMatch14",
+            "price": 60.00,
+            "match": 14   
         }
     },
     {
         "pk": 65,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 12,    
-            "name": "Peter May Stand",
-            "price": 70.00    
+            "stadium": 5,    
+            "name": "WestStandMatch14",
+            "price": 65.00,
+            "match": 14      
         }
     },
     {
         "pk": 66,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 12,    
-            "name": "Lock Laker Stand",
-            "price": 75.00     
+            "stadium": 5,    
+            "name": "DrayonManorFamilyStandMatch14",
+            "price": 60.00,
+            "match": 14      
         }
     },
     {
         "pk": 67,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 12,    
-            "name": "Bedser Stand",
-            "price": 70.00    
+            "stadium": 5,    
+            "name": "RaglanStandMatch14",
+            "price": 65.00,
+            "match": 14      
         }
     },
     {
         "pk": 68,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 13,    
-            "name": "Mount Stand",
-            "price": 55.00     
+            "stadium": 5,    
+            "name": "RESWyattStandMatch14",
+            "price": 65.00,
+            "match": 14      
         }
     },
     {
         "pk": 69,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 13,    
-            "name": "Stands A-B",
-            "price": 60.00     
+            "stadium": 5,    
+            "name": "ScrivensOpticians/StanleyBarnesStandMatch14",
+            "price": 75.00,
+            "match": 14      
         }
     },
     {
         "pk": 70,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 13,    
-            "name": "Stands C & E",
-            "price": 55.00     
+            "stadium": 5,    
+            "name": "EricHolliesStandMatch23",
+            "price": 55.00,
+            "match": 23    
         }
     },
     {
         "pk": 71,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 13,    
-            "name": "Stand D",
-            "price": 60.00     
+            "stadium": 5,    
+            "name": "SouthStandMatch23",
+            "price": 60.00,
+            "match": 23   
         }
     },
     {
         "pk": 72,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 13,    
-            "name": "Stands F-G",
-            "price": 65.00     
+            "stadium": 5,    
+            "name": "WestStandMatch23",
+            "price": 65.00,
+            "match": 23     
         }
     },
     {
         "pk": 73,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 14,    
-            "name": "Red Area",
-            "price": 25.00     
+            "stadium": 5,    
+            "name": "DrayonManorFamilyStandMatch23",
+            "price": 60.00,
+            "match": 23      
         }
     },
     {
         "pk": 74,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 14,    
-            "name": "Green Area",
-            "price": 30.00     
+            "stadium": 5,    
+            "name": "RaglanStandMatch23",
+            "price": 65.00,
+            "match": 23      
         }
     },
     {
         "pk": 75,
         "model": "tours.ticket",
         "fields": {
-            "stadium": 14,    
-            "name": "Blue Area",
-            "price": 35.00     
+            "stadium": 5,    
+            "name": "RESWyattStandMatch23",
+            "price": 65.00,
+            "match": 23      
         }
     },
     {
         "pk": 76,
         "model": "tours.ticket",
         "fields": {
+            "stadium": 5,    
+            "name": "ScrivensOpticians/StanleyBarnesStandMatch23",
+            "price": 75.00,
+            "match": 23     
+        }
+    },
+    {
+        "pk": 77,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 6,    
+            "name": "RiversideStandMatch15",
+            "price": 55.00,
+            "match": 15   
+        }
+    },
+    {
+        "pk": 78,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 6,    
+            "name": "FostersStandMatch15",
+            "price": 50.00,
+            "match": 15      
+        }
+    },
+    {
+        "pk": 79,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 6,    
+            "name": "CroesoStandMatch15",
+            "price": 55.00,
+            "match": 15       
+        }
+    },
+    {
+        "pk": 80,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 6,    
+            "name": "CastelHowellStandMatch15",
+            "price": 65.00 ,
+            "match": 15    
+        }
+    },
+    {
+        "pk": 81,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 6,    
+            "name": "DiscoverLeeksPavilionMatch15",
+            "price": 75.00,
+            "match": 15     
+        }
+    },
+    {
+        "pk": 82,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 6,    
+            "name": "AltodigitalStandMatch15",
+            "price": 55.00,
+            "match": 15      
+        }
+    },
+        {
+        "pk": 83,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 6,    
+            "name": "RiversideStandMatch16",
+            "price": 55.00,
+            "match": 16  
+        }
+    },
+    {
+        "pk": 84,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 6,    
+            "name": "FostersStandMatch16",
+            "price": 50.00,
+            "match": 16      
+        }
+    },
+    {
+        "pk": 85,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 6,    
+            "name": "CroesoStandMatch16",
+            "price": 55.00,
+            "match": 16       
+        }
+    },
+    {
+        "pk": 86,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 6,    
+            "name": "CastelHowellStandMatch16",
+            "price": 65.00 ,
+            "match": 16    
+        }
+    },
+    {
+        "pk": 87,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 6,    
+            "name": "DiscoverLeeksPavilionMatch16",
+            "price": 75.00,
+            "match": 16     
+        }
+    },
+    {
+        "pk": 88,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 6,    
+            "name": "AltodigitalStandMatch16",
+            "price": 55.00,
+            "match": 16      
+        }
+    },
+            {
+        "pk": 89,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 6,    
+            "name": "RiversideStandMatch21",
+            "price": 55.00,
+            "match": 21  
+        }
+    },
+    {
+        "pk": 90,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 6,    
+            "name": "FostersStandMatch21",
+            "price": 50.00,
+            "match": 21      
+        }
+    },
+    {
+        "pk": 91,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 6,    
+            "name": "CroesoStandMatch21",
+            "price": 55.00,
+            "match": 21       
+        }
+    },
+    {
+        "pk": 92,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 6,    
+            "name": "CastelHowellStandMatch21",
+            "price": 65.00 ,
+            "match": 21    
+        }
+    },
+    {
+        "pk": 93,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 6,    
+            "name": "DiscoverLeeksPavilionMatch21",
+            "price": 75.00,
+            "match": 21     
+        }
+    },
+    {
+        "pk": 94,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 6,    
+            "name": "AltodigitalStandMatch21",
+            "price": 55.00,
+            "match": 21     
+        }
+    },
+    {
+        "pk": 95,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 7,    
+            "name": "EastSideLowerMatch17",
+            "price": 65.00,
+            "match": 17     
+        }
+    },
+    {
+        "pk": 96,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 7,    
+            "name": "EastSideUpperMatch17",
+            "price": 55.00,
+            "match": 17   
+        }
+    },
+    {
+        "pk": 97,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 7,    
+            "name": "WestSideLowerMatch17",
+            "price": 65.00,
+            "match": 17     
+        }
+    },
+    {
+        "pk": 98,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 7,    
+            "name": "WestSideUpperMatch17",
+            "price": 55.00,
+            "match": 17     
+        }
+    },
+    {
+        "pk": 99,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 8,    
+            "name": "FoxRoadStandMatch24",
+            "price": 55.00,
+            "match": 24     
+        }
+    },
+    {
+        "pk": 100,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 8,    
+            "name": "HoundRoadMatch24",
+            "price": 60.00,
+            "match": 24      
+        }
+    },
+    {
+        "pk": 101,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 8,    
+            "name": "NewStandMatch24",
+            "price": 55.00,
+            "match": 24       
+        }
+    },
+    {
+        "pk": 102,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 8,    
+            "name": "WilliamClarkeStandMatch24",
+            "price": 65.00,
+            "match": 24      
+        }
+    },
+    {
+        "pk": 103,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 8,    
+            "name": "RadcliffeRoadStandMatch24",
+            "price": 60.00,
+            "match": 24       
+        }
+    },
+      {
+        "pk": 104,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 8,    
+            "name": "FoxRoadStandMatch27",
+            "price": 55.00,
+            "match": 27     
+        }
+    },
+    {
+        "pk": 105,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 8,    
+            "name": "HoundRoadMatch27",
+            "price": 60.00,
+            "match": 27      
+        }
+    },
+    {
+        "pk": 106,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 8,    
+            "name": "NewStandMatch27",
+            "price": 55.00,
+            "match": 27       
+        }
+    },
+    {
+        "pk": 107,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 8,    
+            "name": "WilliamClarkeStandMatch27",
+            "price": 65.00,
+            "match": 27      
+        }
+    },
+    {
+        "pk": 108,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 8,    
+            "name": "RadcliffeRoadStandMatch27",
+            "price": 60.00,
+            "match": 27       
+        }
+    },
+    {
+        "pk": 109,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 9,    
+            "name": "NorthEastStandMatch25",
+            "price": 55.00,
+            "match": 25     
+        }
+    },
+    {
+        "pk": 110,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 9,    
+            "name": "EastStandMatch25",
+            "price": 60.00,
+            "match": 25     
+        }
+    },
+    {
+        "pk": 111,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 9,    
+            "name": "PavilionStandMatch25",
+            "price": 65.00,
+            "match": 25    
+        }
+    },
+    {
+        "pk": 112,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 9,    
+            "name": "MainStandMatch25",
+            "price": 65.00,
+            "match": 25     
+        }
+    },
+    {
+        "pk": 113,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 9,    
+            "name": "PopularEnclosureMatch25",
+            "price": 50.00,
+            "match": 25    
+        }
+    },
+    {
+        "pk": 114,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 9,    
+            "name": "1863EnclosureMatch25",
+            "price": 55.00,
+            "match": 25    
+        }
+    },
+    {
+        "pk": 115,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 9,    
+            "name": "CommunityStandMatch25",
+            "price": 55.00,
+            "match": 25     
+        }
+    },
+    {
+        "pk": 116,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 9,    
+            "name": "TruemanEnclosureMatch25",
+            "price": 65.00,
+            "match": 25    
+        }
+    },
+        {
+        "pk": 117,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 9,    
+            "name": "NorthEastStandMatch29",
+            "price": 55.00,
+            "match": 29    
+        }
+    },
+    {
+        "pk": 118,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 9,    
+            "name": "EastStandMatch29",
+            "price": 60.00,
+            "match": 29    
+        }
+    },
+    {
+        "pk": 119,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 9,    
+            "name": "PavilionStandMatch29",
+            "price": 65.00,
+            "match": 29    
+        }
+    },
+    {
+        "pk": 120,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 9,    
+            "name": "MainStandMatch29",
+            "price": 65.00,
+            "match": 29     
+        }
+    },
+    {
+        "pk": 121,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 9,    
+            "name": "PopularEnclosureMatch29",
+            "price": 50.00,
+            "match": 29    
+        }
+    },
+    {
+        "pk": 122,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 9,    
+            "name": "1863EnclosureMatch29",
+            "price": 55.00,
+            "match": 29    
+        }
+    },
+    {
+        "pk": 123,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 9,    
+            "name": "CommunityStandMatch29",
+            "price": 55.00,
+            "match": 29     
+        }
+    },
+    {
+        "pk": 124,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 9,    
+            "name": "TruemanEnclosureMatch29",
+            "price": 65.00,
+            "match": 29    
+        }
+    },
+    {
+        "pk": 125,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 10,    
+            "name": "StandAMatch26",
+            "price": 55.00,
+            "match": 26     
+        }
+    },
+    {
+        "pk": 126,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 10,    
+            "name": "StandBLowerMatch26",
+            "price": 65.00,
+            "match": 26      
+        }
+    },
+    {
+        "pk": 127,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 10,    
+            "name": "StandBUpperMatch26",
+            "price": 60.00,
+            "match": 26       
+        }
+    },
+    {
+        "pk": 128,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 10,    
+            "name": "StandCLowerMatch26",
+            "price": 65.00,
+            "match": 26        
+        }
+    },
+    {
+        "pk": 129,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 10,    
+            "name": "StandCUpperMatch26",
+            "price": 60.00,
+            "match": 26       
+        }
+    },
+    {
+        "pk": 130,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 10,    
+            "name": "StandDMatch26",
+            "price": 65.00,
+            "match": 26        
+        }
+    },
+    {
+        "pk": 131,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 10,    
+            "name": "StandEMatch26",
+            "price": 60.00,
+            "match": 26       
+        }
+    },
+        {
+        "pk": 132,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 10,    
+            "name": "StandAMatch31",
+            "price": 55.00,
+            "match": 31    
+        }
+    },
+    {
+        "pk": 133,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 10,    
+            "name": "StandBLowerMatch31",
+            "price": 65.00,
+            "match": 31      
+        }
+    },
+    {
+        "pk": 134,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 10,    
+            "name": "StandBUpperMatch31",
+            "price": 60.00,
+            "match": 31       
+        }
+    },
+    {
+        "pk": 135,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 10,    
+            "name": "StandCLowerMatch31",
+            "price": 65.00,
+            "match": 31        
+        }
+    },
+    {
+        "pk": 136,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 10,    
+            "name": "StandCUpperMatch31",
+            "price": 60.00,
+            "match": 31     
+        }
+    },
+    {
+        "pk": 137,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 10,    
+            "name": "StandDMatch31",
+            "price": 65.00,
+            "match": 31       
+        }
+    },
+    {
+        "pk": 138,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 10,    
+            "name": "StandEMatch31",
+            "price": 60.00,
+            "match": 31       
+        }
+    },
+    {
+        "pk": 139,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 11,    
+            "name": "NorthTerraceMatch18",
+            "price": 55.00,
+            "match": 18     
+        }
+    },
+    {
+        "pk": 140,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 11,    
+            "name": "NorthEastTerraceMatch18",
+            "price": 50.00,
+            "match": 18    
+        }
+    },
+    {
+        "pk": 141,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 11,    
+            "name": "FamilyStandMatch18",
+            "price": 45.00,
+            "match": 18    
+        }
+    },
+    {
+        "pk": 142,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 11,    
+            "name": "SouthTerraceMatch18",
+            "price": 55.00,
+            "match": 18     
+        }
+    },
+    {
+        "pk": 143,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 11,    
+            "name": "SouthWestTerraceMatch18",
+            "price": 65.00,
+            "match": 18     
+        }
+    },
+    {
+        "pk": 144,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 11,    
+            "name": "DanRobsonPavilionMatch18",
+            "price": 55.00,
+            "match": 18     
+        }
+    },
+    {
+        "pk": 145,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 11,    
+            "name": "NorthWestTerraceMatch18",
+            "price": 50.00,
+            "match": 18     
+        }
+    },
+    {
+        "pk": 146,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 12,    
+            "name": "OCSStandMatch19",
+            "price": 65.00,
+            "match": 19     
+        }
+    },
+    {
+        "pk": 147,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 12,    
+            "name": "OCSFamilyZoneMatch19",
+            "price": 55.00,
+            "match": 19      
+        }
+    },
+    {
+        "pk": 148,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 12,    
+            "name": "PeterMayStandMatch19",
+            "price": 70.00,
+            "match": 19      
+        }
+    },
+    {
+        "pk": 149,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 12,    
+            "name": "LockLakerStandMatch19",
+            "price": 75.00,
+            "match": 19      
+        }
+    },
+    {
+        "pk": 150,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 12,    
+            "name": "BedserStandMatch19",
+            "price": 70.00,
+            "match": 19     
+        }
+    },
+        {
+        "pk": 151,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 12,    
+            "name": "OCSStandMatch30",
+            "price": 65.00,
+            "match": 30     
+        }
+    },
+    {
+        "pk": 152,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 12,    
+            "name": "OCSFamilyZoneMatch30",
+            "price": 55.00,
+            "match": 30      
+        }
+    },
+    {
+        "pk": 153,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 12,    
+            "name": "PeterMayStandMatch30",
+            "price": 70.00,
+            "match": 30     
+        }
+    },
+    {
+        "pk": 154,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 12,    
+            "name": "LockLakerStandMatch30",
+            "price": 75.00,
+            "match": 30      
+        }
+    },
+    {
+        "pk": 155,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 12,    
+            "name": "BedserStandMatch30",
+            "price": 70.00,
+            "match": 30    
+        }
+    },
+    {
+        "pk": 156,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 13,    
+            "name": "MountStandMatch20",
+            "price": 55.00,
+            "match": 20     
+        }
+    },
+    {
+        "pk": 157,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 13,    
+            "name": "StandsA-BMatch20",
+            "price": 60.00,
+            "match": 20      
+        }
+    },
+    {
+        "pk": 158,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 13,    
+            "name": "StandsC&EMatch20",
+            "price": 55.00,
+            "match": 20      
+        }
+    },
+    {
+        "pk": 159,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 13,    
+            "name": "StandDMatch20",
+            "price": 60.00,
+            "match": 20      
+        }
+    },
+    {
+        "pk": 160,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 13,    
+            "name": "StandsF-GMatch20",
+            "price": 65.00,
+            "match": 20     
+        }
+    },
+    {
+        "pk": 161,
+        "model": "tours.ticket",
+        "fields": {
             "stadium": 14,    
-            "name": "Yellow Area",
-            "price": 20.00     
+            "name": "RedAreaMatch32",
+            "price": 25.00,
+            "match": 32     
+        }
+    },
+    {
+        "pk": 162,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 14,    
+            "name": "GreenAreaMatch32",
+            "price": 30.00,
+            "match": 32      
+        }
+    },
+    {
+        "pk": 163,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 14,    
+            "name": "BlueAreaMatch32",
+            "price": 35.00,
+            "match": 32      
+        }
+    },
+    {
+        "pk": 164,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 14,    
+            "name": "YellowAreaMatch32",
+            "price": 20.00,
+            "match": 32      
+        }
+    },
+        {
+        "pk": 165,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 14,    
+            "name": "RedAreaMatch33",
+            "price": 25.00,
+            "match": 33     
+        }
+    },
+    {
+        "pk": 166,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 14,    
+            "name": "GreenAreaMatch33",
+            "price": 30.00,
+            "match": 33     
+        }
+    },
+    {
+        "pk": 167,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 14,    
+            "name": "BlueAreaMatch33",
+            "price": 35.00,
+            "match": 33      
+        }
+    },
+    {
+        "pk": 168,
+        "model": "tours.ticket",
+        "fields": {
+            "stadium": 14,    
+            "name": "YellowAreaMatch33",
+            "price": 20.00,
+            "match": 33      
         }
     }
 ]

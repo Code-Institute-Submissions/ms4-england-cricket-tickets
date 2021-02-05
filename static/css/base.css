@@ -60,6 +60,9 @@ body{
         height: 120px;
     }
 }
+.btn{
+    margin-bottom: 10px;
+}
 
 .btn-blue{
     background-color: rgb(4,45,82);
