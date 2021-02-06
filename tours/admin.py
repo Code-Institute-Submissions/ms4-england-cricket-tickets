@@ -34,6 +34,7 @@ class TicketAdmin(admin.ModelAdmin):
     list_display = (
     'stadium',
     'name',
+    'friendly_name',
     'price',
     'match'
     )

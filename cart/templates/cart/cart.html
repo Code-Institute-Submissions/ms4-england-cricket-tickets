@@ -39,8 +39,8 @@
                                  
                                 <td>{{item.ticket.match.tour.friendly_name}}: {{item.ticket.match}}</td>                                
                                 <td>{{item.ticket.stadium}}</td>                                
-                                <td>{% if item.ticket.match.gametype == "Test Match" %}Test Match{%else%}N/A{%endif%}</td>                                
-                                <td>{{item.ticket}}</td>
+                                <td>{% if item.ticket.match.gametype.name == "Test Match" %}Test Match{%else%}N/A{%endif%}</td>                                
+                                <td>{{item.ticket.friendly_name}}</td>
                                 <td>{{item.ticket.price}}</td>
                                 <td>{{item.quantity}}</td>
                                 <td>tbc: {{item.ticket.price}}**{{item.quantity}}</td>                         
