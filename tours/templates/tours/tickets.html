@@ -20,7 +20,7 @@
         </div>
         <div class="col m6 center-align">            
              {% for ticket in tickets %}
-                {% if match.stadium == ticket.stadium %}
+                {% if match == ticket.match %}
                     <h5>{{ ticket.friendly_name }}: {{ticket.price}}</h5>
                     
                         <form action="{% url 'add_to_cart' ticket.id %}" method="POST" >
