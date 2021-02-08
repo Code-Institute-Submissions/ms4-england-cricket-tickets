@@ -16,10 +16,6 @@
     <div class="row">
         <div class="col12 center">
             {% if cart_items %}
-            {{match.name}}
-            {{item.ticket}}
-                
-
                 <div class="table">
                           <table class="striped">
                             <thead>
@@ -45,9 +41,12 @@
                                     <form method="POST" action="{% url 'update_cart' item.item_id %}" class="update-form">
                                         {% csrf_token %}
                                         <input class="qty_input white-text center" type="number" name="quantity" value="{{item.quantity}}" min="1" max="4"
-                                        data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}" style="max-width: 250px;">
+                                        data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
                                         <input type="submit" class="btn btn-white btn-small update-link" value="Update">
-                                         <a class="remove-item btn btn-white btn-small" id="remove_{{ item.item_id }}" data-day="{{ item.day }}">Remove</a>                                       
+                                         <a class="remove-item btn btn-white btn-small" id="remove_{{ item.item_id }}" data-day="{{ item.day }}">Remove</a>   
+                                         {% if item.day %}
+                                            <input type="hidden" name="day" value="{{ item.day }}">
+                                        {% endif %}                                    
                                     </form>
                                 </td>
                                 <td>{{item.ticket.price | calc_subtotal:item.quantity}}</td>   
@@ -75,7 +74,7 @@
                 </div>
             {% else %}
                 <p>Your cart is empty.</p>
-                <a href="{% url 'tours' %}" class="btn">
+                <a href="{% url 'tours' %}" class="btn btn-white">
                     <i class="fas fa-chevron-left"></i> Back to Tours
                 </a>
             {%endif%}

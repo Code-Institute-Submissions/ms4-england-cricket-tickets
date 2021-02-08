@@ -12,7 +12,7 @@ def view_cart(request):
 
 
 def add_to_cart(request, item_id):
-    """Add a quantity to the shopping cart"""    
+    """Add a quantity to the shopping cart"""
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     day = None
@@ -25,10 +25,13 @@ def add_to_cart(request, item_id):
         if item_id in list(cart.keys()):
             if day in cart[item_id]['items_by_day'].keys():
                 cart[item_id]['items_by_day'][day] += quantity
+                print(item_id)
             else:
                 cart[item_id]['items_by_day'][day] = quantity
+                print(item_id)
         else:
             cart[item_id] = {'items_by_day': {day: quantity}}
+            print(item_id)
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity
@@ -36,15 +39,18 @@ def add_to_cart(request, item_id):
         else:
             cart[item_id] = quantity
             messages.success(request, "added to cart")
+            print(item_id)
 
     request.session['cart'] = cart
 
     return redirect(redirect_url)
-    
+
 
 def update_cart(request, item_id):
-    """Update the quantity in the shopping cart"""
-    quantity = int(request.POST.get('quantity'))   
+
+    """Adjust the quantity of the specified product to the specified amount"""
+
+    quantity = int(request.POST.get('quantity'))
     day = None
     if 'day' in request.POST:
         day = request.POST['day']
@@ -53,6 +59,7 @@ def update_cart(request, item_id):
     if day:
         if quantity > 0:
             cart[item_id]['items_by_day'][day] = quantity
+            print(f"The item_id in the if day if quantity > 0 part: {item_id}")
         else:
             del cart[item_id]['items_by_day'][day]
             if not cart[item_id]['items_by_day']:
@@ -79,8 +86,10 @@ def remove_item(request, item_id):
             del cart[item_id]['items_by_day'][day]
             if not cart[item_id]['items_by_day']:
                 cart.pop(item_id)
+                messages.success(request, "removed from cart")
         else:
             cart.pop(item_id)
+            messages.success(request, "removed from cart")
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
