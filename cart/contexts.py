@@ -22,7 +22,6 @@ def cart_contents(request):
                 'ticket': ticket,
 
             })
-            print(cart_items)
         else:
             ticket = get_object_or_404(Ticket, pk=item_id)
             for day, quantity in item_data['items_by_day'].items():
@@ -30,7 +29,7 @@ def cart_contents(request):
                 product_count += quantity
                 cart_items.append({
                     'item_id': item_id,
-                    'quantity': item_data,
+                    'quantity': quantity,
                     'ticket': ticket,
                     'day': day
                 })
