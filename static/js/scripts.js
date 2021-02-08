@@ -4,5 +4,6 @@
     $('.sidenav').sidenav({edge: "right"});
     $(".dropdown-trigger").dropdown({alighment: "bottom"}); 
      $('select').formSelect();
+     
 
 });

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cart_tools %}
 
 {% block page_header %}
 
@@ -41,16 +42,16 @@
                                 <td>{{item.ticket.friendly_name}}</td>
                                 <td>{{item.ticket.price}}</td>
                                 <td>
-                                    <form method="POST" action="" class="update-form">
+                                    <form method="POST" action="{% url 'update_cart' item.item_id %}" class="update-form">
                                         {% csrf_token %}
                                         <input class="qty_input white-text center" type="number" name="quantity" value="{{item.quantity}}" min="1" max="4"
                                         data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}" style="max-width: 250px;">
+                                        <input type="submit" class="btn btn-white btn-small update-link" value="Update">
+                                         <a class="remove-item btn btn-white btn-small" id="remove_{{ item.item_id }}" data-day="{{ item.day }}">Remove</a>                                       
                                     </form>
                                 </td>
-                                <td>tbc: {{item.ticket.price}}**{{item.quantity}}</td>   
-                                <td><a href="" class="btn-small btn-white update-link">Update</a></td>
-                                <td><a href="" class="btn-small btn-white remove-item" id="remove_{{item.item_id}}"
-                                    data-size="item.day">Remove</a></td>                      
+                                <td>{{item.ticket.price | calc_subtotal:item.quantity}}</td>   
+                                                      
                             </tr>
                                 {% endfor %}                        
                             </tbody>
@@ -87,22 +88,24 @@
 {{ block.super }}
 
 <script type="text/javascript">
-    //update quantity on click
-    $(".update-link").click(function(e){
-        var form = $(this).prev(".update-form");
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
         form.submit();
     })
-    $(".remove-item").click(function(e){
-        var csrfToken = "{{csrf_token}}";
-        var itemID = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('day');
-        var url = `/cart/remove/${itemID}`;
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var day = $(this).data('day');
+        var url = `/cart/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken, 'day': day};
 
         $.post(url, data)
-        .done(function(){
-            location.reload();
-        })
+         .done(function() {
+             location.reload();
+         });
     })
 </script>
 {% endblock %}
