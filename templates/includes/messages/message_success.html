@@ -1,0 +1,14 @@
+<div class="container-fluid messages">
+    <div class="row">
+        <div class="col right white" style="color: rgb(4,45,82); margin-top: 15px;">
+            <h6>Success! <a class="right hide-messages" style="color: rgb(4,45,82)"><i class="fas fa-times"></i></a></h6>
+            <p>{{message}}</p>
+        </div>
+    </div>   
+    
+</div>
+<script type="text/javascript">
+    $(".hide-messages").click(function(e){
+        $(".messages").addClass("hidden")
+    })
+</script>

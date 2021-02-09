@@ -97,3 +97,11 @@ body{
 .select-dropdown .dropdown-trigger{
     color: white;
 }
+
+.hidden{
+    display: none;
+}
+
+.hide-messages:hover{
+    cursor: pointer;
+}

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
 from django.contrib import messages
+from tours.models import Ticket
 
 
 # Create your views here.
@@ -13,6 +14,7 @@ def view_cart(request):
 
 def add_to_cart(request, item_id):
     """Add a quantity to the shopping cart"""
+    ticket = Ticket.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     day = None
@@ -25,21 +27,16 @@ def add_to_cart(request, item_id):
         if item_id in list(cart.keys()):
             if day in cart[item_id]['items_by_day'].keys():
                 cart[item_id]['items_by_day'][day] += quantity
-                print(item_id)
             else:
                 cart[item_id]['items_by_day'][day] = quantity
-                print(item_id)
         else:
             cart[item_id] = {'items_by_day': {day: quantity}}
-            print(item_id)
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity
-            messages.success(request, "added to cart")
         else:
             cart[item_id] = quantity
-            messages.success(request, "added to cart")
-            print(item_id)
+            messages.error(request, f'Added {quantity} x {ticket.friendly_name} to your bag')
 
     request.session['cart'] = cart
 
@@ -59,7 +56,6 @@ def update_cart(request, item_id):
     if day:
         if quantity > 0:
             cart[item_id]['items_by_day'][day] = quantity
-            print(f"The item_id in the if day if quantity > 0 part: {item_id}")
         else:
             del cart[item_id]['items_by_day'][day]
             if not cart[item_id]['items_by_day']:
@@ -85,11 +81,10 @@ def remove_item(request, item_id):
         if day:
             del cart[item_id]['items_by_day'][day]
             if not cart[item_id]['items_by_day']:
-                cart.pop(item_id)
-                messages.success(request, "removed from cart")
+                cart.pop(item_id)                
         else:
             cart.pop(item_id)
-            messages.success(request, "removed from cart")
+            
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
