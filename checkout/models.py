@@ -2,7 +2,7 @@ import uuid
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
-from tours.models import Ticket
+from tours.models import Ticket, Tour, Match
 
 
 class Order(models.Model):
@@ -53,6 +53,8 @@ class Order(models.Model):
 
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
+    tour = models.ForeignKey(Tour, null=False, blank=False, on_delete=models.CASCADE)
+    match = models.ForeignKey(Match, null=False, blank=False, on_delete=models.CASCADE)
     ticket = models.ForeignKey(Ticket, null=False, blank=False, on_delete=models.CASCADE)
     day = models.CharField(max_length=1, null=True, blank=True)
     quantity = models.IntegerField(null=False, blank=False, default=0)
