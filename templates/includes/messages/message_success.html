@@ -1,11 +1,25 @@
+{% load cart_tools %}
 <div class="container-fluid messages">
     <div class="row">
         <div class="col right white" style="color: rgb(4,45,82); margin-top: 15px;">
             <h6>Success! <a class="right hide-messages" style="color: rgb(4,45,82)"><i class="fas fa-times"></i></a></h6>
             <p>{{message}}</p>
+            <hr>
+            {% if grand_total %}
+                <p><strong>Your Cart: ({{product_count}})</strong></p>
+                {% for item in cart_items %}
+                    <p>{{item.ticket.match.tour.friendly_name}}: {{item.ticket.match}}</p>
+                    <p>{{item.quantity}} x {{item.ticket.friendly_name}} = {{item.ticket.price | calc_subtotal:item.quantity}}</p>
+                    
+                {% endfor %}
+                <p>Total: £{{total|floatformat:2}}</p>
+                <p>Delivery: £{{delivery|floatformat:2}}</p>
+                <p>Grand Total: £{{grand_total|floatformat:2}}</p>
+                <a href="{% url 'view_cart' %}" class="btn btn-blue center">Checkout</a>
+            {% endif %}
+
         </div>
-    </div>   
-    
+    </div>    
 </div>
 <script type="text/javascript">
     $(".hide-messages").click(function(e){

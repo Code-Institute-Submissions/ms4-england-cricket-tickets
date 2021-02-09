@@ -105,3 +105,9 @@ body{
 .hide-messages:hover{
     cursor: pointer;
 }
+
+.messages{
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
