@@ -35,22 +35,19 @@
                             <p>{% if item.ticket.match.gametype.name == "Test Match" %}Day: {{item.day}}{%else%}N/A{%endif%}</p>
                             <p>Qty: {{ item.quantity }}</p>
                         
-                            <p>Subtotal: £{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            <p>Subtotal: £{{ item.ticket.price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
                 <hr class="my-0">
-                <div class="row text-black text-right">
-                    <div class="col-7 offset-2">
-                        <p class="my-0">Order Total:</p>
-                        <p class="my-0">Delivery:</p>
-                        <p class="my-0">Grand Total:</p>
+                <div class="row">
+                    <div class="col12 center">
+                        <p class="my-0">Order Total: {{ total | floatformat:2 }}</p>
+                        <p class="my-0">Delivery: ${{ delivery | floatformat:2 }}</p>
+                        <p class="my-0">Grand Total: ${{ grand_total | floatformat:2 }}</p>
                     </div>
-                    <div class="col-3">
-                        <p class="my-0">${{ total | floatformat:2 }}</p>
-                        <p class="my-0">${{ delivery | floatformat:2 }}</p>
-                        <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
-                    </div>
+                    
+                </div>
 
         </div>
         <div class="col m6 center">
