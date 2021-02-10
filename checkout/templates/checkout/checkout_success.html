@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css%}
+<link rel="stylesheet" href="{%static 'checkout/css/checkout.css'%}">
+{% endblock %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col12 center ">
+            <h2>Thank You!</h2>   
+            <p>Your Order information is below. A confirmation email will be sent to {{order.email}}</p>         
+        </div>
+    </div>
+    <div class="row">
+        <div class="col12">
+            <a href="{% url 'tours' %}" class="btn btn-white">Now check out more of our tours!</a>
+        </div>
+    </div>
+</div>
+{%endblock%}
