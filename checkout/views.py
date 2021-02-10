@@ -5,6 +5,7 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from tours.models import Ticket, Tour, Match
+from django.utils.safestring import mark_safe
 from cart.contexts import cart_contents
 
 import stripe
@@ -33,7 +34,6 @@ def checkout(request):
             for item_id, item_data in cart.items():
                 try:
                     ticket = Ticket.objects.get(id=item_id)
-                    
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
@@ -45,8 +45,7 @@ def checkout(request):
                         for day, quantity in item_data['items_by_day'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
-                                ticket=ticket,                              
-                                
+                                ticket=ticket,
                                 quantity=quantity,
                                 day=day,
                             )
@@ -100,9 +99,9 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
+    messages.success(request, mark_safe(f'Order successfully processed! \
+        Your order number is<br> {order_number}.<br> A confirmation \
+        email will be sent to {order.email}.'))
 
     if 'cart' in request.session:
         del request.session['cart']
