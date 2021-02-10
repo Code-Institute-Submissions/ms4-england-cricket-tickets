@@ -171,3 +171,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DELIVERY_CHARGE = 5
 
+#Stripe
+STRIPE_CURRENCY = 'gbp'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
