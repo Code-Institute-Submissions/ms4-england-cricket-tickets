@@ -8,7 +8,7 @@
             {% if grand_total %}
                 <p><strong>Your Cart: ({{product_count}})</strong></p>
                 {% for item in cart_items %}
-                    <p>{{item.ticket.match.tour.friendly_name}}: {{item.ticket.match}}</p>
+                    <p>{{item.ticket.match.tour.friendly_name}}: {{item.ticket.match}}{% if item.ticket.match.gametype.name == "Test Match" %}: Day: {{item.day}}{%else%}N/A{%endif%}</p>
                     <p>{{item.quantity}} x {{item.ticket.friendly_name}} = {{item.ticket.price | calc_subtotal:item.quantity}}</p>
                     
                 {% endfor %}
