@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'checkout',
     'crispy_forms',
     'crispy_forms_materialize',
+    'profiles',
 ]
 
 MIDDLEWARE = [
