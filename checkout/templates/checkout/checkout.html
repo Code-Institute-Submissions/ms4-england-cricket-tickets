@@ -61,12 +61,12 @@
                 <fieldset class="">
                     <legend class="fieldset-label ">Delivery</legend>
                     {{ order_form.phone_number | as_crispy_field }}
-                    {{ order_form.country | as_crispy_field }}
-                    {{ order_form.postcode | as_crispy_field }}
-                    {{ order_form.town_or_city | as_crispy_field }}
                     {{ order_form.street_address1 | as_crispy_field }}
                     {{ order_form.street_address2 | as_crispy_field }}
+                    {{ order_form.town_or_city | as_crispy_field }}
                     {{ order_form.county | as_crispy_field }}
+                    {{ order_form.postcode | as_crispy_field }}
+                    {{ order_form.country | as_crispy_field }}
                     <div class="form-check form-check-inline">
                         {% if user.is_authenticated %}
                             
@@ -111,7 +111,7 @@
 							<span class="icon">
 								<i class="fas fa-exclamation-circle"></i>
 							</span>
-							<span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+							<span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
 						</p>
 					</div>      
           </form>
