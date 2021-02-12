@@ -111,3 +111,12 @@ body{
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input{
+    color: white;
+}
+
