@@ -5,7 +5,7 @@
             <h6>Success! <a class="right hide-messages" style="color: rgb(4,45,82)"><i class="fas fa-times"></i></a></h6>
             <p>{{message}}</p>
             <hr>
-            {% if grand_total %}
+            {% if grand_total and not on_profile_page %}
                 <p><strong>Your Cart: ({{product_count}})</strong></p>
                 {% for item in cart_items %}
                     <p>{{item.ticket.match.tour.friendly_name}}: {{item.ticket.match}}{% if item.ticket.match.gametype.name == "Test Match" %}: Day: {{item.day}}{%else%}N/A{%endif%}</p>
