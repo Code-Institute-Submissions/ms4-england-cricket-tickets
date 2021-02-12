@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Tour, Match, Stadium, Ticket, Gametype
-
+from .forms import MatchForm
 # Create your views here.
 
 def tours(request):
@@ -66,3 +66,13 @@ def tickets(request, match_id):
     }
 
     return render(request, 'tours/tickets.html', context)
+
+def add_match(request):
+    """Add a match to the store"""
+    form = MatchForm()
+    template = 'tours/add_match.html'
+    context = {
+        'form': form,
+
+    }
+    return render(request, template, context)

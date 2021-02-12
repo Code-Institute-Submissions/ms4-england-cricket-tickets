@@ -21,6 +21,9 @@ class Tour(models.Model):
     def __str__(self):
         return self.name
 
+    def get_friendly_name(self):
+        return self.friendly_name
+
 class Match(models.Model):
     class Meta:
         verbose_name_plural = 'Matches'
