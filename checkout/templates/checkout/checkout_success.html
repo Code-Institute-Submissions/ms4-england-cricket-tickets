@@ -48,7 +48,11 @@
     </div>
     <div class="row">
         <div class="col12">
+            {% if from_profile %}
+            <a href="{% url 'profile' %}" class="btn btn-white">Back to Profile</a>
+            {% else %}
             <a href="{% url 'tours' %}" class="btn btn-white">Now check out more of our tours!</a>
+            {% endif %}
         </div>
     </div>
 </div>
