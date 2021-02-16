@@ -156,3 +156,25 @@ def add_tour(request):
 
     }
     return render(request, template, context)
+
+def edit_match(request, match_id):
+    """edit a match in the store"""
+    match = get_object_or_404(Match, pk=match_id)
+    if request.method == 'POST':
+        form = MatchForm(request.POST, request.FILES, instance=match)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated match!')
+            return redirect(reverse('product_management'))
+        else:
+            messages.error(request, 'Failed to update match. Please ensure the form is valid.')
+    else:
+        form = MatchForm(instance=match)
+        messages.info(request, f'You are editing {match.name}')
+
+    template = 'tours/edit_match.html'
+    context = {
+        'form': form,
+        'match': match,
+    }
+    return render(request, template, context)

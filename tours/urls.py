@@ -9,4 +9,5 @@ urlpatterns = [
     path('add_ticket/', views.add_ticket, name='add_ticket'),
     path('add_stadium/', views.add_stadium, name='add_stadium'),
     path('add_tour/', views.add_tour, name='add_tour'),
+    path('edit_match/<int:match_id>/', views.edit_match, name='edit_match'),
 ]
