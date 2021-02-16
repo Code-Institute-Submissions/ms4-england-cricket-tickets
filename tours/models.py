@@ -35,6 +35,7 @@ class Match(models.Model):
 
     def __str__(self):
         return self.name
+       
 
 class Stadium(models.Model):
     name = models.CharField(max_length=254)
@@ -47,11 +48,12 @@ class Stadium(models.Model):
 
 
 class Ticket(models.Model):
+    match = models.ForeignKey('Match', null=True, blank=True, on_delete=models.SET_NULL)
     stadium = models.ForeignKey('Stadium', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254, )
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    match = models.ForeignKey('Match', null=True, blank=True, on_delete=models.SET_NULL)
+    
 
     def __str__(self):
         return self.name

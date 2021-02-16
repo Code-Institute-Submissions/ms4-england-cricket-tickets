@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Tour, Match, Stadium, Ticket, Gametype
-from .forms import MatchForm
+from .forms import MatchForm, TicketForm, StadiumForm, TourForm
 # Create your views here.
 
 def tours(request):
@@ -76,11 +76,74 @@ def add_match(request):
             messages.success(request, 'Successfully added match!')
             return redirect(reverse('add_match'))
         else:
-                messages.error(request, 'Failed to add match. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add match. Please ensure the form is valid.')
     else:
         form = MatchForm()
     
     template = 'tours/add_match.html'
+    context = {
+        'form': form,
+
+    }
+    return render(request, template, context)
+
+
+def add_ticket(request):
+    """Add a ticket to the store"""
+    if request.method == "POST":
+        form = TicketForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added ticket!')
+            return redirect(reverse('add_ticket'))
+        else:
+            messages.error(request, 'Failed to add ticket. Please ensure the form is valid.')
+    else:
+        form = TicketForm()
+    
+    template = 'tours/add_ticket.html'
+    context = {
+        'form': form,
+
+    }
+    return render(request, template, context)
+
+
+def add_stadium(request):
+    """Add a stadium to the store"""
+    if request.method == "POST":
+        form = StadiumForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added stadium!')
+            return redirect(reverse('add_stadium'))
+        else:
+            messages.error(request, 'Failed to add stadium. Please ensure the form is valid.')
+    else:
+        form = StadiumForm()
+    
+    template = 'tours/add_stadium.html'
+    context = {
+        'form': form,
+
+    }
+    return render(request, template, context)
+
+
+def add_tour(request):
+    """Add a tour to the store"""
+    if request.method == "POST":
+        form = TourForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added tour!')
+            return redirect(reverse('add_tour'))
+        else:
+            messages.error(request, 'Failed to add tour. Please ensure the form is valid.')
+    else:
+        form = TourForm()
+    
+    template = 'tours/add_tour.html'
     context = {
         'form': form,
 
