@@ -10,4 +10,5 @@ urlpatterns = [
     path('add_stadium/', views.add_stadium, name='add_stadium'),
     path('add_tour/', views.add_tour, name='add_tour'),
     path('edit_match/<int:match_id>/', views.edit_match, name='edit_match'),
+    path('delete_match/<int:match_id>/', views.delete_match, name='delete_match'),
 ]

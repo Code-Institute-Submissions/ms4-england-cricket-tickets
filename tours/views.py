@@ -81,7 +81,7 @@ def add_match(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully added match!')
-            return redirect(reverse('add_match'))
+            return redirect(reverse('tours'))
         else:
             messages.error(request, 'Failed to add match. Please ensure the form is valid.')
     else:
@@ -178,3 +178,11 @@ def edit_match(request, match_id):
         'match': match,
     }
     return render(request, template, context)
+
+
+def delete_match(request, match_id):
+    """Delete a match from the store"""
+    match = get_object_or_404(Match, pk=match_id)
+    match.delete()
+    messages.success(request, "Match deleted!")
+    return redirect(reverse('tours'))
