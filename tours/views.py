@@ -67,6 +67,13 @@ def tickets(request, match_id):
 
     return render(request, 'tours/tickets.html', context)
 
+
+def product_management(request):
+    """ A view to return the index page """
+
+    return render(request, 'tours/product_management.html')
+
+
 def add_match(request):
     """Add a match to the store"""
     if request.method == "POST":
