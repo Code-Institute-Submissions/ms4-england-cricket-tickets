@@ -69,7 +69,17 @@ def tickets(request, match_id):
 
 def add_match(request):
     """Add a match to the store"""
-    form = MatchForm()
+    if request.method == "POST":
+        form = MatchForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added match!')
+            return redirect(reverse('add_match'))
+        else:
+                messages.error(request, 'Failed to add match. Please ensure the form is valid.')
+    else:
+        form = MatchForm()
+    
     template = 'tours/add_match.html'
     context = {
         'form': form,
