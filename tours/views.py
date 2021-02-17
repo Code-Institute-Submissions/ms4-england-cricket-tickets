@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Tour, Match, Stadium, Ticket, Gametype
 from .forms import MatchForm, TicketForm, StadiumForm, TourForm
@@ -68,14 +69,23 @@ def tickets(request, match_id):
     return render(request, 'tours/tickets.html', context)
 
 
+@login_required
 def product_management(request):
     """ A view to return the index page """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can access this page.')
+        return redirect(reverse('tours'))
 
     return render(request, 'tours/product_management.html')
 
 
+@login_required
 def add_match(request):
     """Add a match to the store"""
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can access this page.')
+        return redirect(reverse('tours'))
+
     if request.method == "POST":
         form = MatchForm(request.POST, request.FILES)
         if form.is_valid():
@@ -86,7 +96,7 @@ def add_match(request):
             messages.error(request, 'Failed to add match. Please ensure the form is valid.')
     else:
         form = MatchForm()
-    
+
     template = 'tours/add_match.html'
     context = {
         'form': form,
@@ -94,9 +104,13 @@ def add_match(request):
     }
     return render(request, template, context)
 
-
+@login_required
 def add_ticket(request):
     """Add a ticket to the store"""
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can access this page.')
+        return redirect(reverse('tours'))
+
     if request.method == "POST":
         form = TicketForm(request.POST, request.FILES)
         if form.is_valid():
@@ -107,7 +121,7 @@ def add_ticket(request):
             messages.error(request, 'Failed to add ticket. Please ensure the form is valid.')
     else:
         form = TicketForm()
-    
+
     template = 'tours/add_ticket.html'
     context = {
         'form': form,
@@ -116,8 +130,13 @@ def add_ticket(request):
     return render(request, template, context)
 
 
+@login_required
 def add_stadium(request):
     """Add a stadium to the store"""
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can access this page.')
+        return redirect(reverse('tours'))
+
     if request.method == "POST":
         form = StadiumForm(request.POST, request.FILES)
         if form.is_valid():
@@ -128,7 +147,7 @@ def add_stadium(request):
             messages.error(request, 'Failed to add stadium. Please ensure the form is valid.')
     else:
         form = StadiumForm()
-    
+
     template = 'tours/add_stadium.html'
     context = {
         'form': form,
@@ -137,8 +156,13 @@ def add_stadium(request):
     return render(request, template, context)
 
 
+@login_required
 def add_tour(request):
     """Add a tour to the store"""
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can access this page.')
+        return redirect(reverse('tours'))
+
     if request.method == "POST":
         form = TourForm(request.POST, request.FILES)
         if form.is_valid():
@@ -149,7 +173,7 @@ def add_tour(request):
             messages.error(request, 'Failed to add tour. Please ensure the form is valid.')
     else:
         form = TourForm()
-    
+
     template = 'tours/add_tour.html'
     context = {
         'form': form,
@@ -157,8 +181,14 @@ def add_tour(request):
     }
     return render(request, template, context)
 
+
+@login_required
 def edit_match(request, match_id):
     """edit a match in the store"""
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can access this page.')
+        return redirect(reverse('tours'))
+
     match = get_object_or_404(Match, pk=match_id)
     if request.method == 'POST':
         form = MatchForm(request.POST, request.FILES, instance=match)
@@ -180,8 +210,13 @@ def edit_match(request, match_id):
     return render(request, template, context)
 
 
+@login_required
 def edit_ticket(request, ticket_id):
     """edit a ticket in the store"""
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can access this page.')
+        return redirect(reverse('tours'))
+
     ticket = get_object_or_404(Ticket, pk=ticket_id)
     if request.method == 'POST':
         form = TicketForm(request.POST, request.FILES, instance=ticket)
@@ -203,16 +238,26 @@ def edit_ticket(request, ticket_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_match(request, match_id):
     """Delete a match from the store"""
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can access this page.')
+        return redirect(reverse('tours'))
+
     match = get_object_or_404(Match, pk=match_id)
     match.delete()
     messages.success(request, "Match deleted!")
     return redirect(reverse('tours'))
 
 
+@login_required
 def delete_ticket(request, ticket_id):
     """Delete a match from the store"""
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can access this page.')
+        return redirect(reverse('tours'))
+
     ticket = get_object_or_404(Ticket, pk=ticket_id)
     ticket.delete()
     messages.success(request, "Ticket deleted!")
