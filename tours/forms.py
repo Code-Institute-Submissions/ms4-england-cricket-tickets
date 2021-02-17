@@ -1,5 +1,4 @@
 from django import forms
-from .widgets import CustomClearableFileInput
 from .models import Tour, Ticket, Match, Stadium, Gametype
 
 
@@ -30,9 +29,8 @@ class StadiumForm(forms.ModelForm):
 
     class Meta:
         model = Stadium
-        fields = '__all__'
+        fields = '__all__'    
     
-    image = forms.ImageField(label='Image', required=True, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
