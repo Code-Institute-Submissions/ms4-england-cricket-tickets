@@ -209,3 +209,11 @@ def delete_match(request, match_id):
     match.delete()
     messages.success(request, "Match deleted!")
     return redirect(reverse('tours'))
+
+
+def delete_ticket(request, ticket_id):
+    """Delete a match from the store"""
+    ticket = get_object_or_404(Ticket, pk=ticket_id)
+    ticket.delete()
+    messages.success(request, "Ticket deleted!")
+    return redirect(reverse('product_management'))

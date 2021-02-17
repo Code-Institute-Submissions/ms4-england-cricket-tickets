@@ -41,7 +41,10 @@
                              <input type="submit" class="btn btn-white" value="Buy Tickets">
                              <input type="hidden" name="redirect_url" value="{{request.path}}">
                         </form>
-                        <a href="{% url 'edit_ticket' ticket.id %}" class="btn btn-white">Edit Ticket</a>   
+                        {% if request.user.is_superuser %}
+                        <a href="{% url 'edit_ticket' ticket.id %}" class="btn btn-white">Edit Ticket</a>
+                        <a href="{% url 'delete_ticket' ticket.id %}" class="btn btn-white">Delete Ticket</a> 
+                        {% endif %} 
                         
                 {% endif %}  
                            
