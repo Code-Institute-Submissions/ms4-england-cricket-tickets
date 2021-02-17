@@ -1,0 +1,1 @@
+web: gunicorn ms4_england_cricket_tickets.wsgi:application
