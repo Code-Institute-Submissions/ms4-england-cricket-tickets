@@ -180,6 +180,29 @@ def edit_match(request, match_id):
     return render(request, template, context)
 
 
+def edit_ticket(request, ticket_id):
+    """edit a ticket in the store"""
+    ticket = get_object_or_404(Ticket, pk=ticket_id)
+    if request.method == 'POST':
+        form = TicketForm(request.POST, request.FILES, instance=ticket)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated ticket!')
+            return redirect(reverse('product_management'))
+        else:
+            messages.error(request, 'Failed to update ticket. Please ensure the form is valid.')
+    else:
+        form = TicketForm(instance=ticket)
+        messages.info(request, f'You are editing {ticket.friendly_name}')
+
+    template = 'tours/edit_ticket.html'
+    context = {
+        'form': form,
+        'ticket': ticket,
+    }
+    return render(request, template, context)
+
+
 def delete_match(request, match_id):
     """Delete a match from the store"""
     match = get_object_or_404(Match, pk=match_id)

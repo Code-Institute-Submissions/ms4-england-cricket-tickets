@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col m6 offset-m3  center ">
+            <h2>Product Management</h2>
+            <h5>Edit a Ticket</h5>          
+        </div>
+    </div>
+    <div class="row">
+        <div class="col m6 offset-m3  center">
+            <form method="POST" action="{% url 'edit_ticket' ticket.id %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <a href="{% url 'tours' %}" class="btn btn-white">Cancel</a>
+                <button class="btn btn-blue" type="submit">Update Ticket</button>
+
+            </form>
+        </div>          
+    </div>
+
+</div>
+{% endblock %}
