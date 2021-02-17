@@ -11,10 +11,6 @@ from checkout.models import Order
 @login_required
 def profile(request):
     """ Display the user's profile. """
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can access this page.')
-        return redirect(reverse('tours'))
-
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == "POST":
@@ -41,10 +37,7 @@ def profile(request):
 
 @login_required
 def order_history(request, order_number):
-    """Displays the user's order history"""
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can access this page.')
-        return redirect(reverse('tours'))
+    """Displays the user's order history"""    
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
