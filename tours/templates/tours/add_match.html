@@ -17,7 +17,7 @@
             <form method="POST" action="{% url 'add_match' %}" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <a href="{% url 'tours' %}" class="btn btn-white">Cancel</a>
+                <a href="{% url 'product_management' %}" class="btn btn-white">Cancel</a>
                 <button class="btn btn-blue" type="submit">Add Match</button>
 
             </form>
