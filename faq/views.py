@@ -6,8 +6,7 @@ from .models import FAQ
 
 def faq(request):
     """
-    A view to return the tickets page, showing the
-    stadium and tickets available
+    A view to return the FAQ page
     """
 
     faq = FAQ.objects.all()

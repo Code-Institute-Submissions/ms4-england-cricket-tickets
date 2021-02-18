@@ -81,6 +81,33 @@
     {% block content %}
     {% endblock %}
 
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col m4 center">
+                    <p><a href="{% url 'tours' %}">Browse All Tours</a></p>
+                    {% for t in tours%}
+                    <ul>
+                    <li><a href="{% url 'tours' %}?tour={{t.name}}">{{t.friendly_name}}</a></li>
+                    </ul>
+                    {% endfor %}
+                </div>
+                <div class="col m4 center valign">
+                    <ul>
+                        <li><a href="https://www.facebook.com/" target="blank"><i class="fab fa-facebook"></i></a> </li>
+                        <li><a href="https://www.twitter.com/" target="blank"><i class="fab fa-twitter"></i></a> </li>
+                        <li><a href="https://www.instagram.com/" target="blank"><i class="fab fa-instagram"></i></a> </li>                       
+                    </ul>
+                    <p>For Educational Purposes Only.</p>
+                    <p>Created by <a href="https://github.com/adamdelancey" target="_blank"> Adam de Lancey <i class="fab fa-github"></i></a></p>
+                </div>
+                <div class="col m4 center">
+                    <img src="{{MEDIA_URL}}images/NicePng_cricket-cup-png_2457408.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
     {% block postloadjs %}    
     {% endblock %}
 

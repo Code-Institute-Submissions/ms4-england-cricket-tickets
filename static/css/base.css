@@ -116,3 +116,28 @@ body{
 .dropdown-content{
     min-width: 200px;
 }
+
+footer, footer a{
+    background-color: white;
+    color: rgb(4,45,82);   
+}
+
+footer .row{
+    margin-bottom: 0px;
+}
+
+footer img{
+    height: 200px;
+    padding-top: 35px;
+}
+
+footer ul li{
+    display: inline;
+}
+
+footer li i{
+    font-size: 50px;
+    padding-top: 10%;
+    padding-right: 45px;
+    padding-bottom: 5%;
+}

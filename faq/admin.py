@@ -9,7 +9,7 @@ class FAQAdmin(admin.ModelAdmin):
         'answer'
     )
     ordering = ('name',)
-    
+
 
 # Register your models here.
 admin.site.register(FAQ, FAQAdmin)
