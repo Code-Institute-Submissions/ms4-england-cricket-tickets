@@ -75,8 +75,20 @@ def product_management(request):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can access this page.')
         return redirect(reverse('tours'))
+    
+    tours = Tour.objects.all()
 
-    return render(request, 'tours/product_management.html')
+    if request.GET:
+        if 'tour' in request.GET:
+            all_tours = Tour.objects.all()
+            tour = request.GET['tour']
+            tours = all_tours.filter(name=tour)
+
+    context = {        
+        'tours': tours
+    }
+
+    return render(request, 'tours/product_management.html', context)
 
 
 @login_required

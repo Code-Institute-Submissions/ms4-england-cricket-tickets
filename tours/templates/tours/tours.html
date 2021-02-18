@@ -58,8 +58,8 @@
     {% for tour in tours %}
         <div class="row center-align" style="background-image: url('{{tour.image_url}}'); background-size: cover;
 	-webkit-background-size: cover;	-moz-background-size: cover;	-o-background-size: cover;
-	background-repeat: no-repeat;	background-position: 50% 50%; min-height: 60vh;">
-            <h3 style="padding-top: 25px;">{{tour.friendly_name}}</h3>
+	background-repeat: no-repeat;	background-position: 50% 50%; min-height: 60vh; margin-bottom: 0;">
+            <h3 style="padding-top: 25px; margin-top: 0;">{{tour.friendly_name}}</h3>
             <div class="col m6 offset-m6 center-align">                
                 {% for match in matches %}
                     {% if match.tour == tour%}
