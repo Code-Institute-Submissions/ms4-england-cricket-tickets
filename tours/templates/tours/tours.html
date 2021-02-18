@@ -13,6 +13,7 @@
         </div>
     </div>
     <div class="row">
+        <!--
         <div class="col m4 center-align">
             <form method="GET" action="{% url 'tours' %}">
                 <div class="input-field">
@@ -22,10 +23,13 @@
                         </button>                    
                 </div>
             </form>
-        </div>   
-        <div class="col m4 center-align">            
+        </div> 
+        -->  
+        <div class="col m4 offset-m4 center-align">            
                 <!-- Dropdown Trigger -->
-            <a class="dropdown-trigger white-text" href="#" data-target="dropdown3">Select Match</a>
+            <h6><a class="dropdown-trigger white-text" href="#" data-target="dropdown3" style="; padding: 2px;">
+                Filter by Tour <i class="far fa-arrow-alt-circle-down"></i>
+            </a></h6>
             <!-- Dropdown Structure -->
             <ul id="dropdown3" class="dropdown-content">
                 {% for tour in tours %}
@@ -33,13 +37,13 @@
                 <li class="divider" tabindex="-1"></li>
                 {% endfor %}                    
             </ul>
-            <a href="{% url 'tours' %}" class="btn btn-white">Reset</a>         
+            <p><a href="{% url 'tours' %}" class="btn btn-white">Reset</a>  </p>       
         </div>  
-        <div class="col m4 center-align">
-            
-                 <!-- Dropdown Trigger -->
+        <!--
+        <div class="col m4 center-align">            
+                 
                 <a class="dropdown-trigger white-text" href="#" data-target="dropdown4">Select Stadium Location</a>
-                <!-- Dropdown Structure -->
+                
                 <ul id="dropdown4" class="dropdown-content">
                     {% for s in stadiums %}
                     <li><a href="{% url 'tours' %}?stadium={{s.name}}">{{s.name}}</a></li>                    
@@ -47,6 +51,7 @@
                     {% endfor %}                    
                 </ul>
             </div>
+        -->
          
     </div>
     

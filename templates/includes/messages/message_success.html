@@ -13,6 +13,7 @@
                     
                 {% endfor %}
                 <p>Total: £{{total|floatformat:2}}</p>
+                <p>Member Discount: £{{discount|floatformat:2}}</p>
                 <p>Delivery: £{{delivery|floatformat:2}}</p>
                 <p>Grand Total: £{{grand_total|floatformat:2}}</p>
                 <a href="{% url 'view_cart' %}" class="btn btn-blue center">Checkout</a>
