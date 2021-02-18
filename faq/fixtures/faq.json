@@ -1,7 +1,7 @@
 [
     {
         "pk": 1,
-        "model": "faq.faqs",
+        "model": "faq.faq",
         "fields": {
             "name": "Q1",        
             "question": "Who do I contact if I need to change or cancel my tickets?",
@@ -10,7 +10,7 @@
     },
     {
         "pk": 2,
-        "model": "faq.faqs",
+        "model": "faq.faq",
         "fields": {
             "name": "Q2",        
             "question": "What happens if the match is cancelled due to COVID-19?",
@@ -19,7 +19,7 @@
     },
     {
         "pk": 3,
-        "model": "faq.faqs",
+        "model": "faq.faq",
         "fields": {
             "name": "Q3",        
             "question": "What happens if the match that I have tickets for is rained off?",
@@ -28,7 +28,7 @@
     },
     {
         "pk": 4,
-        "model": "faq.faqs",
+        "model": "faq.faq",
         "fields": {
             "name": "Q4",        
             "question": "Is attending cricket safe at the moment?",
@@ -37,7 +37,7 @@
     },
     {
         "pk": 5,
-        "model": "faq.faqs",
+        "model": "faq.faq",
         "fields": {
             "name": "Q5",        
             "question": "Do you sell any England cricket merchandise?",
@@ -46,16 +46,16 @@
     },
     {
         "pk": 6,
-        "model": "faq.faqs",
+        "model": "faq.faq",
         "fields": {
             "name": "Q6",        
             "question": "Will you be selling tickets for the Ashes 2021/2022?",
             "answer": "Absolutely! We are just waiting for the exact dates to be announced, then the tickets will be available to purchase on our website."      
         }
-    }
-        {
+    },
+    {
         "pk": 7,
-        "model": "faq.faqs",
+        "model": "faq.faq",
         "fields": {
             "name": "Q7",        
             "question": "I require disabled access to the stadium, can you assist with this?",

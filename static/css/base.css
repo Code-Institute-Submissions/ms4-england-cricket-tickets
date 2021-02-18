@@ -129,3 +129,7 @@ body{
 .card a{
     margin-bottom: 5px;
 }
+
+.collapsible-header{
+    color: rgb(4,45,82);
+}
