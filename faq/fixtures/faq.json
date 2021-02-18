@@ -1,0 +1,65 @@
+[
+    {
+        "pk": 1,
+        "model": "faq.faqs",
+        "fields": {
+            "name": "Q1",        
+            "question": "Who do I contact if I need to change or cancel my tickets?",
+            "answer": "Please call our free hotline on +44 123 456 789 between 09:00-17:00 Monday-Friday and we would be happy to assist with your enquiry. You can also email us on englandcrickettickets@example.com."   
+        }
+    },
+    {
+        "pk": 2,
+        "model": "faq.faqs",
+        "fields": {
+            "name": "Q2",        
+            "question": "What happens if the match is cancelled due to COVID-19?",
+            "answer": "In case of a full cancellation of the match, you will be entitled to a full refund and will be notified by email in case of this event."       
+        }
+    },
+    {
+        "pk": 3,
+        "model": "faq.faqs",
+        "fields": {
+            "name": "Q3",        
+            "question": "What happens if the match that I have tickets for is rained off?",
+            "answer": "If less than 20 overs are played, you will receive a full refund, otherwise you will still be responsible for the full price of the ticket."      
+        }
+    },
+    {
+        "pk": 4,
+        "model": "faq.faqs",
+        "fields": {
+            "name": "Q4",        
+            "question": "Is attending cricket safe at the moment?",
+            "answer": "Matches will only allow fans to visit if it is deemed safe to do so. However, we strongly encourage you to follow local government regulations in order to stay safe."      
+        }
+    },
+    {
+        "pk": 5,
+        "model": "faq.faqs",
+        "fields": {
+            "name": "Q5",        
+            "question": "Do you sell any England cricket merchandise?",
+            "answer": "Not at the moment! However, there is a plan to introduce this option soon to the website."      
+        }
+    },
+    {
+        "pk": 6,
+        "model": "faq.faqs",
+        "fields": {
+            "name": "Q6",        
+            "question": "Will you be selling tickets for the Ashes 2021/2022?",
+            "answer": "Absolutely! We are just waiting for the exact dates to be announced, then the tickets will be available to purchase on our website."      
+        }
+    }
+        {
+        "pk": 7,
+        "model": "faq.faqs",
+        "fields": {
+            "name": "Q7",        
+            "question": "I require disabled access to the stadium, can you assist with this?",
+            "answer": "Yes, please contact us via phone or email and we would be more than happy to ensure you have a smooth day."      
+        }
+    }
+]
