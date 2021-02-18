@@ -57,7 +57,10 @@
                         </table>
                 <div class="row center">
                     <h6>Total: £{{total|floatformat:2}}</h6>
-                    <h6>Delivery: £{{delivery|floatformat:2}}</h6>
+                    {% if request.user.is_authenticated %}
+                    <h6>Member Discount: £{{discount|floatformat:2}}</h6>
+                    {% endif %}
+                    <h6>Delivery: £{{delivery|floatformat:2}}</h6>                   
                     <h6><strong>Grand Total: £{{grand_total|floatformat:2}}</strong></h6>
                 </div>
                 <div class="row center">

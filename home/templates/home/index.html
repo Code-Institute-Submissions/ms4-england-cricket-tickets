@@ -6,15 +6,14 @@
 {% endblock %}
 
 {% block content %}
-<div class="v-header container">
+<div class="v-header ">
    <div class="fullscreen-video-wrap">
       <video src="{{MEDIA_URL}}video/video.mp4" autoplay loop muted></video>
    </div>
-   <div class="header-overlay"></div> 
+   
 </div>
-<div class="container center">
-    <img src="{{MEDIA_URL}}images/ecblogo.png" alt="">
-    <h1 style="padding-top: 25px;">Welcome to England Cricket Tickets</h1>
+<div class="container center">    
+    <h1>Welcome to England Cricket Tickets</h1>
     <h3>The #1 Best Place for buying tickets for England Test matches, ODIs and IT20s around the world.</h3>
     <a href="{% url 'tours' %}" class="btn-large btn-white">Explore Tickets</a>
 </div>

@@ -178,6 +178,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DELIVERY_CHARGE = 5
+MEMBER_DISCOUNT = 10
 
 if 'USE_AWS' in os.environ:
     # Cache control

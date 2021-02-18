@@ -42,6 +42,9 @@
                 <div class="row">
                     <div class="col12 center">
                         <p class="my-0">Order Total: {{ total | floatformat:2 }}</p>
+                        {% if request.user.is_authenticated %}
+                        <p>Member Discount: £{{discount|floatformat:2}}</p>
+                        {% endif %}
                         <p class="my-0">Delivery: £{{ delivery | floatformat:2 }}</p>
                         <p class="my-0">Grand Total: £{{ grand_total | floatformat:2 }}</p>
                     </div>

@@ -36,7 +36,13 @@ def cart_contents(request):
 
     delivery = total * Decimal(settings.DELIVERY_CHARGE / 100)
 
-    grand_total = total + delivery
+    discount = total * Decimal(settings.MEMBER_DISCOUNT / 100)
+
+    if request.user.is_authenticated:
+        grand_total = total - discount + delivery
+    
+    else:
+        grand_total = total + delivery
    
     gametype = Gametype.objects.all()
     match = Match.objects.all()
@@ -46,6 +52,7 @@ def cart_contents(request):
         'total': total,
         'product_count': product_count,
         'delivery': delivery,
+        'discount': discount,
         'grand_total': grand_total,
         'match': match,
         'gametype': gametype
