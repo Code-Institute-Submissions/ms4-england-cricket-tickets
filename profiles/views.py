@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 
 from .models import UserProfile
 from .forms import UserProfileForm
+from tours.models import Tour
 
 from checkout.models import Order
 
@@ -22,6 +23,14 @@ def profile(request):
             messages.error(request, 'Update failed. Please ensure the form is valid')
     else:
         form = UserProfileForm(instance=profile)
+    
+    tours = Tour.objects.all()
+
+    if request.GET:
+        if 'tour' in request.GET:
+            all_tours = Tour.objects.all()
+            tour = request.GET['tour']
+            tours = all_tours.filter(name=tour)
 
     
     orders = profile.orders.all()
@@ -29,6 +38,7 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
+        'tours': tours,
         'on_profile_page': True
     }
 

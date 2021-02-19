@@ -59,6 +59,8 @@
                     <h6>Total: £{{total|floatformat:2}}</h6>
                     {% if request.user.is_authenticated %}
                     <h6>Member Discount: £{{discount|floatformat:2}}</h6>
+                    {% else %}
+                    <h6>Want to receive 10% discount? <a href="{% url 'account_signup' %}" class="btn-small btn-white">Register Here!</a></h6>
                     {% endif %}
                     <h6>Delivery: £{{delivery|floatformat:2}}</h6>                   
                     <h6><strong>Grand Total: £{{grand_total|floatformat:2}}</strong></h6>

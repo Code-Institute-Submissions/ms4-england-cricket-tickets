@@ -21,7 +21,7 @@ def tours(request):
         if 'tour' in request.GET:
             all_tours = Tour.objects.all()
             tour = request.GET['tour']
-            tours = all_tours.filter(name=tour)       
+            tours = all_tours.filter(name=tour)
 
     context = {
         'tours': tours,
@@ -94,10 +94,19 @@ def add_match(request):
             messages.error(request, 'Failed to add match. Please ensure the form is valid.')
     else:
         form = MatchForm()
+    
+    tours = Tour.objects.all()
+
+    if request.GET:
+        if 'tour' in request.GET:
+            all_tours = Tour.objects.all()
+            tour = request.GET['tour']
+            tours = all_tours.filter(name=tour)
 
     template = 'tours/add_match.html'
     context = {
         'form': form,
+        'tours': tours
 
     }
     return render(request, template, context)
@@ -121,8 +130,18 @@ def add_ticket(request):
         form = TicketForm()
 
     template = 'tours/add_ticket.html'
+
+    tours = Tour.objects.all()
+
+    if request.GET:
+        if 'tour' in request.GET:
+            all_tours = Tour.objects.all()
+            tour = request.GET['tour']
+            tours = all_tours.filter(name=tour)
+
     context = {
         'form': form,
+        'tours': tours
 
     }
     return render(request, template, context)
@@ -145,10 +164,19 @@ def add_stadium(request):
             messages.error(request, 'Failed to add stadium. Please ensure the form is valid.')
     else:
         form = StadiumForm()
+    
+    tours = Tour.objects.all()
+
+    if request.GET:
+        if 'tour' in request.GET:
+            all_tours = Tour.objects.all()
+            tour = request.GET['tour']
+            tours = all_tours.filter(name=tour)
 
     template = 'tours/add_stadium.html'
     context = {
         'form': form,
+        'tours': tours
 
     }
     return render(request, template, context)
@@ -171,10 +199,19 @@ def add_tour(request):
             messages.error(request, 'Failed to add tour. Please ensure the form is valid.')
     else:
         form = TourForm()
+    
+    tours = Tour.objects.all()
+
+    if request.GET:
+        if 'tour' in request.GET:
+            all_tours = Tour.objects.all()
+            tour = request.GET['tour']
+            tours = all_tours.filter(name=tour)
 
     template = 'tours/add_tour.html'
     context = {
         'form': form,
+        'tours': tours
 
     }
     return render(request, template, context)
@@ -199,11 +236,20 @@ def edit_match(request, match_id):
     else:
         form = MatchForm(instance=match)
         messages.info(request, f'You are editing {match.name}')
+    
+    tours = Tour.objects.all()
+
+    if request.GET:
+        if 'tour' in request.GET:
+            all_tours = Tour.objects.all()
+            tour = request.GET['tour']
+            tours = all_tours.filter(name=tour)
 
     template = 'tours/edit_match.html'
     context = {
         'form': form,
         'match': match,
+        'tours': tours
     }
     return render(request, template, context)
 
@@ -227,11 +273,20 @@ def edit_ticket(request, ticket_id):
     else:
         form = TicketForm(instance=ticket)
         messages.info(request, f'You are editing {ticket.friendly_name}')
+    
+    tours = Tour.objects.all()
+
+    if request.GET:
+        if 'tour' in request.GET:
+            all_tours = Tour.objects.all()
+            tour = request.GET['tour']
+            tours = all_tours.filter(name=tour)
 
     template = 'tours/edit_ticket.html'
     context = {
         'form': form,
         'ticket': ticket,
+        'tours': tours
     }
     return render(request, template, context)
 
