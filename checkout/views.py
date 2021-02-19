@@ -184,10 +184,18 @@ def checkout_success(request, order_number):
 
     if 'cart' in request.session:
         del request.session['cart']
+    
+    tours = Tour.objects.all()
+
+    if request.GET:
+        if 'tour' in request.GET:
+            all_tours = Tour.objects.all()
+            tour = request.GET['tour']
 
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
+        'tours': tours
     }
 
     return render(request, template, context)
