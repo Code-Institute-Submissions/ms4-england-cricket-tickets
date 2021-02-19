@@ -49,9 +49,9 @@
        <nav class="nav-extended" style="background-color:rgb(4,45,82)">  
             {% include 'includes/desktop-navbar.html' %}
             {% include 'includes/mobile-navbar.html' %}     
-            <h4 class="center-align" style="color:rgb(4,45,82); background-color: white; padding-top: 5px;padding-bottom: 5px;">
+            <h5 class="center-align" style="color:rgb(4,45,82); background-color: white; padding-top: 5px;padding-bottom: 5px;">
                 <a href="{% url 'account_login' %}" style="color:rgb(4,45,82); font-weight: bold;">Register</a> now to receive 10% off your order!
-            </h4>                
+            </h5>                
            
         </nav>    
     </header>
@@ -84,7 +84,7 @@
     <footer>
         <div class="container-fluid">
             <div class="row">
-                <div class="col m4 center">
+                <div class="col m4 center tours-footer">
                     <p><a href="{% url 'tours' %}">Browse All Tours</a></p>
                     {% for t in tours%}
                     <ul>

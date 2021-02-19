@@ -1,0 +1,57 @@
+{% load cart_tools %}
+<div class="cart-list-view">
+        <div class="row">
+            {% if cart_items %}
+            <div class="col center">
+                {% for item in cart_items %}
+                    <p><span style="font-weight: bold;">Match:</span>  {{item.ticket.match.tour.friendly_name}}: {{item.ticket.match}}</p>                                
+                    <p><span style="font-weight: bold;">Stadium:</span>  {{item.ticket.stadium.full_name}}</p>                                
+                    <p>{% if item.ticket.match.gametype.name == "Test Match" %}<span style="font-weight: bold;">Day:</span>  {{item.day}}{%else%}N/A{%endif%}</p>                                
+                    <p><span style="font-weight: bold;">Stand: </span>{{item.ticket.friendly_name}}</p>
+                    <p><span style="font-weight: bold;">Unit Price:</span>  {{item.ticket.price}}</p>
+                    <p><span style="font-weight: bold;">Quantity:</span></p>
+                    <form method="POST" action="{% url 'update_cart' item.item_id %}" class="update-form">
+                        {% csrf_token %}
+                        <input class="qty_input white-text center" type="number" name="quantity" value="{{item.quantity}}" min="1" max="4"
+                        data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                        <input type="submit" class="btn btn-white btn-small update-link" value="Update">
+                        <a class="remove-item btn btn-white btn-small" id="remove_{{ item.item_id }}" data-day="{{ item.day }}">Remove</a>   
+                        {% if item.day %}
+                            <input type="hidden" name="day" value="{{ item.day }}">
+                        {% endif %}                                    
+                    </form>
+                    <p><span style="font-weight: bold;">Subtotal:</span>{{item.ticket.price | calc_subtotal:item.quantity}}</p>
+                    <hr>
+                {% endfor %}
+                <h6><span style="font-weight: bold;">Total:</span> £{{total|floatformat:2}}</h6>
+                    {% if request.user.is_authenticated %}
+                    <h6><span style="font-weight: bold;">Member Discount:</span> £{{discount|floatformat:2}}</h6>
+                    {% else %}
+                    <h6>Want to receive 10% discount? <a href="{% url 'account_signup' %}" class="btn-small btn-white btn-mobile">Register Here!</a></h6>
+                    {% endif %}
+                    <h6><span style="font-weight: bold;">Delivery:</span> £{{delivery|floatformat:2}}</h6>                   
+                    <h6 style="font-weight: bold;">Grand Total: £{{grand_total|floatformat:2}}</h6>
+            </div>
+        </div>
+        <div class="row center">
+            <a href="{% url 'checkout' %}" class="btn-white btn ">
+                            <i class="fas fa-lock"> </i> Secure Checkout
+                        </a>
+                        <a href="{% url 'tours' %}" class="btn btn-white">
+                            <i class="fas fa-chevron-left"> </i> Back to Tours
+                        </a>
+                        
+                    
+
+                    
+                    
+        </div>
+        <div>
+            {% else %}
+                <p>Your cart is empty.</p>
+                <a href="{% url 'tours' %}" class="btn btn-white">
+                    <i class="fas fa-chevron-left"></i> Back to Tours
+                </a>
+            {%endif%}
+        </div>
+    </div>

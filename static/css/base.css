@@ -191,3 +191,76 @@ footer li i{
 .table{
     display: table;
 }
+
+.photo-header{
+    display: none
+}
+
+.cart-list-view{
+    display: none;
+}
+
+.cart-table-view{
+    display: block
+}
+
+.message-title{
+    color: rgb(4,45,82);
+    margin-top: 25px;
+}
+
+/* Mobile */
+
+.sidenav-overlay{
+    z-index: 100;
+}
+
+@media only screen and (max-width: 500px){
+    .v-header {
+        display: none;
+    }
+    .photo-header{
+        display: block;
+    }
+
+    .photo-header img{        
+        height: 90vh;
+        width: 100%;
+        object-fit: cover;
+    }
+    .row .col{
+        float: none;
+    }
+    .table{
+        display: inline;
+    }
+    .tour-header{
+        margin-top: 110px;
+    }
+    .select-wrapper{
+        margin-left: 18%;
+    }
+    .info-row h3{
+        margin-top: 110px;
+    }
+    .info-row h5{
+        margin-bottom: 20px;
+    }
+    .message-title h6{
+        margin-top: 75px;
+    }
+    .cart-header h2{
+        margin-top: 100px;
+    }
+    .cart-list-view{
+        display: block;
+        overflow: hidden;
+    }
+    .cart-table-view{
+        display: none
+    }
+    .btn-mobile{
+        margin-top: 10px;
+    }
+    
+}
