@@ -8,28 +8,16 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col6 center-align">    
+        <div class="col6 center-align tour-header">    
             <h2>Tours</h2>
         </div>
     </div>
-    <div class="row">
-        <!--
-        <div class="col m4 center-align">
-            <form method="GET" action="{% url 'tours' %}">
-                <div class="input-field">
-                    <input id="search" type="search" required name="q" placeholder="Search our site">                  
-                        <button type="submit">                            
-                                <i class="fas fa-search"></i>                            
-                        </button>                    
-                </div>
-            </form>
-        </div> 
-        -->  
-        <div class="col m4 offset-m4 center-align">            
+    <div class="row">       
+        <div class="col m4 offset-m4 center-align tour-filter">            
                 <!-- Dropdown Trigger -->
-            <h6><a class="dropdown-trigger white-text" href="#" data-target="dropdown3" style="; padding: 2px;">
-                Filter by Tour <i class="far fa-arrow-alt-circle-down"></i>
-            </a></h6>
+            <a class="dropdown-trigger btn btn-white" href="#" data-target="dropdown3" style="padding: 2px;">
+                Filter
+            </a>
             <!-- Dropdown Structure -->
             <ul id="dropdown3" class="dropdown-content">
                 {% for tour in tours %}
@@ -37,29 +25,16 @@
                 <li class="divider" tabindex="-1"></li>
                 {% endfor %}                    
             </ul>
-            <p><a href="{% url 'tours' %}" class="btn btn-white">Reset</a>  </p>       
-        </div>  
-        <!--
-        <div class="col m4 center-align">            
-                 
-                <a class="dropdown-trigger white-text" href="#" data-target="dropdown4">Select Stadium Location</a>
-                
-                <ul id="dropdown4" class="dropdown-content">
-                    {% for s in stadiums %}
-                    <li><a href="{% url 'tours' %}?stadium={{s.name}}">{{s.name}}</a></li>                    
-                    <li class="divider" tabindex="-1"></li>
-                    {% endfor %}                    
-                </ul>
-            </div>
-        -->
+            <a href="{% url 'tours' %}" class="btn btn-white">Reset</a>     
+        </div>       
          
     </div>
     
     {% for tour in tours %}
-        <div class="row center-align" style="background-image: url('{{tour.image_url}}'); background-size: cover;
+        <div class="row center-align tour-row" style="background-image: url('{{tour.image_url}}'); background-size: cover;
 	-webkit-background-size: cover;	-moz-background-size: cover;	-o-background-size: cover;
-	background-repeat: no-repeat;	background-position: 50% 50%; min-height: 60vh; margin-bottom: 0;">
-            <h3 style="padding-top: 25px; margin-top: 0;">{{tour.friendly_name}}</h3>
+	background-repeat: no-repeat;	background-position: 50% 50%; min-height: 70vh; margin-bottom: 0;">
+            <h3>{{tour.friendly_name}}</h3>
             <div class="col m6 offset-m6 center-align">                
                 {% for match in matches %}
                     {% if match.tour == tour%}

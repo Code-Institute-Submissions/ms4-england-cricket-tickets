@@ -5,8 +5,8 @@
         "fields": {
             "name": "IndiavEngland",
             "friendly_name": "India v England",
-            "image_url": "https://images.newindianexpress.com/uploads/user/imagelibrary/2020/4/23/w900X450/Virat_Kohli_PTI.jpg",
-            "image": "kohli.jpg"
+            "image_url": "https://p.imgci.com/db/PICTURES/CMS/316100/316193.jpg",
+            "image": "sibley.jpg"
 
         }
     },
@@ -16,8 +16,8 @@
         "fields": {
             "name": "EnglandvNewZealand",
             "friendly_name": "England v New Zealand",
-            "image_url": "https://p.imgci.com/db/PICTURES/CMS/274100/274155.jpg",
-            "image": "williamson.jpg"      
+            "image_url": "https://p.imgci.com/db/PICTURES/CMS/316200/316257.jpg",
+            "image": "root.jpg"      
         }
     },
 {
@@ -26,8 +26,8 @@
         "fields": {
             "name": "EnglandvSriLanka",
             "friendly_name": "England v Sri Lanka",   
-            "image_url": "https://p.imgci.com/db/PICTURES/CMS/291000/291054.jpg",
-            "image": "stokes.jpg"       
+            "image_url": "https://p.imgci.com/db/PICTURES/CMS/292100/292101.jpg",
+            "image": "buttler.jpg"       
         }
     },
 {
@@ -36,8 +36,8 @@
         "fields": {
             "name": "EnglandvPakistan",
             "friendly_name": "England v Pakistan",
-            "image_url": "https://p.imgci.com/db/PICTURES/CMS/308200/308268.jpg",
-            "image": "malan.jpg"       
+            "image_url": "https://p.imgci.com/db/PICTURES/CMS/290600/290683.jpg",
+            "image": "wood.jpg"       
         }
     },
 {
@@ -56,8 +56,8 @@
         "fields": {
             "name": "PakistanvEngland",
             "friendly_name": "Pakistan v England",
-            "image_url": "https://p.imgci.com/db/PICTURES/CMS/308300/308334.jpg",
-            "image": "afridi.jpg"
+            "image_url": "https://p.imgci.com/db/PICTURES/CMS/292200/292268.jpg",
+            "image": "wcfinal2.jpg"
         }
     }
 
