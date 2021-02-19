@@ -214,6 +214,9 @@ footer li i{
 .sidenav-overlay{
     z-index: 100;
 }
+.sidenav li a{
+    color: rgb(4,45,82);
+}
 
 @media only screen and (max-width: 500px){
     .v-header {
@@ -249,7 +252,8 @@ footer li i{
     .message-title h6{
         margin-top: 75px;
     }
-    .cart-header h2, .checkout-header h2, .checkout-success-header h2{
+    .cart-header h2, .checkout-header h2, .checkout-success-header h2, .allauth-header,
+    .product-management h2{
         margin-top: 100px;
     }
     .cart-list-view, .order-list-view{
