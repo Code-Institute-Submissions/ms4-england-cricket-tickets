@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
-from tours.models import Ticket
+from tours.models import Ticket, Tour
 
 
 # Create your views here.
@@ -8,8 +8,19 @@ def view_cart(request):
     """
     A view that renders the cart contents page
     """
+    tours = Tour.objects.all()
 
-    return render(request, 'cart/cart.html',)
+    if request.GET:
+        if 'tour' in request.GET:
+            all_tours = Tour.objects.all()
+            tour = request.GET['tour']
+            tours = all_tours.filter(name=tour)
+    
+    context = {
+        'tours': tours,
+    }
+
+    return render(request, 'cart/cart.html', context)
 
 
 def add_to_cart(request, item_id):

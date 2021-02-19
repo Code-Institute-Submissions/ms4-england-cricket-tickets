@@ -147,6 +147,20 @@ footer, footer a{
     color: rgb(4,45,82);   
 }
 
+.select-wrapper{
+    max-width: 250px;
+    margin-left: 36%;
+}
+
+.select-wrapper input.select-dropdown{
+    color: white;
+    align-items: center;
+}
+
+.form-options a, .form-options input{
+    margin-top: 10px;
+}
+
 footer .row{
     margin-bottom: 0px;
 }

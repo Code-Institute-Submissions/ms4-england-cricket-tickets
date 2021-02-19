@@ -12,13 +12,14 @@
         {% for stadium in stadiums%}
                 {% if match.stadium == stadium %}
         <h4>{{stadium.full_name}}</h4>
+        <h5>{{match.date}}</h5>
         <div class="col m6">       
                 <a href="{{stadium.image_url}}" target="_blank"><img src="{{stadium.image_url}}" alt="{{stadium.name}}" style="max-width: 100%;"></a>
                 {% endif %}
             {% endfor %}          
            
         </div>
-        <div class="col m6 center-align">            
+        <div class="col m6 center form-options">            
              {% for ticket in tickets %}
                 {% if match == ticket.match %}
                     <h5>{{ ticket.friendly_name }}: {{ticket.price}}</h5>
