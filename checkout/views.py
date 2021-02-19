@@ -7,7 +7,7 @@ from django.utils.safestring import mark_safe
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 
-from tours.models import Ticket
+from tours.models import Ticket, Tour
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from cart.contexts import cart_contents
@@ -131,11 +131,20 @@ def checkout(request):
         messages.warning(request, 'Stripe public key is missing. \
             Did you forget to set it in your environment?')
 
+    tours = Tour.objects.all()
+
+    if request.GET:
+        if 'tour' in request.GET:
+            all_tours = Tour.objects.all()
+            tour = request.GET['tour']
+            tours = all_tours.filter(name=tour)
+
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+        'tours': tours
     }
 
     return render(request, template, context)

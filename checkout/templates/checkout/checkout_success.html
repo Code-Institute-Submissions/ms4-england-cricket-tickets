@@ -13,12 +13,13 @@
     <div class="row">
         <div class="col12 center ">
             <h2>Thank You!</h2>   
-            <p>Your Order information is below. A confirmation email will be sent to {{order.email}}</p> 
+            <p>Your Order information is below. A confirmation email will be sent to <span style="font-weight: bold;">{{order.email}}</span></p> 
             <h5>Order Info:</h5>            
             <p>Order Number = {{order.order_number}}</p> 
             <p>Order Date = {{order.date}}</p> 
 
             <h5>Order Details:</h5> 
+            <div class="row">                
             {% for item in order.lineitems.all %}   
             <p>{{item.ticket.match.tour.friendly_name}}: {{item.ticket.match}}</p>
             <p> {{item.ticket.friendly_name}}: {% if item.ticket.match.gametype.name == "Test Match" %}Day: {{item.day}}{%else%}N/A{%endif%}</p>
@@ -46,8 +47,8 @@
 
         </div>
     </div>
-    <div class="row">
-        <div class="col12">
+    <div class="row center">
+        <div class="col ">
             {% if from_profile %}
             <a href="{% url 'profile' %}" class="btn btn-white">Back to Profile</a>
             {% else %}
@@ -55,5 +56,6 @@
             {% endif %}
         </div>
     </div>
+</div>
 </div>
 {%endblock%}
