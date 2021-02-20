@@ -29,6 +29,9 @@
             <hr>          
             {% endfor %}
             <p style="font-weight: bold;">Order Total: £{{order.order_total}}</p>
+            {% if request.user.is_authenticated %}
+                <p style="font-weight: bold;">Member Discount: £{{order.member_discount}}</p>
+            {% endif %}
             <p style="font-weight: bold;">Delivery: £{{order.delivery_cost}}</p>
             <p style="font-weight: bold;">Grand Total: £{{order.grand_total}}</p>
         </div>

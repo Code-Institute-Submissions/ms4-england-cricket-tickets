@@ -22,6 +22,7 @@ class Order(models.Model):
     county = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
+    member_discount = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     original_cart = models.TextField(null=False, blank=False, default='')
@@ -41,7 +42,12 @@ class Order(models.Model):
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         self.delivery_cost = self.order_total * settings.DELIVERY_CHARGE / 100
-        self.grand_total = self.order_total + self.delivery_cost
+        self.member_discount = self.order_total * settings.MEMBER_DISCOUNT / 100
+        if self.user_profile:
+            self.grand_total = self.order_total - self.member_discount + self.delivery_cost
+        else:
+            self.grand_total = self.order_total + self.delivery_cost
+        
         self.save()
 
     def save(self, *args, **kwargs):
