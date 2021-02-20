@@ -25,12 +25,12 @@
             {% for item in order.lineitems.all %}   
             <p>{{item.ticket.match.tour.friendly_name}}: {{item.ticket.match}}</p>
             <p> {{item.ticket.friendly_name}}: {% if item.ticket.match.gametype.name == "Test Match" %}Day: {{item.day}}{%else%}N/A{%endif%}</p>
-            <p>{{item.quantity}} ticket(s) at {{item.ticket.price}} each</p>
+            <p>{{item.quantity}} ticket(s) at £{{item.ticket.price}} each</p>
             <hr>          
             {% endfor %}
-            <p style="font-weight: bold;">Order Total: {{order.order_total}}</p>
-            <p style="font-weight: bold;">Delivery: {{order.delivery_cost}}</p>
-            <p style="font-weight: bold;">Grand Total: {{order.grand_total}}</p>
+            <p style="font-weight: bold;">Order Total: £{{order.order_total}}</p>
+            <p style="font-weight: bold;">Delivery: £{{order.delivery_cost}}</p>
+            <p style="font-weight: bold;">Grand Total: £{{order.grand_total}}</p>
         </div>
         <div class="col m6 center">            
             <h4>Delivering to:</h4>

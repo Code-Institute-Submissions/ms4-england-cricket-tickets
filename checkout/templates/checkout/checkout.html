@@ -47,7 +47,7 @@
                 <hr>
                 <div class="row">
                     <div class="center">
-                        <p>Order Total: {{ total | floatformat:2 }}</p>
+                        <p>Order Total: £{{ total | floatformat:2 }}</p>
                         {% if request.user.is_authenticated %}
                         <p>Member Discount: £{{discount|floatformat:2}}</p>
                         {% endif %}

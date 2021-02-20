@@ -37,7 +37,7 @@
                                     <td>{{item.ticket.stadium}}</td>                                
                                     <td>{% if item.ticket.match.gametype.name == "Test Match" %}{{item.day}}{%else%}N/A{%endif%}</td>                                
                                     <td>{{item.ticket.friendly_name}}</td>
-                                    <td>{{item.ticket.price}}</td>
+                                    <td>£{{item.ticket.price}}</td>
                                     <td>
                                         <form method="POST" action="{% url 'update_cart' item.item_id %}" class="update-form">
                                             {% csrf_token %}
@@ -50,7 +50,7 @@
                                             {% endif %}                                    
                                         </form>
                                     </td>
-                                    <td>{{item.ticket.price | calc_subtotal:item.quantity}}</td>   
+                                    <td>£{{item.ticket.price | calc_subtotal:item.quantity}}</td>   
                                                         
                                 </tr>
                                     {% endfor %}                        

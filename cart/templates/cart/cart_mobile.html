@@ -8,7 +8,7 @@
                     <p><span style="font-weight: bold;">Stadium:</span>  {{item.ticket.stadium.full_name}}</p>                                
                     <p>{% if item.ticket.match.gametype.name == "Test Match" %}<span style="font-weight: bold;">Day:</span>  {{item.day}}{%else%}N/A{%endif%}</p>                                
                     <p><span style="font-weight: bold;">Stand: </span>{{item.ticket.friendly_name}}</p>
-                    <p><span style="font-weight: bold;">Unit Price:</span>  {{item.ticket.price}}</p>
+                    <p><span style="font-weight: bold;">Unit Price:</span>  £{{item.ticket.price}}</p>
                     <p><span style="font-weight: bold;">Quantity:</span></p>
                     <form method="POST" action="{% url 'update_cart' item.item_id %}" class="update-form">
                         {% csrf_token %}
@@ -20,7 +20,7 @@
                             <input type="hidden" name="day" value="{{ item.day }}">
                         {% endif %}                                    
                     </form>
-                    <p><span style="font-weight: bold;">Subtotal:</span>{{item.ticket.price | calc_subtotal:item.quantity}}</p>
+                    <p><span style="font-weight: bold;">Subtotal:</span>£{{item.ticket.price | calc_subtotal:item.quantity}}</p>
                     <hr>
                 {% endfor %}
                 <h6><span style="font-weight: bold;">Total:</span> £{{total|floatformat:2}}</h6>
