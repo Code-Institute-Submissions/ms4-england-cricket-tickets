@@ -23,7 +23,7 @@
         "fields": {
             "name": "Q3",        
             "question": "What happens if the match that I have tickets for is rained off?",
-            "answer": "If less than 20 overs are played, you will receive a full refund, otherwise you will still be responsible for the full price of the ticket."      
+            "answer": "If fewer than 20 overs are played, you will receive a full refund, otherwise you will still be responsible for the full price of the ticket."      
         }
     },
     {

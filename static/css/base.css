@@ -30,6 +30,9 @@ body{
         top: -400px;
         height: 170vh;
     }
+    .select-wrapper{
+        margin-left: 30%;
+    }
 }
 
 .fullscreen-video-wrap video {
