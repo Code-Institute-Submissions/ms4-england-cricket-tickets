@@ -13,7 +13,7 @@ def tours(request):
     matches = Match.objects.all()
     gametypes = Gametype.objects.all()
     stadiums = Stadium.objects.all()
-    tour = None
+    
     query = None
     stadium = None
 

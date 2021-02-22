@@ -35,10 +35,10 @@
 	-webkit-background-size: cover;	-moz-background-size: cover;	-o-background-size: cover;
 	background-repeat: no-repeat;	background-position: 50% 50%; min-height: 70vh; margin-bottom: 0;">
             <h3>{{tour.friendly_name}}</h3>
-            <div class="col m6 offset-m6 center-align">                
+            <div class="col m6 offset-m6 center-align tour-details">                
                 {% for match in matches %}
                     {% if match.tour == tour%}
-                    <p>{{match.name}}, {{match.stadium.full_name}}: {{match.date}}</p>
+                    <p>{{match.name}}, {{match.stadium.full_name}}:<br> {{match.date}}</p>
                     <a href="{% url 'tickets' match.id %}" class="btn btn-blue" >Buy tickets</a>
                     {% if request.user.is_superuser %}
                     <a href="{% url 'edit_match' match.id %}" class="btn btn-white" >Edit match</a>

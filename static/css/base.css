@@ -25,15 +25,16 @@ body{
 	overflow: hidden;
 }
 
-@media only screen and (min-width: 1100px) and (max-width:1300px){
-    .fullscreen-video-wrap {
-        top: -400px;
-        height: 170vh;
+@media only screen and (min-width: 1026px) and (max-width: 1800px){
+    .v-header {
+    height: 140vh;
     }
-    .select-wrapper{
-        margin-left: 30%;
+    .fullscreen-video-wrap {        	
+    height: 170vh;
     }
 }
+
+
 
 .fullscreen-video-wrap video {
 	min-width: 100%;
@@ -143,6 +144,12 @@ body{
     margin-top: 10px;
 }
 
+.tour-details{
+    background-color: rgba(255, 255, 255, 0.3);
+    border: rgba(255, 255, 255, 0.3) 1px solid;
+    border-radius: 0.5%
+}
+
 .tour-row p{
     font-weight: bold
 }
@@ -230,8 +237,7 @@ footer li i{
 .sidenav li a{
     color: rgb(4,45,82);
 }
-
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 1025px){
     .v-header {
         display: none;
     }
@@ -240,9 +246,21 @@ footer li i{
     }
 
     .photo-header img{        
-        height: 90vh;
+        height: 50vh;
         width: 100%;
         object-fit: cover;
+    }
+
+    footer img{
+        height: 150px;
+        width: 150px;
+        padding-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .photo-header img{        
+        height: 90vh;        
     }
     .row .col{
         float: none;
