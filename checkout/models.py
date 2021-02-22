@@ -43,10 +43,14 @@ class Order(models.Model):
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         self.delivery_cost = self.order_total * settings.DELIVERY_CHARGE / 100
         self.member_discount = self.order_total * settings.MEMBER_DISCOUNT / 100
+
         if self.user_profile:
             self.grand_total = self.order_total - self.member_discount + self.delivery_cost
+            print(str(self.user_profile) + "1st total: " + str(self.grand_total))
         else:
             self.grand_total = self.order_total + self.delivery_cost
+
+        print(str(self.user_profile) + " total: " + str(self.grand_total))
         
         self.save()
 
