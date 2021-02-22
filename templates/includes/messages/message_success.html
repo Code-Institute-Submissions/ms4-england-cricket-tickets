@@ -6,7 +6,7 @@
             <p>{{message}}</p>
             <hr>
             {% if grand_total and not on_profile_page %}
-                <p><strong>Your Cart: ({{product_count}})</strong></p>
+                <p><strong>Your <a href="{%url 'view_cart'%}" style="color: rgb(4,45,82); text-decoration: underline;">Cart</a> : ({{product_count}})</strong></p>
                 {% for item in cart_items %}
                     <p>{{item.ticket.match.tour.friendly_name}}: {{item.ticket.match}}{% if item.ticket.match.gametype.name == "Test Match" %}: Day: {{item.day}}{%else%}{%endif%}</p>
                     <p>{{item.quantity}} x {{item.ticket.friendly_name}} = £{{item.ticket.price | calc_subtotal:item.quantity}}</p>
@@ -18,7 +18,7 @@
                 {% endif %}
                 <p>Delivery: £{{delivery|floatformat:2}}</p>
                 <p>Grand Total: £{{grand_total|floatformat:2}}</p>
-                <a href="{% url 'view_cart' %}" class="btn btn-blue center">Checkout</a>
+                <a href="{% url 'view_cart' %}" class="btn btn-blue center">Go to Cart</a>
             {% endif %}
 
         </div>

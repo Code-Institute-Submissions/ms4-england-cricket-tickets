@@ -34,7 +34,11 @@ def cart_contents(request):
                     'day': day
                 })
 
-    delivery = total * Decimal(settings.DELIVERY_CHARGE / 100)
+    if total > 100:
+        delivery = 5
+    else:
+        delivery = total * Decimal(settings.DELIVERY_CHARGE / 100)   
+    
 
     discount = total * Decimal(settings.MEMBER_DISCOUNT / 100)
 

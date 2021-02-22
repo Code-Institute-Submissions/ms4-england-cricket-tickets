@@ -61,5 +61,24 @@
             "question": "I require disabled access to the stadium, can you assist with this?",
             "answer": "Yes, please contact us via phone or email and we would be more than happy to ensure you have a smooth day."      
         }
+    },
+    {
+        "pk": 8,
+        "model": "faq.faq",
+        "fields": {
+            "name": "Q8",        
+            "question": "How much is delivery?",
+            "answer": "Delivery is 5% of the total ticket cost, unless you spend more than £100, then it is capped at £5.00"      
+        }
+    },
+    {
+        "pk": 9,
+        "model": "faq.faq",
+        "fields": {
+            "name": "Q9",        
+            "question": "How do I get the 10% discount?",
+            "answer": "Hit register at the top of the page, login to your account, and the discount will automatically be applied."      
+        }
     }
+
 ]
