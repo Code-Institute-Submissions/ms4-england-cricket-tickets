@@ -34,8 +34,6 @@ body{
     }
 }
 
-
-
 .fullscreen-video-wrap video {
 	min-width: 100%;
 	min-width: 100%;
@@ -118,8 +116,9 @@ body{
 }
 
 .card img{
-    max-height: 250px;
+    max-height: 150px;
     width: 100%;
+    object-fit: cover;
 }
 
 .card a{

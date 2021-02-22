@@ -9,7 +9,7 @@ tickets have been added. The owner of the website will be able to create, read, 
 updated. It is designed to be responsive and accessible on a range of devices, making it interactive and easy to navigate for potential users.
 
 <p align="center">
-    <img src="documentation/screenshots/responsive.jpg">
+    <img src="readme_materials/responsive.jpg">
 
 # Access
 
@@ -109,25 +109,112 @@ View the Github repo: [here](https://adamdelancey.github.io/ms4-england-cricket-
 ### Current features
 
 * Base HTML - on all pages
-    - ###
+    - Navbar - using Materialize's [mobile collapse feature](https://materializecss.com/navbar.html), I created two separate
+    navbars, one for mobile and tablet devices, and one for laptops and larger screens. Both versions feature the England 
+    cricket logo that acts as a link to the hompage, plus links to all of the Tours and FAQs, a My Account button where logged in 
+    users can view their profile and others can register or sign in to an account, as well as a responsive cart icon and number that 
+    will responsively reflect the grand total of the items in the shopping cart. The mobile version of the navbar additionally 
+    features a sidenav that is triggered by a hamburger icon, that appears on the screen from the right as per below. 
+    <img src="readme_materials/sidenav1.jpg"><img src="readme_materials/sidenav2.jpg">
+    - 10% offer - across the top of each page, the user is presented with an option to save 10% on their purchase by 
+    registering to the website. There is a link to the registration page in the header, and immediately gives the user an 
+    incentive to become a member. This improves click-through rate and means that the user is more likely to purchase a ticket 
+    on this website.
+    - Messages - using the Django import 'messages' from 'django-contrib' the site uses error, success, warning and info messages 
+    across the site to keep the user updated on any important interaction, such as adding, updating or removing an item in the bag, 
+    logging in to the site or viewing a previous order. These appear across the site at the top of the page, and on the success 
+    messages, there is a feature to go directly to the shopping cart to proceed with the order:
+    <img src="readme_materials/success-message.jpg">
+    - Footer - this is split into three separate parts. First, a link to either all tours or one of the tours that the user is interested in 
+    for convenience, social media links to external windows, and finally the England cricket logo for consistency. This provides the user 
+    with easy navigation across the site both at the top and bottom of the page.  
+    <img src="readme_materials/footer.jpg"> 
 
 * Home Page
-    - ###
+    - Hero video (desktop devices) - upon entering the site, users are immediately presented with a looped 18s video 
+    of one of the most famous moments in England's cricket recent history. If this doesn't get cricket fans excited upon 
+    entering the site, I'm not sure what will! Due to the dimensions of the video, this works best on desktop devices only, 
+    but is an exciting feature for the target audience and I believe creates a great first impression.
+    - Hero image (mobile/tablet devices) - as a replacement for the aforementioned video, a photo of England's World Cup winning 
+    team is immediately viewed by the user. As above, this should create an exciting first impression for the user and an 
+    intrigue to purchase tickets given that they could witness another famous match.
+    - Introduction text - on all devices, there is a simple introduction to the website that outlines the purpose of the site 
+    and a link to go straight to the Tours page to purchase tickets. This means that the user will quickly understand the website 
+    and have several options to navigate to the Tours page.
 
 * Tour Page
-    - ### 
+    - Filter Button - at the top of the Tours page, the user can immediately filter the page to see a particular Tour 
+    that they may be interested in. Alternatively, they can click the reset button and simply scroll through the various 
+    options that they can purchase.
+    - Tour image - for each tour there is a high quality photo of a member of the England cricket team. These photos create 
+    a sense of professionalism and can attract the user into seeing one of their heroes play. Additionally, the photos 
+    create a clear separation between the different Tours that are available.
+    - Tour information - for each match, there is information on the teams playing, which match it is, the stadium that 
+    the match is playing played at, the dates, and a button to go through to the Tickets page. This short summary is standard 
+    for a ticketing website and allows the user to get as much information as quickly as possible.
+    - Edit/delete match - for the admin/superuser only, there is an option next to each match that the user can click in to 
+    either amend the details, or remove it completely. This is particularly useful for when a match is now finished and the admin 
+    can remove it easily.
+    <img src="readme_materials/admin-tour.jpg"> 
 
 * Tickets Page
-    - ###
+    - Stadium image - this image shows the available stands for which a user can purchase tickets. This links to an external 
+    site so that the user can get a larger look if needed. These images create simplicity for the user in discovering what is 
+    available, and means they can easily select the desired tickets by looking at the image as the names of the tickets reflect 
+    the stands in the image.
+    - Ticket information - here the user can see the different prices for the tickets that they can purchase, the quantity 
+    to buy, and if it is a Test Match, the Day that they choose to go to. From here, they can buy tickets or return to the Tours 
+    page to buy tickets for a different match if necessary. Upon clicking 'Buy Tickets' a success message will appear 
+    and then the user can go to the cart to confirm their purchase. The cart in the navbar will also update the amount.
+    - Edit/delete ticket - similar to the edit/delete match options, here the admin/superuser can edit or delete any ticket 
+    throughout the site that may no longer be relevant.
+    
+
+* Cart Page
+    - Summary - here the user can quickly see the match, stadium, day, stand, price and quantity of the tickets that 
+    they are about to purchase. It's easy to understand and therefore user-friendly. At the bottom of the page, there is 
+    also a summary on the order total, member discount (if applicable), delivery cost and grand total.
+    - Update/remove buttons - here the user can update the quantity of the items in the cart, or remove it altogether. This saves 
+    removing everything that it's in the cart and allows for a speedy interaction with the website.
+    - Member discount - if the user has not yet created an account, here they again have the option to register to the website 
+    so that they receive the 10% discount on their purchase:
+    <img src="readme_materials/discount-button.jpg"> 
+
+* Checkout Page
+    - Order summary - similar to the summary in the cart page above, the user is presented with a summary of what they 
+    are about to purchase. This gives the user confidence that they can easily check that they have the correct items 
+    in the cart before checking out and paying.
+    - Payment - through [Stripe](https://stripe.com/en-gb-se) the user can enter their credit card details and make the 
+    purchase successfully. The responsive form will let the user know if they have made any errors. 
+    - Loading screen - once the user clicks submit, a loading image of a cricket ball spins on the page to let the user 
+    know that the order is being processed.
+    <img src="readme_materials/loading-ball.jpg"> 
+
+* Checkout Success Page
+    - Summary - this shows the order details, total and delivery details for the order and therefore acts as a very useful place 
+    for the user to visit to check that their order is correct. 
+    - Email confirmation - additionally, an email is sent to the user's email address letting them know that the order has 
+    been processed:
+    <img src="readme_materials/email-conf.jpg"> 
 
 * Profile Page
-    - ###
-
-* Manage Tours/Tickets Page
-    - ###
+    - Split into two sections, the first shows the user's default delivery information, which if they have just made their first order, 
+    will be automatically created with the details of their order. Here they can edit their default information which will speed 
+    up the checking out process and therefore the user is more likely to make an order.
+    - The second part shows the user's order history which shows the order number, date, items purchased and order total. The 
+    user can click on the order number to view their past order, and then there is a message which lets the user know 
+    that they are looking at an old order. 
 
 * FAQs page
-    - ###
+    - Using the [Materialize Collapsible](https://materializecss.com/collapsible.html) feature, the user can easily view 
+    all of the questions and click on any that applies to them. The box then expands and reveals the answer to the user.
+    <img src="readme_materials/faq.jpg">
+
+* Product Management page
+    - Available only to the admin/superuser, in the 'My Account' dropdown in the navbar, the user can select Product 
+    Management and then from there add a new match, ticket, tour or stadium to the list. This is necessary because a match 
+    may be part of a new Tour, at a new Stadium, and feature tickets that have not yet been sold and therefore the admin 
+    will need to create new options for all of these. 
   
 
 ### Long-term goals
@@ -213,7 +300,7 @@ Full wireframes can be accessed here:
 Current schema:
 A txt version can be viewed [here](documentation/data/data.txt)
 
-<p><img src="documentation/screenshots/data.jpg"></p>
+<p><img src="readme_materials/data2.jpg"></p>
 
 
 
