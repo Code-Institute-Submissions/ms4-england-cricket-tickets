@@ -115,7 +115,7 @@ View the Github repo: [here](https://adamdelancey.github.io/ms4-england-cricket-
     users can view their profile and others can register or sign in to an account, as well as a responsive cart icon and number that 
     will responsively reflect the grand total of the items in the shopping cart. The mobile version of the navbar additionally 
     features a sidenav that is triggered by a hamburger icon, that appears on the screen from the right as per below. 
-    <img src="readme_materials/sidenav1.jpg"><img src="readme_materials/sidenav2.jpg">
+    <p><img src="readme_materials/sidenav1.jpg"><img src="readme_materials/sidenav2.jpg"></p>
     - 10% offer - across the top of each page, the user is presented with an option to save 10% on their purchase by 
     registering to the website. There is a link to the registration page in the header, and immediately gives the user an 
     incentive to become a member. This improves click-through rate and means that the user is more likely to purchase a ticket 
@@ -215,18 +215,27 @@ View the Github repo: [here](https://adamdelancey.github.io/ms4-england-cricket-
     Management and then from there add a new match, ticket, tour or stadium to the list. This is necessary because a match 
     may be part of a new Tour, at a new Stadium, and feature tickets that have not yet been sold and therefore the admin 
     will need to create new options for all of these. 
+    - Individual Add Page - the admin is then redirected to the relevant Add Page, and then has to simply fill in the short 
+    form in order for the new item to be created.
   
 
 ### Long-term goals
 
 Future improvements to the website may include:
 
-* ###
+* More filter options on Tours page, for example so that a user could filter by date, stadium or gametype.
+* A blog section so that users could upload their own experiences or photos of matches that they have been to, comment on each 
+other's posts and create a community atmosphere to the website.
+* Add merchandise to the website so that users had the option to buy official England merchandise through the website, therefore 
+expanding the product offering and making it more more likely that a user will make a purchase.
 
 
 ## Structure
 
-* ###
+* I made the decision programatically and thematically to have the site clearly split into different sections based on the Django 
+installed apps - Home, Tours, Cart, Checkout, Profile and FAQ - as well as the allauth installed pages such as login, log out, register. 
+This created a natural sales journey throughout the site, and with the consistency of the sticky navbar, footer, messages and design, 
+it becomes very easy to navigate through the site.
 
 
 ## Skeleton
@@ -280,14 +289,25 @@ Full wireframes can be accessed here:
    
 ### Design
 -   #### Colour Scheme
-    <p><img src="documentation/screenshots/colors.jpg"></p>
-    -   ###
+    
+    - Taking inspiration from the England Cricket Boards' [official website](https://www.ecb.co.uk/), I have used the colour in the header,
+    #042D52, to be the main color throughout the site in the header and buttons. As a seconday, complimentary colour, I have used 
+    #1B466C as background for the site where there isn't imagery used as the background instead. As a lighter, brighter colour in 
+    contrast to the darker blues, I have used off-white colour #F9FAFA for much of the text, to ensure it stands out and is easily 
+    readable.
+    - I used [Sessions.edu](https://www.sessions.edu/color-calculator/) to work out the correct complimentary colours, and 
+    [Coolors](https://coolors.co/042d52-1b466c-f9fafa) to create the palette below.
+    <p><img src="readme_materials/colors.jpg"></p>
 
 -   #### Typography
-    -   ###
+    -   The Noto Sans font is the main font used throughout the whole website with Sans Serif as the fallback font in case for 
+    any reason the font isn't being imported into the site correctly. I chose this as I believe it has a modern feel and 
+    reflects the style of the remainder of the site.
 
 -   #### Imagery
-    - ###
+    - I have predominantly used professional images throughout the site from [ESPN CricInfo](https://www.espncricinfo.com/ci/content/image/index.html)
+    in order to ensure that the site looks professional. For the stadium images, these come from the individual stadium ticketing pages 
+    in order to remain consistent across the site.
     - All photos were put through [Tiny PNG](https://tinypng.com/) to reduce the file size and improve loading time.
 
 -   #### Icons

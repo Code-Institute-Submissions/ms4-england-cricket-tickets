@@ -1,8 +1,8 @@
 body{
     font-family: 'Noto Sans', sans-serif;
     overflow-x: hidden;
-    background-color:rgb(4,45,82);
-    color: white;
+    background-color:#1b466c;
+    color: #f9fafa;
     
 }
 
@@ -60,16 +60,16 @@ body{
 }
 
 .btn-blue:hover{
-    background-color: white;
+    background-color: #f9fafa;
     color: rgb(4,45,82);;
 }
 
 .btn-white{
-    background-color: white;
+    background-color: #f9fafa;
     color: rgb(4,45,82);
 }
 .btn-white:hover{
-    color: white;
+    color: #f9fafa;
     background-color: rgb(4,45,82);
 }
 
@@ -82,7 +82,7 @@ body{
 }
 
 .btn:focus, .btn-large:focus, .btn-small:focus, .btn-floating:focus {
-    background-color: white;
+    background-color: #f9fafa;
 }
 
 .btt-link{
@@ -90,7 +90,7 @@ body{
 }
 
 .select-dropdown .dropdown-trigger{
-    color: white;
+    color: #f9fafa;
 }
 
 .hidden{
@@ -112,7 +112,7 @@ body{
 }
 
 .allauth-form-inner-content input{
-    color: white;
+    color: #f9fafa;
 }
 
 .card img{
@@ -162,7 +162,7 @@ body{
 }
 
 footer, footer a{
-    background-color: white;
+    background-color: #f9fafa;
     color: rgb(4,45,82);   
 }
 
@@ -172,7 +172,7 @@ footer, footer a{
 }
 
 .select-wrapper input.select-dropdown{
-    color: white;
+    color: #f9fafa;
     align-items: center;
 }
 
@@ -226,6 +226,26 @@ footer li i{
 .message-title{
     color: rgb(4,45,82);
     margin-top: 25px;
+}
+
+.primaryAction{
+    
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.secondaryAction{
+    color: #f9fafa;
+}
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: absolute;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.input-field>label{
+    color: white;
 }
 
 /* Mobile */
