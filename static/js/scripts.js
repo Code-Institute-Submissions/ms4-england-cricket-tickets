@@ -5,6 +5,9 @@
     $(".dropdown-trigger").dropdown({alighment: "bottom"}); 
     $('select').formSelect();
     $('.collapsible').collapsible();
+    $(".hide-messages").click(function(e){
+        $(".messages").addClass("hidden")
+    })
      
 
 });
