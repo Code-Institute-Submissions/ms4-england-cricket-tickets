@@ -1,6 +1,6 @@
 {% load cart_tools %}
 <div class="cart-list-view">
-        <div class="row">
+        <div class="row center">
             {% if cart_items %}
             <div class="col center">
                 {% for item in cart_items %}
@@ -39,12 +39,7 @@
                         </a>
                         <a href="{% url 'tours' %}" class="btn btn-white">
                             <i class="fas fa-chevron-left"> </i> Back to Tours
-                        </a>
-                        
-                    
-
-                    
-                    
+                        </a>                          
         </div>
         <div>
             {% else %}
