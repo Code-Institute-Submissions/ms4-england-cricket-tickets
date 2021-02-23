@@ -35,7 +35,7 @@
 	-webkit-background-size: cover;	-moz-background-size: cover;	-o-background-size: cover;
 	background-repeat: no-repeat;	background-position: 50% 50%; min-height: 70vh; margin-bottom: 0;">
             <h3>{{tour.friendly_name}}</h3>
-            <div class="col m6 offset-m6 center-align tour-details">                
+            <div class="col m6 offset-m6 center-align tour-details" data-aos="fade-up">                
                 {% for match in matches %}
                     {% if match.tour == tour%}
                     <p>{{match.name}}, {{match.stadium.full_name}}:<br> {{match.date}}</p>

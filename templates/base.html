@@ -26,6 +26,8 @@
          <!--Import google fonts-->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <!-- AOS CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <!-- Main CSS -->
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
@@ -113,7 +115,13 @@
     </footer>
    
 
-    {% block postloadjs %}    
+    {% block postloadjs %} 
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+       
     {% endblock %}
 
 
