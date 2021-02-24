@@ -98,18 +98,45 @@ used for the images in the Tour page.
         <p><img src="product-management.jpg"></p>
 
 
-
 ## Fixed Bugs
 After deployment, I found multiple bugs that needed addressing:
 
-1. Bug 1...
-    - *###*
-2.  Bug 2
-    - *###*  
-2.  Bug 3...
-    - *###*  
-
+1. Tickets page pulling through the tickets of every match at that stadium.
+    - *This was due to the original database models that I had attempted to use. Initially, I tried to have each ticket related to 
+    the stadium rather than the match. However, the issue was that multiple matches are played at the same stadium, and therefore when you 
+    clicked buy ticket, it was pulling through every match at that stadium, not just the one clicked on. Therefore, I changed the 
+    data models and changed the relationship between the tour, match and ticket instead.*
+2.  List of Tours in the footer only appearing on home page.
+    - *In order to fix this, I added the below function to each view, as well as adding 'tours' to the contexts. This allowed the list 
+    to show on each page across the site.*
+    ```
+    if request.GET:
+        if 'tour' in request.GET:
+            all_tours = Tour.objects.all()
+            tour = request.GET['tour']
+            tours = all_tours.filter(name=tour)
+    ```  
+3.  Two order numbers were being created for every order, rather than one.
+    - *On the admin page I noticed that each time an order was being created, it was checking to see if there was a matching grand_total 
+    to a previous order. By removing this from the webhook_handler.py handle_payment_intent_succeeded() function, the grand_total was 
+    no longer checked, and this meant that the order numbers no longer duplicated.*  
+4. Member discount was not being applied on the checkout_success page or order_history
+    - *I attempted a range of print statements to see if the user_profile was being pulled through properly. When I realised that 
+    it was, I had to add order.update_total() to the views.py, and this solved the issue.*
+5. Cart page form and checkout page were not responsive on mobile.
+    - *The initial layout of the cart and checkout pages did not handle well on mobile devices. In order to solve this and not create a
+    too large HTML file, I added a cart_mobile.html page with a new layout, and then used the {% include %} method, alongside the 
+    appropriate CSS, to handle this properly.*
+6. Video did not display well on mobile
+    - *Similarly to the note above, the video did not look good on mobile or tablet devices as these screen sizes are too narrow.
+    I therefore used a well-known photo instead of the video, which works well responsively on these smaller devices.*
 
 ## Further Testing
 
-- ###
+- Each link and in particular the whole buying process and CRUD functionality for the superuser have been tested thoroughly to ensure 
+that they are working effectively.
+- Throughout the development process, I used the Chrome Developer Tools, specifically by using the print() function to test Python
+ code, as well as for the various CSS designs, particularly around responsiveness.
+- The website has been tested on various desktop browsers such as Google Chrome, Firefox, Safari and Edge, as mentioned above, I used the
+ CSS tool Autoprefixer Online to help with this.
+- Friends and family were also asked for advice particularly on layout and in order to ensure that the site was being tested across various devices.

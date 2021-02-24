@@ -518,7 +518,7 @@ os.environ["STRIPE_SECRET_KEY"] = "<Your Stripe Secret Key>"
 os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"   
 ```
 3. Install the required packages with pip3 install -r requirements.txt
-4. Migrate the models to create a databsae by using ```python3 manage.py makemigrations``` and ```python3 manage.py migrate```
+4. Migrate the models to create a database by using ```python3 manage.py makemigrations``` and ```python3 manage.py migrate```
 5. Load the data fixtures(Gametype, Tour, Stadium, Match, Ticket, FAQ. ) into the database using the following command:
  ```python3 manage.py loaddata <fixture_name>```.
 6. Create a superuser for the Postgres database by running with ```python3 manage.py createsuperuser```
