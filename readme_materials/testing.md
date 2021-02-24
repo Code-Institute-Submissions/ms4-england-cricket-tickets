@@ -3,10 +3,10 @@
 The W3C Markup and CSS Validator Services, JSHint and Python Validator were used to validate every page of the project 
 to ensure there were no syntax errors in the project.
 
--   [W3C Markup Validator](https://validator.w3.org/) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fms3-tips.herokuapp.com%2F)
-    This same result appears across every page of the site.
-    <p> <img src="documentation/screenshots/html-checks.jpg">  </p> 
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fms3-tips.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) -  
+-   [W3C Markup Validator](https://validator.w3.org/) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fengland-cricket-tickets.herokuapp.com%2F)
+    This same result appears across every page of the site, and the error that shows is due to the base.html template being used across the site.
+    <p> <img src="html-checker.jpg">  </p> 
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2F8000-ed7f6852-bcc5-4712-9035-464423e5cab7.ws-eu03.gitpod.io%2Ftours%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) -  
     There is 1 property issue found when checking the site. However, these are being validated from the Materialize 
     link and therefore out of my control.
     <p> <img src="documentation/screenshots/css-validator.jpg">  </p> 

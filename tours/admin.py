@@ -20,6 +20,7 @@ class MatchAdmin(admin.ModelAdmin):
     )
     ordering = ('tour', 'gametype', 'name')
 
+
 class StadiumAdmin(admin.ModelAdmin):
     list_display = (
         'name',
@@ -32,11 +33,11 @@ class StadiumAdmin(admin.ModelAdmin):
 
 class TicketAdmin(admin.ModelAdmin):
     list_display = (
-    'stadium',
-    'name',
-    'friendly_name',
-    'price',
-    'match'
+        'stadium',
+        'name',
+        'friendly_name',
+        'price',
+        'match'
     )
     ordering = ('name',)
 

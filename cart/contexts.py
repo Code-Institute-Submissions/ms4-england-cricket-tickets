@@ -37,17 +37,16 @@ def cart_contents(request):
     if total > 100:
         delivery = 5
     else:
-        delivery = total * Decimal(settings.DELIVERY_CHARGE / 100)   
-    
+        delivery = total * Decimal(settings.DELIVERY_CHARGE / 100)
 
     discount = total * Decimal(settings.MEMBER_DISCOUNT / 100)
 
     if request.user.is_authenticated:
         grand_total = total - discount + delivery
-    
+
     else:
         grand_total = total + delivery
-   
+
     gametype = Gametype.objects.all()
     match = Match.objects.all()
 

@@ -20,10 +20,11 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid')
+            messages.error(request, 'Update failed.\
+            Please ensure the form is valid')
     else:
         form = UserProfileForm(instance=profile)
-    
+
     tours = Tour.objects.all()
 
     if request.GET:
@@ -32,7 +33,6 @@ def profile(request):
             tour = request.GET['tour']
             tours = all_tours.filter(name=tour)
 
-    
     orders = profile.orders.all()
     template = 'profiles/profile.html'
     context = {
@@ -47,7 +47,7 @@ def profile(request):
 
 @login_required
 def order_history(request, order_number):
-    """Displays the user's order history"""    
+    """Displays the user's order history"""
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
@@ -62,4 +62,3 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
-

@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (render, redirect, reverse,
+                              get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -80,7 +81,8 @@ def checkout(request):
                             order_line_item.save()
                 except Ticket.DoesNotExist:
                     messages.error(request, (
-                        "One of the tickets in your cart wasn't found in our database. "
+                        "One of the tickets in your cart wasn't\
+                        found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -88,14 +90,16 @@ def checkout(request):
 
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse(
+                'checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
         cart = request.session.get('cart', {})
         if not cart:
-            messages.error(request, "There's nothing in your cart at the moment")
+            messages.error(
+                request, "There's nothing in your cart at the moment")
             return redirect(reverse('tours'))
 
         current_cart = cart_contents(request)
@@ -107,7 +111,8 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Attempt to prefill the form with any info the user maintains in their profile
+        # Try prefill form with info the user has in their profile.
+
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -161,10 +166,9 @@ def checkout_success(request, order_number):
         profile = UserProfile.objects.get(user=request.user)
         # Attach the user's profile to the order
         order.user_profile = profile
-        print("Profile = " + str(profile))
         order.save()
         order.update_total()
-        
+
         # Save the user's info
         if save_info:
             profile_data = {
@@ -186,7 +190,7 @@ def checkout_success(request, order_number):
 
     if 'cart' in request.session:
         del request.session['cart']
-    
+
     tours = Tour.objects.all()
 
     if request.GET:

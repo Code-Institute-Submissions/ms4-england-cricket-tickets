@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (render, redirect, reverse, HttpResponse,
+                              get_object_or_404)
 from django.contrib import messages
 from tours.models import Ticket, Tour
 
@@ -15,7 +16,7 @@ def view_cart(request):
             all_tours = Tour.objects.all()
             tour = request.GET['tour']
             tours = all_tours.filter(name=tour)
-    
+
     context = {
         'tours': tours,
     }
@@ -38,20 +39,28 @@ def add_to_cart(request, item_id):
         if item_id in list(cart.keys()):
             if day in cart[item_id]['items_by_day'].keys():
                 cart[item_id]['items_by_day'][day] += quantity
-                messages.success(request, f'Update: {cart[item_id]["items_by_day"][day]} x Day {day} {ticket.friendly_name} tickets now in your cart')
+                messages.success(request, f'Update: {cart[item_id]["items_by_day"][day]} x \
+                    Day {day} {ticket.friendly_name} tickets \
+                         now in your cart')
+
             else:
                 cart[item_id]['items_by_day'][day] = quantity
-                messages.success(request, f'Added {quantity} x Day {day} {ticket.friendly_name} to your cart')
+                messages.success(request, f'Added {quantity} x\
+                     Day {day} {ticket.friendly_name} to your cart')
         else:
             cart[item_id] = {'items_by_day': {day: quantity}}
-            messages.success(request, f'Added {quantity} x Day {day} {ticket.friendly_name} to your cart')
+            messages.success(request, f'Added {quantity} x \
+                Day {day} {ticket.friendly_name} to your cart')
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity
-            messages.success(request, f'Update: {cart[item_id]} x {ticket.friendly_name} tickets now in your cart')
+            messages.success(request, f'Update: {cart[item_id]} \
+                x {ticket.friendly_name} \
+                    tickets now in your cart')
         else:
             cart[item_id] = quantity
-            messages.success(request, f'Added {quantity} x {ticket.friendly_name} to your cart')
+            messages.success(request, f'Added\
+                 {quantity} x {ticket.friendly_name} to your cart')
 
     request.session['cart'] = cart
 
@@ -71,20 +80,28 @@ def update_cart(request, item_id):
     if day:
         if quantity > 0:
             cart[item_id]['items_by_day'][day] = quantity
-            messages.success(request, f'Update: {cart[item_id]["items_by_day"][day]} x Day {day} {ticket.friendly_name} tickets now in your cart')
+            messages.success(request, f'Update:\
+                 {cart[item_id]["items_by_day"][day]} x \
+                     Day {day} {ticket.friendly_name} \
+                         tickets now in your cart')
 
         else:
             del cart[item_id]['items_by_day'][day]
             if not cart[item_id]['items_by_day']:
                 cart.pop(item_id)
-            messages.success(request, f'Removed {quantity} x Day {day} {ticket.friendly_name} from your cart')
+            messages.success(request, f'Removed\
+                 {quantity} x Day {day} {ticket.friendly_name}\
+                      from your cart')
     else:
         if quantity > 0:
             cart[item_id] = quantity
-            messages.success(request, f'Update: {cart[item_id]} x {ticket.friendly_name} tickets now in your cart')
+            messages.success(request, f'Update:\
+                 {cart[item_id]} x {ticket.friendly_name}\
+                      tickets now in your cart')
         else:
             cart.pop(item_id)
-            messages.success(request, f'Removed {ticket.friendly_name} from your cart')
+            messages.success(request, f'Removed\
+                 {ticket.friendly_name} from your cart')
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
@@ -103,10 +120,12 @@ def remove_item(request, item_id):
             del cart[item_id]['items_by_day'][day]
             if not cart[item_id]['items_by_day']:
                 cart.pop(item_id)
-            messages.success(request, f'Removed Day {day} {ticket.friendly_name} tickets from your cart')
+            messages.success(request, f'Removed Day\
+                 {day} {ticket.friendly_name} tickets from your cart')
         else:
             cart.pop(item_id)
-            messages.success(request, f'Removed {ticket.friendly_name} from your cart')
+            messages.success(request, f'Removed \
+                {ticket.friendly_name} from your cart')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
@@ -114,13 +133,3 @@ def remove_item(request, item_id):
     except Exception as e:
         messages.error(request, f'Error removing item {e}')
         return HttpResponse(status=500)
-
-
-
-
-
-
-
-
-
-
