@@ -51,7 +51,7 @@
 
     <title>England Cricket Tickets {% block extra_title%}{% endblock %}</title>
 </head>
-
+<body>
     <header class="container-fluid navbar-fixed">
        <nav class="nav-extended" style="background-color:rgb(4,45,82)">  
             {% include 'includes/desktop-navbar.html' %}
@@ -62,7 +62,7 @@
            
         </nav>    
     </header>
-<body>
+
     <!--Offer Banner-->
 
  
@@ -88,7 +88,7 @@
 
     {% block content %}
     {% endblock %}
-</body>
+
     <footer>
         <div class="container-fluid">
             <div class="row">
@@ -115,12 +115,12 @@
             </div>
         </div>
     </footer>
-   
+
 
     {% block postloadjs %} 
     {% endblock %}
 
-
+</body>
       
 
 </html>
