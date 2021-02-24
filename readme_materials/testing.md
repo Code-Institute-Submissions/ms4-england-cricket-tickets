@@ -1,3 +1,10 @@
+- [Validation](#validation)
+- [Autoprefixer CSS Online](#autoprefixer-css-online)
+- [Lighthouse](#lighthouse)
+- [Testing User Stories from User Experience Section](#testing-user-stories-from-user-experience-section)
+- [Fixed Bugs](#fixed-bugs)
+- [Further Testing](#further-testing)
+
 ## Validation
 
 The W3C Markup and CSS Validator Services, JSHint and Python Validator were used to validate every page of the project 
