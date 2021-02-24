@@ -12,6 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
         <meta charset="utf-8">
+        <meta name="description" content="Online Store selling England Cricket Tickets">
     {% endblock %}
 
     {% block extra_meta %}
@@ -50,7 +51,7 @@
 
     <title>England Cricket Tickets {% block extra_title%}{% endblock %}</title>
 </head>
-<body>
+
     <header class="container-fluid navbar-fixed">
        <nav class="nav-extended" style="background-color:rgb(4,45,82)">  
             {% include 'includes/desktop-navbar.html' %}
@@ -61,6 +62,7 @@
            
         </nav>    
     </header>
+<body>
     <!--Offer Banner-->
 
  
@@ -86,7 +88,7 @@
 
     {% block content %}
     {% endblock %}
-
+</body>
     <footer>
         <div class="container-fluid">
             <div class="row">
@@ -100,12 +102,12 @@
                 </div>
                 <div class="col m4 center table">
                     <ul>
-                        <li><a href="https://www.facebook.com/" target="blank"><i class="fab fa-facebook"></i></a> </li>
-                        <li><a href="https://www.twitter.com/" target="blank"><i class="fab fa-twitter"></i></a> </li>
-                        <li><a href="https://www.instagram.com/" target="blank"><i class="fab fa-instagram"></i></a> </li>                       
+                        <li><a href="https://www.facebook.com/" target="blank" rel="noopener"><i class="fab fa-facebook"></i></a> </li>
+                        <li><a href="https://www.twitter.com/" target="blank" rel="noopener"><i class="fab fa-twitter"></i></a> </li>
+                        <li><a href="https://www.instagram.com/" target="blank" rel="noopener"><i class="fab fa-instagram"></i></a> </li>                       
                     </ul>
                     <p>For Educational Purposes Only.</p>
-                    <p>Created by <a href="https://github.com/adamdelancey" target="_blank"> Adam de Lancey <i class="fab fa-github"></i></a></p>
+                    <p>Created by <a href="https://github.com/adamdelancey" target="_blank" rel="noopener"> Adam de Lancey <i class="fab fa-github"></i></a></p>
                 </div>
                 <div class="col m4 center footer-img">
                     <img src="{{MEDIA_URL}}images/NicePng_cricket-cup-png_2457408.png" alt="ECB logo">
@@ -120,5 +122,5 @@
 
 
       
-</body>
+
 </html>

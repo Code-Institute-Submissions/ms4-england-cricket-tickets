@@ -27,7 +27,8 @@
                         <form action="{% url 'add_to_cart' ticket.id %}" method="POST" >
                             {% csrf_token %}
                       {% if match.gametype.name == "Test Match" %}
-                           <select name="day" required data-item_id="{{ticket.id}}" id="id_day" size="4">   
+                           <select name="day" required data-item_id="{{ticket.id}}" id="id_day">
+                            <option value="" disabled selected>Choose Day</option>   
                             <option value="1" class="white-text">Day 1</option>
                             <option value="2">Day 2</option>
                             <option value="3">Day 3</option>

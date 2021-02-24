@@ -102,7 +102,7 @@ View the Github repo: [here](https://adamdelancey.github.io/ms4-england-cricket-
 -   #### Admin Goals
 
     As Admin, I want to:
-    1. Be able to create, read, update and delete all tours, tickets and FAQs on the website.
+    1. Be able to create, read, update and delete all tours, matches and tickets on the website.
 
 ## Scope
 
