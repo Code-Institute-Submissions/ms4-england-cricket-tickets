@@ -10,7 +10,7 @@ updated. It is designed to be responsive and accessible on a range of devices, m
 
 <p align="center">
     <img src="readme_materials/responsive.jpg">
-
+</p>
 # Access
 
 View the project live: [here](https://ms4-england-cricket-tickets.herokuapp.com/)
