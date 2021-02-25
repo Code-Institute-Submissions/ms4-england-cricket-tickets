@@ -272,6 +272,12 @@ footer li i{
 
 .input-field>label{
     color: white;
+    position: inherit;
+    
+}
+
+.checkboxinput{
+    margin-left: 120px;
 }
 
 /* Mobile */

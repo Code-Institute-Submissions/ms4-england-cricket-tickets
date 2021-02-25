@@ -54,9 +54,9 @@
                                 {% for item in order.lineitems.all %}
                                     <li>
                                         {{ item.ticket.match}}:
-                                        {% if item.ticket.day %}
-                                            Day: {{ item.ticket.day}}
-                                        {% endif %} - 
+                                        {% if item.day %}
+                                            Day: {{ item.day}}:
+                                        {% endif %}  
                                         {{item.ticket.friendly_name}} x {{item.quantity}}
                                     </li>
                                 {% endfor %}

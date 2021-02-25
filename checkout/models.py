@@ -58,8 +58,8 @@ class Order(models.Model):
             self.order_total * settings.MEMBER_DISCOUNT / 100)
 
         if self.user_profile:
-            self.grand_total = self.order_total - (
-                self.member_discount + self.delivery_cost)
+            self.grand_total = self.order_total - self.member_discount + (
+                self.delivery_cost)
         else:
             self.grand_total = self.order_total + self.delivery_cost
 

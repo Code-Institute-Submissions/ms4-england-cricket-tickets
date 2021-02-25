@@ -28,12 +28,12 @@
             <p>{{item.quantity}} ticket(s) at £{{item.ticket.price}} each</p>
             <hr>          
             {% endfor %}
-            <p style="font-weight: bold;">Order Total: £{{order.order_total}}</p>
+            <p style="font-weight: bold;">Order Total: £{{order.order_total|floatformat:2 }}</p>
             {% if request.user.is_authenticated %}
-                <p style="font-weight: bold;">Member Discount: £{{order.member_discount}}</p>
+                <p style="font-weight: bold;">Member Discount: £{{order.member_discount|floatformat:2 }}</p>
             {% endif %}
-            <p style="font-weight: bold;">Delivery: £{{order.delivery_cost}}</p>
-            <p style="font-weight: bold;">Grand Total: £{{order.grand_total}}</p>
+            <p style="font-weight: bold;">Delivery: £{{order.delivery_cost|floatformat:2 }}</p>
+            <p style="font-weight: bold;">Grand Total: £{{order.grand_total|floatformat:2 }}</p>
         </div>
         <div class="col m6 center">            
             <h4>Delivering to:</h4>
