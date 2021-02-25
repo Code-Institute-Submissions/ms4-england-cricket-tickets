@@ -51,9 +51,11 @@ class Order(models.Model):
         if self.order_total > 100:
             self.delivery_cost = 5
         else:
-            self.delivery_cost = self.order_total * settings.DELIVERY_CHARGE / 100
+            self.delivery_cost = (
+                self.order_total * settings.DELIVERY_CHARGE / 100)
 
-        self.member_discount = self.order_total * settings.MEMBER_DISCOUNT / 100
+        self.member_discount = (
+            self.order_total * settings.MEMBER_DISCOUNT / 100)
 
         if self.user_profile:
             self.grand_total = self.order_total - (
