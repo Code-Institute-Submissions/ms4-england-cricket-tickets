@@ -4,6 +4,7 @@
 - [Testing User Stories from User Experience Section](#testing-user-stories-from-user-experience-section)
 - [Fixed Bugs](#fixed-bugs)
 - [Further Testing](#further-testing)
+- [Known Bugs](#known-bugs)
 
 ## Validation
 
@@ -147,3 +148,9 @@ that they are working effectively.
 - The website has been tested on various desktop browsers such as Google Chrome, Firefox, Safari and Edge, as mentioned above, I used the
  CSS tool Autoprefixer Online to help with this.
 - Friends and family were also asked for advice particularly on layout and in order to ensure that the site was being tested across various devices.
+
+## Known Bugs
+
+- On any page that was created by the allauth templates, in the footer the different matches do not appear, only the 'Browse All' button. I am 
+unsure how to fix this and also do not feel it affects the functionality of the site as on this page the user will not be looking to browse tours, but
+instead to do after logging in/out or registering.
