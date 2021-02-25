@@ -49,17 +49,17 @@ used for the images in the Tour page.
         - *Upon entering the site, there is a video on desktop or photo on mobile/tablet of two of the most famous moments 
         in England Cricket, immediately showing the user the theme for the site. Below that, there is a brief description of the
         purpose of the site, then also several links to the tour page including in the navbar, below the text, and footer.*
-    2. Be able to easily browse the various Tours and select which match I am interested in.
+    2. Be able to easily browse the various Tours and select which Match I am interested in.
         - *Firstly, on the main Tours page, the viewer is immediately presented with clear sections showing the different Tours 
         and Matches that are avaialable to purchase tickets for on the site. These clear sections have large, professional imagery 
         and give the key details of each match.*
-        - *Also, there are two options to filter the Tours into the specific Tour that the user is interested in. This is firstly in the 
+        - *Also, there are two options to filter the Tours into the specific Tour that the user may be interested in. This is firstly in the 
         'Filter' button at the top of the page, and also within the footer of every page:
         <p><img src="filter-button.jpg"><img src="filter-footer.jpg"></p>
-    3. Having selected match, I want to choose where I want to sit and which days I would like to attend, as well as the number of tickets.
+    3. Having selected a Match, I want to choose where I want to sit and which days I would like to attend, as well as the number of tickets.
         - *Once the user has clicked 'Buy Tickets' on the Tours page, they are presented with an image of the stadium seating layout
         then a list of the tickets avaialable that correspond to the image. Each one has its own name and price, and here you can select the 
-        quantity and if it is a Test Match, choose the day to attend.*
+        quantity, and if it is a Test Match, choose the day to attend.*
         <p><img src="ticket-selector.jpg"></p>
     4. Use my credit card to make an online payment, and receive an email to let me know that my payment has gone through.
         - *On the checkout page, the site handles payments through Stripe, and here the user can enter his/her card details. 
@@ -82,7 +82,7 @@ used for the images in the Tour page.
         - *Via the filter on the Tours page or the matches listed in the footer of each page, it will be easy for the user to 
         quickly understand if there are any tours being featured that they have not seen before.*
     2. Login to the account that I have previously set up and see the information of the tickets I have purchased.
-        - *In the navbar, a user can login to the account that they have previously set up. Then, there is an option to view their 
+        - *In the navbar, a user can log in to the account that they have previously set up. Then, there is an option to view their 
         profile, then see their order history. From here, they can click on the order number and view the full details of the order.*
         <p><img src="order-history.jpg"></p>
     3. Change my saved details, for example if I have moved address or changed phone number.

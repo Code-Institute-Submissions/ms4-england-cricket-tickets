@@ -4,9 +4,9 @@
 
 As my fourth and final submission for the Code Institute, this England Cricket Tickets website is an online store where users can purchase
 tickets for England Cricket matches around the globe. They can select the day they want to visit, which stand, and how many tickets they would 
-like to purchase. They can login to their accounts to see what tickets they have bought, read FAQs, and receive emails to notify them that new 
-tickets have been added. The owner of the website will be able to create, read, update and delete new tours and tickets in order to keep the website 
-updated. It is designed to be responsive and accessible on a range of devices, making it interactive and easy to navigate for potential users.
+like to purchase. They can login to their accounts to see what tickets they have bought, read FAQs, and receive a 10% discount for becoming a member.
+The owner of the website will be able to create, read, update and delete new tours and tickets in order to keep the website updated. It is designed 
+to be responsive and accessible on a range of devices, making it interactive and easy to navigate for potential users.
 
 <p align="center">
     <img src="readme_materials/responsive.jpg">
@@ -83,10 +83,10 @@ View the Github repo: [here](https://adamdelancey.github.io/ms4-england-cricket-
     As a First Time Visitor, I want to:
 
     1. Quickly understand the service being provided by England Cricket Tickets and how I can interact with the service.
-    2. Be able to easily browse the various Tours and select which match I am interested in
-    3. Having selected match, I want to choose where I want to sit and which days I would like to attend, as well as the number of tickets.
+    2. Be able to easily browse the various Tours and select which Match I am interested in
+    3. Having selected a Match, I want to choose where I want to sit and which days I would like to attend, as well as the number of tickets.
     4. Use my credit card to make an online payment, and receive an email to let me know that my payment has gone through.
-    5. Register to the website to receive any offers
+    5. Register to the website to receive any offers.
     6. Find the answers to any questions that I may have, and contact the company if I can't find them online.
 
 -   #### Frequent User Goals
@@ -110,7 +110,7 @@ View the Github repo: [here](https://adamdelancey.github.io/ms4-england-cricket-
 * Base HTML - on all pages
     - Navbar - using Materialize's [mobile collapse feature](https://materializecss.com/navbar.html), I created two separate
     navbars, one for mobile and tablet devices, and one for laptops and larger screens. Both versions feature the England 
-    cricket logo that acts as a link to the hompage, plus links to all of the Tours and FAQs, a My Account button where logged in 
+    cricket logo that acts as a link to the homepage, plus links to all of the Tours and FAQs, a My Account button where logged in 
     users can view their profile and others can register or sign in to an account, as well as a responsive cart icon and number that 
     will responsively reflect the grand total of the items in the shopping cart. The mobile version of the navbar additionally 
     features a sidenav that is triggered by a hamburger icon, that appears on the screen from the right as per below. 
@@ -122,7 +122,7 @@ View the Github repo: [here](https://adamdelancey.github.io/ms4-england-cricket-
     - Messages - using the Django import 'messages' from 'django-contrib' the site uses error, success, warning and info messages 
     across the site to keep the user updated on any important interaction, such as adding, updating or removing an item in the bag, 
     logging in to the site or viewing a previous order. These appear across the site at the top of the page, and on the success 
-    messages, there is a feature to go directly to the shopping cart to proceed with the order:
+    messages, there is a feature to go directly to the shopping cart to proceed with the order.
     <img src="readme_materials/success-message.jpg">
     - Footer - this is split into three separate parts. First, a link to either all tours or one of the tours that the user is interested in 
     for convenience, social media links to external windows, and finally the England cricket logo for consistency. This provides the user 
@@ -151,7 +151,7 @@ View the Github repo: [here](https://adamdelancey.github.io/ms4-england-cricket-
     - Tour information - for each match, there is information on the teams playing, which match it is, the stadium that 
     the match is playing played at, the dates, and a button to go through to the Tickets page. This short summary is standard 
     for a ticketing website and allows the user to get as much information as quickly as possible.
-    - Edit/delete match - for the admin/superuser only, there is an option next to each match that the user can click in to 
+    - Edit/delete match - for the admin/superuser only, there is an option next to each match that the user can click on to 
     either amend the details, or remove it completely. This is particularly useful for when a match is now finished and the admin 
     can remove it easily.
     <img src="readme_materials/admin-tour.jpg"> 
@@ -160,7 +160,7 @@ View the Github repo: [here](https://adamdelancey.github.io/ms4-england-cricket-
     - Stadium image - this image shows the available stands for which a user can purchase tickets. This links to an external 
     site so that the user can get a larger look if needed. These images create simplicity for the user in discovering what is 
     available, and means they can easily select the desired tickets by looking at the image as the names of the tickets reflect 
-    the stands in the image.
+    the names of the stands in the image.
     - Ticket information - here the user can see the different prices for the tickets that they can purchase, the quantity 
     to buy, and if it is a Test Match, the Day that they choose to go to. From here, they can buy tickets or return to the Tours 
     page to buy tickets for a different match if necessary. Upon clicking 'Buy Tickets' a success message will appear 
@@ -224,8 +224,8 @@ Future improvements to the website may include:
 
 * More filter options on Tours page, for example so that a user could filter by date, stadium or gametype.
 * A blog section so that users could upload their own experiences or photos of matches that they have been to, comment on each 
-other's posts and create a community atmosphere to the website.
-* Add merchandise to the website so that users had the option to buy official England merchandise through the website, therefore 
+other's posts and create a community atmosphere within the website.
+* Add merchandise to the website so that user has the option to buy official England merchandise through the website, therefore 
 expanding the product offering and making it more more likely that a user will make a purchase.
 
 
@@ -289,10 +289,10 @@ Full wireframes can be accessed here:
 ### Design
 -   #### Colour Scheme
     
-    - Taking inspiration from the England Cricket Boards' [official website](https://www.ecb.co.uk/), I have used the colour in the header,
-    #042D52, to be the main color throughout the site in the header and buttons. As a seconday, complimentary colour, I have used 
-    #1B466C as background for the site where there isn't imagery used as the background instead. As a lighter, brighter colour in 
-    contrast to the darker blues, I have used off-white colour #F9FAFA for much of the text, to ensure it stands out and is easily 
+    - Taking inspiration from the England Cricket Boards' [official website](https://www.ecb.co.uk/), I have used the colour in their header,
+    #042D52, to be the main color throughout the site in the header and buttons. As a secondary, complimentary colour, I have used 
+    #1B466C as the background for the site where there isn't imagery used as the background instead. As a lighter, brighter colour in 
+    contrast to the darker blues, I have used an off-white colour, #F9FAFA, for much of the text, to ensure it stands out and is easily 
     readable.
     - I used [Sessions.edu](https://www.sessions.edu/color-calculator/) to work out the correct complimentary colours, and 
     [Coolors](https://coolors.co/042d52-1b466c-f9fafa) to create the palette below.
@@ -315,16 +315,16 @@ Full wireframes can be accessed here:
 # Information Architecture
 
 ## Database Choice
-- Development phase SQLight database was used for the development which is installed with Django.
-- Deployment phase PostgreSQL was used on deployment stage, which is provided as add-on by Heroku application.
+- Development phase - SQLight database was used for the development which is installed with Django.
+- Deployment phase - PostgreSQL was used on deployment stage, which is provided as an add-on by the Heroku application.
 - User model is provided as a default by [Django's authentication system](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/).
 
 
 ## Data Modelling
-- All data related to tours is saved in JSON format in the tours fixtures folder, and the FAQ data is in the respective fixtures folder.
+- All data related to Tours is saved in JSON format in the tours fixtures folder, and the FAQ data is in the respective fixtures folder.
 - I had initially attempted to have the tickets correspond to the stadium, rather than the match, but this caused issues as 
 every match was then pulling through tickets for every match played at the stadium, and hence why I had to make the change.
-- The below data model was created using [Drawl SQL](https://drawsql.app/tbc/diagrams/england-cricket-tickets#)
+- The below data model was created using [Draw SQL](https://drawsql.app/tbc/diagrams/england-cricket-tickets#)
 <p><img src="readme_materials/data2.jpg"></p>
 
 
