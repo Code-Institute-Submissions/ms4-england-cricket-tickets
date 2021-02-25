@@ -1,29 +1,26 @@
 {% load cart_tools %}
 <div class="col m6 center order-list-view">
-            <h4>Order Summary ({{ product_count }})</h4>                
-                {% for item in cart_items %}
-                    <div class="row">
-                                            
-                            <p>{{item.ticket.match.tour.friendly_name}}: {{item.ticket.match}}, {{item.ticket.match.stadium.name}},
-                            {{ item.ticket.friendly_name}}{% if item.ticket.match.gametype.name == "Test Match" %}, Day: {{item.day}}{%else%}{%endif%}</p>
-                            <p>Unit Price: £{{item.ticket.price}}</p>
-                            <p>Quantity: {{ item.quantity }}</p>                    
-                            <p>Subtotal: £{{ item.ticket.price | calc_subtotal:item.quantity }}</p>
-                        
-                        <hr>
-                    </div>
-                {% endfor %}
-                <hr>
-                <div class="row">
-                    <div class="center">
-                        <p>Order Total: £{{ total | floatformat:2 }}</p>
-                        {% if request.user.is_authenticated %}
-                        <p>Member Discount: £{{discount|floatformat:2}}</p>
-                        {% endif %}
-                        <p>Delivery: £{{ delivery | floatformat:2 }}</p>
-                        <p>Grand Total: £{{ grand_total | floatformat:2 }}</p>
-                    </div>
-                    
-                </div>
-
-        </div>
+   <h4>Order Summary ({{ product_count }})</h4>
+   {% for item in cart_items %}
+   <div class="row">
+      <p>{{item.ticket.match.tour.friendly_name}}: {{item.ticket.match}}, {{item.ticket.match.stadium.name}},
+         {{ item.ticket.friendly_name}}{% if item.ticket.match.gametype.name == "Test Match" %}, Day: {{item.day}}{%else%}{%endif%}
+      </p>
+      <p>Unit Price: £{{item.ticket.price}}</p>
+      <p>Quantity: {{ item.quantity }}</p>
+      <p>Subtotal: £{{ item.ticket.price | calc_subtotal:item.quantity }}</p>
+      <hr>
+   </div>
+   {% endfor %}
+   <hr>
+   <div class="row">
+      <div class="center">
+         <p>Order Total: £{{ total | floatformat:2 }}</p>
+         {% if request.user.is_authenticated %}
+         <p>Member Discount: £{{discount|floatformat:2}}</p>
+         {% endif %}
+         <p>Delivery: £{{ delivery | floatformat:2 }}</p>
+         <p>Grand Total: £{{ grand_total | floatformat:2 }}</p>
+      </div>
+   </div>
+</div>

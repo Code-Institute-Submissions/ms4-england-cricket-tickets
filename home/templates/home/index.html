@@ -1,23 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block page_header %}
-
 {% endblock %}
-
 {% block content %}
 <div class="v-header ">
    <div class="fullscreen-video-wrap">
       <video src="{{MEDIA_URL}}video/video.mp4" autoplay loop muted></video>
-      
-   </div>   
+   </div>
 </div>
 <div class="photo-header">
-    <img src="{{MEDIA_URL}}images/wcwin.jpg" alt="World Cup Win">
+   <img src="{{MEDIA_URL}}images/wcwin.jpg" alt="World Cup Win">
 </div>
-<div class="container header-container center">    
-    <h1>Welcome to England Cricket Tickets</h1>
-    <h3>The Best Place for buying tickets for England Test Matches, ODIs and IT20s around the world.</h3>
-    <a href="{% url 'tours' %}" class="btn-large btn-white" style="margin-bottom: 50px;">Explore Tickets</a>
+<div class="container header-container center">
+   <h1>Welcome to England Cricket Tickets</h1>
+   <h3>The Best Place for buying tickets for England Test Matches, ODIs and IT20s around the world.</h3>
+   <a href="{% url 'tours' %}" class="btn-large btn-white" style="margin-bottom: 50px;">Explore Tickets</a>
 </div>
 {% endblock %}

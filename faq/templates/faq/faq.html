@@ -1,29 +1,25 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block page_header %}
-
 {% endblock %}
-
 {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="col6 center-align product-management">    
-            <h2>FAQs</h2>           
-        </div>
-    </div>
-    <div class="row">
-        <div class="col6 center-align">
-              <ul class="collapsible">
-                  {% for f in faq %}
-                <li>
-                <div class="collapsible-header">{{f.question}}</div>
-                <div class="collapsible-body"><span>{{f.answer}}</span></div>
-                </li>
-                {%endfor%}
-                
-            </ul>
-        </div>
-    </div>
+   <div class="row">
+      <div class="col6 center-align product-management">
+         <h2>FAQs</h2>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col6 center-align">
+         <ul class="collapsible">
+            {% for f in faq %}
+            <li>
+               <div class="collapsible-header">{{f.question}}</div>
+               <div class="collapsible-body"><span>{{f.answer}}</span></div>
+            </li>
+            {%endfor%}
+         </ul>
+      </div>
+   </div>
 </div>
 {% endblock %}

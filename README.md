@@ -382,6 +382,8 @@ throughout the site include alt tags.
     - Heroku is used for the hosting of the site and is deployed through here.
 1. [Balsamiq](https://balsamiq.com/)
     - Balsamiq was used to create the wireframes during the design process.
+1. [Free Formatter](https://www.freeformatter.com/html-formatter.html#ad-output)
+    - This was used to format all of the HTML pages.
 
 # Testing
 

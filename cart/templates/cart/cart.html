@@ -1,120 +1,109 @@
 {% extends "base.html" %}
 {% load static %}
 {% load cart_tools %}
-
 {% block page_header %}
-
 {% endblock %}
-
 {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="col m8 offset-m2 center cart-header">
-            <h2>Cart</h2>            
-        </div>
-    </div>
-    <div class="cart-table-view">
-        <div class="row">
-            <div class="col m8 offset-m2 center">
-                {% if cart_items %}
-                    <div class="table">
-                            <table class="striped">
-                                <thead>
-                                <tr>
-                                    <th>Match</th>
-                                    <th>Stadium</th>
-                                    <th>Day</th>
-                                    <th>Stand</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Subtotal</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    {% for item in cart_items %}
-                                <tr>                              
-                                    <td>{{item.ticket.match.tour.friendly_name}}: {{item.ticket.match}}</td>                                
-                                    <td>{{item.ticket.stadium}}</td>                                
-                                    <td>{% if item.ticket.match.gametype.name == "Test Match" %}{{item.day}}{%else%}N/A{%endif%}</td>                                
-                                    <td>{{item.ticket.friendly_name}}</td>
-                                    <td>£{{item.ticket.price}}</td>
-                                    <td>
-                                        <form method="POST" action="{% url 'update_cart' item.item_id %}" class="update-form">
-                                            {% csrf_token %}
-                                            <input class="qty_input white-text center" type="number" name="quantity" value="{{item.quantity}}" min="1" max="4"
-                                            data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
-                                            <input type="submit" class="btn btn-white btn-small update-link" value="Update">
-                                            <a class="remove-item btn btn-white btn-small" id="remove_{{ item.item_id }}" data-day="{{ item.day }}">Remove</a>   
-                                            {% if item.day %}
-                                                <input type="hidden" name="day" value="{{ item.day }}">
-                                            {% endif %}                                    
-                                        </form>
-                                    </td>
-                                    <td>£{{item.ticket.price | calc_subtotal:item.quantity}}</td>   
-                                                        
-                                </tr>
-                                    {% endfor %}                        
-                                </tbody>
-                            </table>
-                    <div class="row center">
-                        <h6>Total: £{{total|floatformat:2}}</h6>
-                        {% if request.user.is_authenticated %}
-                        <h6>Member Discount: £{{discount|floatformat:2}}</h6>
-                        {% else %}
-                        <h6>Want to receive 10% discount? <a href="{% url 'account_signup' %}" class="btn-small btn-white">Register Here!</a></h6>
-                        {% endif %}
-                        <h6>Delivery: £{{delivery|floatformat:2}}</h6>                   
-                        <h6><strong>Grand Total: £{{grand_total|floatformat:2}}</strong></h6>
-                    </div>
-                    <div class="row center">
-                        <a href="{% url 'tours' %}" class="btn btn-white">
-                            <i class="fas fa-chevron-left"> </i> Back to Tours
-                        </a>
-                        <a href="{% url 'checkout' %}" class="btn-white btn ">
-                            <i class="fas fa-lock"> </i> Secure Checkout
-                        </a>
-                    </div>
-
-                    
-                    
-                    </div>
-                {% else %}
-                    <p>Your cart is empty.</p>
-                    <a href="{% url 'tours' %}" class="btn btn-white">
-                        <i class="fas fa-chevron-left"></i> Back to Tours
-                    </a>
-                {%endif%}
+   <div class="row">
+      <div class="col m8 offset-m2 center cart-header">
+         <h2>Cart</h2>
+      </div>
+   </div>
+   <div class="cart-table-view">
+      <div class="row">
+         <div class="col m8 offset-m2 center">
+            {% if cart_items %}
+            <div class="table">
+               <table class="striped">
+                  <thead>
+                     <tr>
+                        <th>Match</th>
+                        <th>Stadium</th>
+                        <th>Day</th>
+                        <th>Stand</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     {% for item in cart_items %}
+                     <tr>
+                        <td>{{item.ticket.match.tour.friendly_name}}: {{item.ticket.match}}</td>
+                        <td>{{item.ticket.stadium}}</td>
+                        <td>{% if item.ticket.match.gametype.name == "Test Match" %}{{item.day}}{%else%}N/A{%endif%}</td>
+                        <td>{{item.ticket.friendly_name}}</td>
+                        <td>£{{item.ticket.price}}</td>
+                        <td>
+                           <form method="POST" action="{% url 'update_cart' item.item_id %}" class="update-form">
+                              {% csrf_token %}
+                              <input class="qty_input white-text center" type="number" name="quantity" value="{{item.quantity}}" min="1" max="4"
+                                 data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                              <input type="submit" class="btn btn-white btn-small update-link" value="Update">
+                              <a class="remove-item btn btn-white btn-small" id="remove_{{ item.item_id }}" data-day="{{ item.day }}">Remove</a>   
+                              {% if item.day %}
+                              <input type="hidden" name="day" value="{{ item.day }}">
+                              {% endif %}                                    
+                           </form>
+                        </td>
+                        <td>£{{item.ticket.price | calc_subtotal:item.quantity}}</td>
+                     </tr>
+                     {% endfor %}                        
+                  </tbody>
+               </table>
+               <div class="row center">
+                  <h6>Total: £{{total|floatformat:2}}</h6>
+                  {% if request.user.is_authenticated %}
+                  <h6>Member Discount: £{{discount|floatformat:2}}</h6>
+                  {% else %}
+                  <h6>Want to receive 10% discount? <a href="{% url 'account_signup' %}" class="btn-small btn-white">Register Here!</a></h6>
+                  {% endif %}
+                  <h6>Delivery: £{{delivery|floatformat:2}}</h6>
+                  <h6><strong>Grand Total: £{{grand_total|floatformat:2}}</strong></h6>
+               </div>
+               <div class="row center">
+                  <a href="{% url 'tours' %}" class="btn btn-white">
+                  <i class="fas fa-chevron-left"> </i> Back to Tours
+                  </a>
+                  <a href="{% url 'checkout' %}" class="btn-white btn ">
+                  <i class="fas fa-lock"> </i> Secure Checkout
+                  </a>
+               </div>
             </div>
-        </div>
-    </div>
-    {% include 'cart/cart_mobile.html' %}
+            {% else %}
+            <p>Your cart is empty.</p>
+            <a href="{% url 'tours' %}" class="btn btn-white">
+            <i class="fas fa-chevron-left"></i> Back to Tours
+            </a>
+            {%endif%}
+         </div>
+      </div>
+   </div>
+   {% include 'cart/cart_mobile.html' %}
 </div>
-
-
-
 {% endblock %}
 {% block postloadjs %}
 {{ block.super }}
-
 <script>
-    // Update quantity on click
-    $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
-    })
-
-    // Remove item and reload on click
-    $('.remove-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var day = $(this).data('day');
-        var url = `/cart/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'day': day};
-
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    })
+   // Update quantity on click
+   $('.update-link').click(function(e) {
+       var form = $(this).prev('.update-form');
+       form.submit();
+   })
+   
+   // Remove item and reload on click
+   $('.remove-item').click(function(e) {
+       var csrfToken = "{{ csrf_token }}";
+       var itemId = $(this).attr('id').split('remove_')[1];
+       var day = $(this).data('day');
+       var url = `/cart/remove/${itemId}/`;
+       var data = {'csrfmiddlewaretoken': csrfToken, 'day': day};
+   
+       $.post(url, data)
+        .done(function() {
+            location.reload();
+        });
+   })
 </script>
 {% endblock %}

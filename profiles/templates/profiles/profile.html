@@ -1,82 +1,75 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block extra_css%}
 <link rel="stylesheet" href="{%static 'profiles/css/profile.css'%}">
 {% endblock %}
-
 {% block page_header %}
 {% endblock %}
-
 {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="col12 center ">
-            <h2>My Profile</h2>            
-        </div>
-    </div>
-    <div class="row">
-        <div class="col m6 center">
-            <h4>Default Delivery Information</h4>
-            <form action="{% url 'profile'%}" method="POST" id="profile-update-form">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <button class="btn btn-white">Update Information</button>
-            </form>
-        </div>
-    </div>
-        <div class="col m6 center">
-            <h4>Order History</h4>  
-            <div class="order-history">
-                <table class=" striped">
-                    <thead>
-                        <tr>
-                            <th>Order Number</th>
-                            <th>Date</th>
-                            <th>Items</th>
-                            <th>Order Total</th>                       
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for order in orders %}
-                        <tr>
-                        <td>
-                            <a href="{% url 'order_history' order.order_number %}" title="{{order.order_number}}"
-                            class="white-text">
-                                {{order.order_number|truncatechars:6}}
-                            </a>
-                        </td>
-                        <td>
-                            {{order.date}}
-                        </td>
-                        <td>
-                            <ul style="list-style:none">
-                                {% for item in order.lineitems.all %}
-                                    <li>
-                                        {{ item.ticket.match}}:
-                                        {% if item.day %}
-                                            Day: {{ item.day}}:
-                                        {% endif %}  
-                                        {{item.ticket.friendly_name}} x {{item.quantity}}
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        </td>
-                        <td>£{{ order.grand_total }}</td>
-                        </tr>
+   <div class="row">
+      <div class="col12 center ">
+         <h2>My Profile</h2>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col m6 center">
+         <h4>Default Delivery Information</h4>
+         <form action="{% url 'profile'%}" method="POST" id="profile-update-form">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button class="btn btn-white">Update Information</button>
+         </form>
+      </div>
+   </div>
+   <div class="col m6 center">
+      <h4>Order History</h4>
+      <div class="order-history">
+         <table class=" striped">
+            <thead>
+               <tr>
+                  <th>Order Number</th>
+                  <th>Date</th>
+                  <th>Items</th>
+                  <th>Order Total</th>
+               </tr>
+            </thead>
+            <tbody>
+               {% for order in orders %}
+               <tr>
+                  <td>
+                     <a href="{% url 'order_history' order.order_number %}" title="{{order.order_number}}"
+                        class="white-text">
+                     {{order.order_number|truncatechars:6}}
+                     </a>
+                  </td>
+                  <td>
+                     {{order.date}}
+                  </td>
+                  <td>
+                     <ul style="list-style:none">
+                        {% for item in order.lineitems.all %}
+                        <li>
+                           {{ item.ticket.match}}:
+                           {% if item.day %}
+                           Day: {{ item.day}}:
+                           {% endif %}  
+                           {{item.ticket.friendly_name}} x {{item.quantity}}
+                        </li>
                         {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-                  
-        </div>
-
+                     </ul>
+                  </td>
+                  <td>£{{ order.grand_total }}</td>
+               </tr>
+               {% endfor %}
+            </tbody>
+         </table>
+      </div>
+   </div>
 </div>
-    </div>
-     
+</div>
 {%endblock%}
-
 {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+{{ block.super }}
+<script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}

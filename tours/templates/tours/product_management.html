@@ -1,57 +1,55 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block page_header %}
 {% endblock %}
-
 {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="col m6 offset-m3  center product-management ">
-            <h2>Product Management</h2>                     
-        </div>
-    </div>
-    <div class="row">
-        <div class="col s12 m6 center">
-            <div class="card">
-                <div class="card-image">
-                    <img src="{{MEDIA_URL}}images/afridi.jpg" alt="Afridi">          
-                </div>       
-                <div class="card-action">
-                    <a href="{% url 'add_match' %}" class="btn btn-blue">Add Match</a>
-                </div>
+   <div class="row">
+      <div class="col m6 offset-m3  center product-management ">
+         <h2>Product Management</h2>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col s12 m6 center">
+         <div class="card">
+            <div class="card-image">
+               <img src="{{MEDIA_URL}}images/afridi.jpg" alt="Afridi">          
             </div>
-        </div>
-        <div class="col s12 m6 center">
-            <div class="card">
-                <div class="card-image">
-                    <img src="{{MEDIA_URL}}images/kohli.jpg" alt="Kohli">          
-                </div>       
-                <div class="card-action">
-                    <a href="{% url 'add_ticket' %}" class="btn btn-blue">Add Ticket</a>
-                </div>
+            <div class="card-action">
+               <a href="{% url 'add_match' %}" class="btn btn-blue">Add Match</a>
             </div>
-        </div>
-        <div class="col s12 m6 center">
-            <div class="card">
-                <div class="card-image">
-                    <img src="{{MEDIA_URL}}images/edgbaston.jpg" alt="Edgbaston">          
-                </div>       
-                <div class="card-action">
-                    <a href="{% url 'add_stadium' %}" class="btn btn-blue">Add Stadium</a>
-                </div>
+         </div>
+      </div>
+      <div class="col s12 m6 center">
+         <div class="card">
+            <div class="card-image">
+               <img src="{{MEDIA_URL}}images/kohli.jpg" alt="Kohli">          
             </div>
-        </div>
-        <div class="col s12 m6 center">
-            <div class="card">
-                <div class="card-image">
-                    <img src="{{MEDIA_URL}}images/mo.jpg" alt="Mo Ali">          
-                </div>       
-                <div class="card-action">
-                    <a href="{% url 'add_tour' %}" class="btn btn-blue">Add Tour</a>
-                </div>
+            <div class="card-action">
+               <a href="{% url 'add_ticket' %}" class="btn btn-blue">Add Ticket</a>
             </div>
-        </div>
-  </div>
+         </div>
+      </div>
+      <div class="col s12 m6 center">
+         <div class="card">
+            <div class="card-image">
+               <img src="{{MEDIA_URL}}images/edgbaston.jpg" alt="Edgbaston">          
+            </div>
+            <div class="card-action">
+               <a href="{% url 'add_stadium' %}" class="btn btn-blue">Add Stadium</a>
+            </div>
+         </div>
+      </div>
+      <div class="col s12 m6 center">
+         <div class="card">
+            <div class="card-image">
+               <img src="{{MEDIA_URL}}images/mo.jpg" alt="Mo Ali">          
+            </div>
+            <div class="card-action">
+               <a href="{% url 'add_tour' %}" class="btn btn-blue">Add Tour</a>
+            </div>
+         </div>
+      </div>
+   </div>
 </div>
 {% endblock %}

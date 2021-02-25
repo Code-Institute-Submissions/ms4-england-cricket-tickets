@@ -1,67 +1,63 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block extra_css%}
 <link rel="stylesheet" href="{%static 'checkout/css/checkout.css'%}">
 {% endblock %}
-
 {% block page_header %}
 {% endblock %}
-
 {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="col12 center checkout-success-header">
-            <h2>Thank You!</h2>   
-            <p>Your Order information is below. A confirmation email will be sent to <span style="font-weight: bold;">{{order.email}}</span></p> 
-            <h4>Order Info:</h4>            
-            <p>Order Number = {{order.order_number}}</p> 
-            <p>Order Date = {{order.date}}</p> 
-        </div>
-    </div>
-    <div class="row">
-        <div class="col m6 center">
-            <h4>Order Details:</h4>                            
-            {% for item in order.lineitems.all %}   
-            <p>{{item.ticket.match.tour.friendly_name}}: {{item.ticket.match}}</p>
-            <p> {{item.ticket.friendly_name}}: {% if item.ticket.match.gametype.name == "Test Match" %}Day: {{item.day}}{%else%}N/A{%endif%}</p>
-            <p>{{item.quantity}} ticket(s) at £{{item.ticket.price}} each</p>
-            <hr>          
-            {% endfor %}
-            <p style="font-weight: bold;">Order Total: £{{order.order_total|floatformat:2 }}</p>
-            {% if request.user.is_authenticated %}
-                <p style="font-weight: bold;">Member Discount: £{{order.member_discount|floatformat:2 }}</p>
-            {% endif %}
-            <p style="font-weight: bold;">Delivery: £{{order.delivery_cost|floatformat:2 }}</p>
-            <p style="font-weight: bold;">Grand Total: £{{order.grand_total|floatformat:2 }}</p>
-        </div>
-        <div class="col m6 center">            
-            <h4>Delivering to:</h4>
-            <p>Full Name: {{order.full_name}}</p>
-            <p>Address 1: {{order.street_address1}}</p>
-            {% if order.street_address2 %}
-            <p>Address 2: {{order.street_address2}}</p>
-            {% endif%}
-            <p>Town/City: {{order.town_or_city}}</p>
-            {% if order.county%}
-            <p>County: {{order.county}}</p>
-            {%endif %}
-            
-            {% if order.postcode %}
-            <p>Postcode: {{order.postcode}}</p>
-            {% endif %}
-            <p>Country: {{order.country}}</p>
-            <p>Phone Number: {{order.phone_number}}</p>
-        </div>        
-    </div>         
-    <div class="row">
-        <div class="col m6 offset-m3 center ">
-            {% if from_profile %}
-            <a href="{% url 'profile' %}" class="btn btn-white">Back to Profile</a>
-            {% else %}
-            <a href="{% url 'tours' %}" class="btn btn-white">Back to Tours</a>
-            {% endif %}
-        </div>
-    </div>
+   <div class="row">
+      <div class="col12 center checkout-success-header">
+         <h2>Thank You!</h2>
+         <p>Your Order information is below. A confirmation email will be sent to <span style="font-weight: bold;">{{order.email}}</span></p>
+         <h4>Order Info:</h4>
+         <p>Order Number = {{order.order_number}}</p>
+         <p>Order Date = {{order.date}}</p>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col m6 center">
+         <h4>Order Details:</h4>
+         {% for item in order.lineitems.all %}   
+         <p>{{item.ticket.match.tour.friendly_name}}: {{item.ticket.match}}</p>
+         <p> {{item.ticket.friendly_name}}: {% if item.ticket.match.gametype.name == "Test Match" %}Day: {{item.day}}{%else%}N/A{%endif%}</p>
+         <p>{{item.quantity}} ticket(s) at £{{item.ticket.price}} each</p>
+         <hr>
+         {% endfor %}
+         <p style="font-weight: bold;">Order Total: £{{order.order_total|floatformat:2 }}</p>
+         {% if request.user.is_authenticated %}
+         <p style="font-weight: bold;">Member Discount: £{{order.member_discount|floatformat:2 }}</p>
+         {% endif %}
+         <p style="font-weight: bold;">Delivery: £{{order.delivery_cost|floatformat:2 }}</p>
+         <p style="font-weight: bold;">Grand Total: £{{order.grand_total|floatformat:2 }}</p>
+      </div>
+      <div class="col m6 center">
+         <h4>Delivering to:</h4>
+         <p>Full Name: {{order.full_name}}</p>
+         <p>Address 1: {{order.street_address1}}</p>
+         {% if order.street_address2 %}
+         <p>Address 2: {{order.street_address2}}</p>
+         {% endif%}
+         <p>Town/City: {{order.town_or_city}}</p>
+         {% if order.county%}
+         <p>County: {{order.county}}</p>
+         {%endif %}
+         {% if order.postcode %}
+         <p>Postcode: {{order.postcode}}</p>
+         {% endif %}
+         <p>Country: {{order.country}}</p>
+         <p>Phone Number: {{order.phone_number}}</p>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col m6 offset-m3 center ">
+         {% if from_profile %}
+         <a href="{% url 'profile' %}" class="btn btn-white">Back to Profile</a>
+         {% else %}
+         <a href="{% url 'tours' %}" class="btn btn-white">Back to Tours</a>
+         {% endif %}
+      </div>
+   </div>
 </div>
 {%endblock%}

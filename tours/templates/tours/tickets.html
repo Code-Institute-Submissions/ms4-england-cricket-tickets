@@ -1,60 +1,50 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block page_header %}
-
 {% endblock %}
-
 {% block content %}
 <div class="container-fluid">
-    <div class="row center-align info-row">
-        <h3>{{match.tour.friendly_name}}: {{match.name}}</h3>
-        {% for stadium in stadiums%}
-                {% if match.stadium == stadium %}
-        <h4>{{stadium.full_name}}</h4>
-        <h5>{{match.date}}</h5>
-        <div class="col m6">       
-                <a href="{{stadium.image_url}}" target="_blank"><img src="{{stadium.image_url}}" alt="{{stadium.name}}" style="max-width: 100%;"></a>
-                {% endif %}
-            {% endfor %}          
-           
-        </div>
-        <div class="col m6 center form-options">            
-             {% for ticket in tickets %}
-                {% if match == ticket.match %}
-                    <h5>{{ ticket.friendly_name }}: £{{ticket.price}}</h5>
-                    
-                        <form action="{% url 'add_to_cart' ticket.id %}" method="POST" >
-                            {% csrf_token %}
-                      {% if match.gametype.name == "Test Match" %}
-                           <select name="day" required data-item_id="{{ticket.id}}" id="id_day">
-                            <option value="" disabled selected>Choose Day</option>   
-                            <option value="1" class="white-text">Day 1</option>
-                            <option value="2">Day 2</option>
-                            <option value="3">Day 3</option>
-                            <option value="4">Day 4</option>
-                            </select>
-                            <label>Choose Day</label>  
-                                               
-                    {% endif %}
-                            Quantity:
-                             <input class="qty_input white-text center" type="number" name="quantity" value="1" min="1" max="4"
-                              data-item_id="{{ ticket.id1 }}" id="id_qty_{{ ticket.id }}" style="max-width: 150px;"><br>
-                             <a href="{% url 'tours'%}" class="btn btn-white"><i class="fas fa-chevron-left"></i> Back to Tours</a>
-                             <input type="submit" class="btn btn-white" value="Buy Tickets">
-                             <input type="hidden" name="redirect_url" value="{{request.path}}">
-                        </form>
-                        {% if request.user.is_superuser %}
-                        <a href="{% url 'edit_ticket' ticket.id %}" class="btn btn-white">Edit Ticket</a>
-                        <a href="{% url 'delete_ticket' ticket.id %}" class="btn btn-white">Delete Ticket</a> 
-                        {% endif %} 
-                        
-                {% endif %}  
-                           
-            {% endfor %}
-        </div>        
-        </div>
-    
+   <div class="row center-align info-row">
+      <h3>{{match.tour.friendly_name}}: {{match.name}}</h3>
+      {% for stadium in stadiums%}
+      {% if match.stadium == stadium %}
+      <h4>{{stadium.full_name}}</h4>
+      <h5>{{match.date}}</h5>
+      <div class="col m6">       
+         <a href="{{stadium.image_url}}" target="_blank"><img src="{{stadium.image_url}}" alt="{{stadium.name}}" style="max-width: 100%;"></a>
+         {% endif %}
+         {% endfor %}          
+      </div>
+      <div class="col m6 center form-options">
+         {% for ticket in tickets %}
+         {% if match == ticket.match %}
+         <h5>{{ ticket.friendly_name }}: £{{ticket.price}}</h5>
+         <form action="{% url 'add_to_cart' ticket.id %}" method="POST" >
+            {% csrf_token %}
+            {% if match.gametype.name == "Test Match" %}
+            <select name="day" required data-item_id="{{ticket.id}}" id="id_day">
+               <option value="" disabled selected>Choose Day</option>
+               <option value="1" class="white-text">Day 1</option>
+               <option value="2">Day 2</option>
+               <option value="3">Day 3</option>
+               <option value="4">Day 4</option>
+            </select>
+            <label>Choose Day</label>  
+            {% endif %}
+            Quantity:
+            <input class="qty_input white-text center" type="number" name="quantity" value="1" min="1" max="4"
+               data-item_id="{{ ticket.id1 }}" id="id_qty_{{ ticket.id }}" style="max-width: 150px;"><br>
+            <a href="{% url 'tours'%}" class="btn btn-white"><i class="fas fa-chevron-left"></i> Back to Tours</a>
+            <input type="submit" class="btn btn-white" value="Buy Tickets">
+            <input type="hidden" name="redirect_url" value="{{request.path}}">
+         </form>
+         {% if request.user.is_superuser %}
+         <a href="{% url 'edit_ticket' ticket.id %}" class="btn btn-white">Edit Ticket</a>
+         <a href="{% url 'delete_ticket' ticket.id %}" class="btn btn-white">Delete Ticket</a> 
+         {% endif %} 
+         {% endif %}  
+         {% endfor %}
+      </div>
+   </div>
 </div>
-
 {% endblock %}
